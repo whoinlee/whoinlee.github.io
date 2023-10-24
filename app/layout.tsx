@@ -15,7 +15,7 @@ const openSans = Open_Sans({
  });
 
 export const metadata: Metadata = {
-  title: 'i_&_UU+',
+  title: 'UU+i',
   description: 'Whoin Lee\'s portfolio site',
 }
 
