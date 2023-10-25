@@ -24,7 +24,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${inter.variable} ${openSans.variable}`}>{children}</body>
+      {/* <body className={`${inter.className} ${inter.variable} ${openSans.variable}`}>{children}</body> */}
+      <body>{children}</body>
     </html>
   )
 }

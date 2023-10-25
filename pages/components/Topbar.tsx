@@ -3,7 +3,6 @@ import {
   Box,
   Container,
   InputBase,
-  //   IconButton,
   Toolbar,
   Typography,
   useTheme,
@@ -15,30 +14,45 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MenuIcon from "@mui/icons-material/Menu";
 import FlexBetBox from "./FlexBetBox";
 
-const Logo = () => {
-  const isLarge = useMediaQuery("(min-width: 900px)");
-
+const Logo = ({ isLarge = true }) => {
   return (
-    <FlexBetBox gap="6px">
+    <FlexBetBox gap="0px">
       {isLarge && (
-        <Typography
-          fontWeight="bold"
-          fontSize="0.9rem"
-          sx={{ cursor: "default", paddingTop: "2px" }}
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            height: "59px",
+            border: 2,
+            paddingLeft: "8px",
+            paddingRight: "8px",
+            paddingBottom: "0px",
+            margitnRight: "-1px",
+          }}
         >
-          STUDIO
-        </Typography>
+          <Typography
+            fontWeight="700"
+            fontSize="22px"
+            sx={{ cursor: "default", paddingTop: "0px", alignItems: "center" }}
+          >
+            STUDIO
+          </Typography>
+        </Box>
       )}
       <Box
         sx={{
           display: "flex",
-          border: 2,
+          borderBottom: 1,
+          borderLeft: 2,
+          borderRight: 2,
+          borderTop: 0,
           borderColor: "black",
           pt: 1.4,
           pb: 1.4,
           pr: 0.5,
           pl: 1,
           cursor: "default",
+          backgroundColor: "black",
           //   cursor: "pointer",
           //   "&:hover": {
           //     borderColor: "blue",
@@ -53,6 +67,7 @@ const Logo = () => {
             display: "inline",
             fontWeight: "bold",
             fontSize: "24px",
+            color: "#fefefe",
           }}
         >
           UU
@@ -62,6 +77,7 @@ const Logo = () => {
             display: "inline",
             fontSize: "16px",
             paddingTop: "5px",
+            color: "#fefefe",
           }}
         >
           +
@@ -73,12 +89,13 @@ const Logo = () => {
 
 const Topbar = () => {
   /* xs: 0, sm: 600, md: 900, lg: 1200, xl: 1536 */
-  const isSmall = !useMediaQuery("(min-width: 600px)");
+  //   const isSmall = !useMediaQuery("(min-width: 600px)");
+  const isLarge = useMediaQuery("(min-width: 900px)");
   const theme = useTheme();
   console.log("theme?", theme);
 
-  const openSearchInput = () => {
-    console.log("openSearchInput");
+  const runSearch = () => {
+    console.log("runSearch");
   };
 
   const openLinkedIn = () => {
@@ -89,12 +106,12 @@ const Topbar = () => {
     console.log("openMenu");
   };
 
-  const searchInput = () => {
+  const renderSearchInput = () => {
     return (
       <>
         <InputBase placeholder="" />
         <Box
-          onClick={openSearchInput}
+          onClick={runSearch}
           sx={{
             width: "34px",
             height: "34px",
@@ -126,46 +143,71 @@ const Topbar = () => {
       className="topbar"
       maxWidth="xl" // maxWidth="lg"
     >
-      <Logo />
+      <Logo isLarge={isLarge} />
       <Toolbar
         sx={{
           width: "100%",
-          marginLeft: "12px",
           // border: "1px solid red"    //-- testing
         }}
       >
         {/* LEFT SIDE */}
-        {!isSmall ? (
-          <FlexBetBox gap="24px" position="absolute" left="12px">
+        {isLarge ? (
+          <FlexBetBox gap="4px" position="absolute" left="18px">
             <Box
               sx={{
                 cursor: "pointer",
                 "&:hover": {
-                  color: "blue",
+                  color: "black",
+                  backgroundColor: "yellow",
+                  "& .MuiTypography-body1": {
+                    color: "black",
+                  },
                 },
               }}
             >
-              <Typography
-                // fontWeight="bold"
-                fontSize="1rem"
-              >
-                WORKS
+              <Typography fontWeight="400" fontSize="20px" padding="2px 12px">
+                Works
               </Typography>
             </Box>
             <Box
               sx={{
                 cursor: "pointer",
                 "&:hover": {
-                  color: "blue",
+                  color: "black",
+                  backgroundColor: "yellow",
                 },
-                //   marginRight: "20px",
+                "& .MuiTypography-body1": {
+                  color: "black",
+                },
               }}
             >
               <Typography
-                // fontWeight="bold"
-                fontSize="1rem"
+                fontWeight="500"
+                fontSize="20px"
+                padding="2px 12px"
+                letterSpacing="0.075px"
               >
-                DATA VIZ & Misc
+                Data Viz & Misc
+              </Typography>
+            </Box>
+            <Box
+              sx={{
+                cursor: "pointer",
+                "&:hover": {
+                  color: "black",
+                  backgroundColor: "yellow",
+                },
+                "& .MuiTypography-body1": {
+                  color: "black",
+                },
+              }}
+            >
+              <Typography
+                fontWeight="500"
+                fontSize="20px"
+                padding="2px 12px"
+              >
+                About
               </Typography>
             </Box>
           </FlexBetBox>
@@ -173,13 +215,16 @@ const Topbar = () => {
           <Box
             onClick={openMenu}
             sx={{
-              width: "34px",
-              height: "34px",
-              cursor: "pointer",
               position: "absolute",
+              display: "flex",
+              alignItems: "center",
+              height: "59px",
+              border: 2,
+              padding: "0px 12px",
+              cursor: "pointer",
               left: "0px",
               "&:hover": {
-                backgroundColor: "transparent",
+                backgroundColor: "yellow",
               },
             }}
           >
@@ -187,18 +232,15 @@ const Topbar = () => {
               sx={{
                 fontSize: "34px",
                 color: "rgba(0, 0, 0, 0.85)",
-                "&:hover": {
-                  color: "blue",
-                },
               }}
             />
           </Box>
         )}
         {/* RIGHT SIDE */}
         <FlexBetBox
-          gap="8px"
+          gap="6px"
           position="absolute"
-          right="-4px"
+          right="-2px"
           //   border="2px solid green"
         >
           <FlexBetBox
@@ -208,9 +250,9 @@ const Topbar = () => {
             width="200px"
             height="30px"
             marginRight="4px"
-            border="1px solid rgba(0,0,0, 1)"
+            border="1.5px solid black"
           >
-            {searchInput()}
+            {renderSearchInput()}
           </FlexBetBox>
           <Box
             onClick={openLinkedIn}

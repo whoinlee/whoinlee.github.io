@@ -7,7 +7,7 @@ $padding-md: 24px;
 $padding-lg: 36px;
 */
 
-$top-bar-height: 60px;
+$top-bar-height: 58px;
 .topbar {
     width: 100%;
     height: $top-bar-height;
@@ -19,5 +19,6 @@ $top-bar-height: 60px;
     padding-left: $padding-sm;
     padding-right: $padding-sm;
     border-bottom: 0.5px solid rgba(black, .15);
+    // border-bottom: 0.5px solid rgba(black, 1);
 }
 
