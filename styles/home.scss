@@ -6,7 +6,6 @@ $padding-sm: 12px;
 $padding-md: 24px;
 $padding-lg: 36px;
 */
-
 $top-bar-height: 58px;
 .topbar {
     width: 100%;
@@ -20,5 +19,9 @@ $top-bar-height: 58px;
     padding-right: $padding-sm;
     border-bottom: 0.5px solid rgba(black, .15);
     // border-bottom: 0.5px solid rgba(black, 1);
-}
 
+    // &_menuItem {
+    //     color: "green";
+    //     text-decoration: "underline";
+    // }
+}

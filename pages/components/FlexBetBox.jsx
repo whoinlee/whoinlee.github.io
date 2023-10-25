@@ -1,5 +1,5 @@
 const { Box } = require("@mui/material");
-const { styled } = require("@mui/system");
+import { styled } from '@mui/material/styles';
 
 const FlexBetBox = styled(Box)({
   display: "flex",

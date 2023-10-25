@@ -1,9 +1,12 @@
 import React from "react";
+import { styled } from "@mui/material/styles";
 import {
   Box,
   Container,
   InputBase,
   Toolbar,
+  Tooltip,
+  //   tooltipClasses,
   Typography,
   useTheme,
   useMediaQuery,
@@ -14,7 +17,11 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MenuIcon from "@mui/icons-material/Menu";
 import FlexBetBox from "./FlexBetBox";
 
+const BLACK_85P = "rgba(0,0,0,.85)";
+const BLUE_85P = "rgba(15,10,222,.85)";
 const Logo = ({ isLarge = true }) => {
+  const theme = useTheme();
+
   return (
     <FlexBetBox gap="0px">
       {isLarge && (
@@ -24,6 +31,7 @@ const Logo = ({ isLarge = true }) => {
             alignItems: "center",
             height: "59px",
             border: 2,
+            borderColor: BLACK_85P,
             paddingLeft: "8px",
             paddingRight: "8px",
             paddingBottom: "0px",
@@ -33,56 +41,70 @@ const Logo = ({ isLarge = true }) => {
           <Typography
             fontWeight="700"
             fontSize="22px"
-            sx={{ cursor: "default", paddingTop: "0px", alignItems: "center" }}
+            sx={{
+              cursor: "default",
+              paddingTop: "0px",
+              color: BLACK_85P,
+              alignItems: "center",
+            }}
           >
             STUDIO
           </Typography>
         </Box>
       )}
-      <Box
-        sx={{
-          display: "flex",
-          borderBottom: 1,
-          borderLeft: 2,
-          borderRight: 2,
-          borderTop: 0,
-          borderColor: "black",
-          pt: 1.4,
-          pb: 1.4,
-          pr: 0.5,
-          pl: 1,
-          cursor: "default",
-          backgroundColor: "black",
-          //   cursor: "pointer",
-          //   "&:hover": {
-          //     borderColor: "blue",
-          //     "& .MuiBox-root": {
-          //       color: "blue",
-          //     },
-          //   },
+      <Tooltip
+        title=" i "
+        placement="bottom"
+        componentsProps={{
+          tooltip: {
+            sx: {
+              bgcolor: "white",
+              color: "black",
+              boxShadow: theme.shadows[1],
+              padding: "5px 15px",
+              fontSize: "14px",
+            },
+          },
         }}
       >
         <Box
           sx={{
-            display: "inline",
-            fontWeight: "bold",
-            fontSize: "24px",
-            color: "#fefefe",
+            display: "flex",
+            borderBottom: 1,
+            borderLeft: 2,
+            borderRight: 2,
+            borderTop: 0,
+            borderColor: BLACK_85P,
+            backgroundColor: BLACK_85P,
+            pt: 1.4,
+            pb: 1.4,
+            pr: 0.5,
+            pl: 1,
+            cursor: "pointer",
           }}
         >
-          UU
+          <Box
+            sx={{
+              display: "inline",
+              fontWeight: "bold",
+              fontSize: "24px",
+              color: "#fefefe",
+            }}
+          >
+            UU
+          </Box>
+          <Box
+            sx={{
+              display: "inline",
+              fontSize: "16px",
+              paddingTop: "5px",
+              color: "#fefefe",
+            }}
+          >
+            +
+          </Box>
         </Box>
-        <Box
-          sx={{
-            display: "inline",
-            fontSize: "16px",
-            paddingTop: "5px",
-            color: "#fefefe",
-          }}
-        >
-          +
-        </Box>
-      </Box>
+      </Tooltip>
     </FlexBetBox>
   );
 };
@@ -109,13 +131,12 @@ const Topbar = () => {
   const renderSearchInput = () => {
     return (
       <>
-        <InputBase placeholder="" />
+        <InputBase placeholder="" className="search_input" />
         <Box
           onClick={runSearch}
           sx={{
             width: "34px",
             height: "34px",
-            cursor: "pointer",
             marginTop: "2px",
             "&:hover": {
               backgroundColor: "transparent",
@@ -123,13 +144,14 @@ const Topbar = () => {
           }}
         >
           <SearchIcon
+            className="search_icon"
             sx={{
               fontSize: "26px",
               marginLeft: "4px",
               marginTop: "4px",
-              color: "rgba(0, 0, 0, 0.85)",
+              color: BLACK_85P,
               "&:hover": {
-                color: "blue",
+                color: BLUE_85P,
               },
             }}
           />
@@ -143,7 +165,7 @@ const Topbar = () => {
       className="topbar"
       maxWidth="xl" // maxWidth="lg"
     >
-      <Logo isLarge={isLarge} />
+      <Logo isLarge={isLarge} theme={theme} />
       <Toolbar
         sx={{
           width: "100%",
@@ -154,10 +176,10 @@ const Topbar = () => {
         {isLarge ? (
           <FlexBetBox gap="4px" position="absolute" left="18px">
             <Box
+              className="topbar_menuItem"
               sx={{
                 cursor: "pointer",
                 "&:hover": {
-                  color: "black",
                   backgroundColor: "yellow",
                   "& .MuiTypography-body1": {
                     color: "black",
@@ -165,19 +187,25 @@ const Topbar = () => {
                 },
               }}
             >
-              <Typography fontWeight="400" fontSize="20px" padding="2px 12px">
+              <Typography
+                fontWeight="400"
+                fontSize="20px"
+                padding="2px 12px"
+                color={BLACK_85P}
+                sx={{ textDecoration: "underline" }}
+              >
                 Works
               </Typography>
             </Box>
             <Box
+              className="topbar_menuItem"
               sx={{
                 cursor: "pointer",
                 "&:hover": {
-                  color: "black",
                   backgroundColor: "yellow",
-                },
-                "& .MuiTypography-body1": {
-                  color: "black",
+                  "& .MuiTypography-body1": {
+                    color: "black",
+                  },
                 },
               }}
             >
@@ -186,19 +214,20 @@ const Topbar = () => {
                 fontSize="20px"
                 padding="2px 12px"
                 letterSpacing="0.075px"
+                color={BLACK_85P}
               >
                 Data Viz & Misc
               </Typography>
             </Box>
             <Box
+              className="topbar_menuItem"
               sx={{
                 cursor: "pointer",
                 "&:hover": {
-                  color: "black",
                   backgroundColor: "yellow",
-                },
-                "& .MuiTypography-body1": {
-                  color: "black",
+                  "& .MuiTypography-body1": {
+                    color: "black",
+                  },
                 },
               }}
             >
@@ -206,6 +235,7 @@ const Topbar = () => {
                 fontWeight="500"
                 fontSize="20px"
                 padding="2px 12px"
+                color={BLACK_85P}
               >
                 About
               </Typography>
@@ -231,18 +261,13 @@ const Topbar = () => {
             <MenuIcon
               sx={{
                 fontSize: "34px",
-                color: "rgba(0, 0, 0, 0.85)",
+                color: BLACK_85P,
               }}
             />
           </Box>
         )}
         {/* RIGHT SIDE */}
-        <FlexBetBox
-          gap="6px"
-          position="absolute"
-          right="-2px"
-          //   border="2px solid green"
-        >
+        <FlexBetBox gap="6px" position="absolute" right="-2px">
           <FlexBetBox
             gap="4px"
             p="2px 12px"
@@ -250,7 +275,15 @@ const Topbar = () => {
             width="200px"
             height="30px"
             marginRight="4px"
-            border="1.5px solid black"
+            border="1.5px solid rgba(0, 0, 0, 0.85)"
+            sx={{
+              "&:hover": {
+                border: "1.5px solid rgba(15, 10, 222, 0.85)",
+                "& .MuiSvgIcon-root": {
+                  color: BLUE_85P,
+                },
+              },
+            }}
           >
             {renderSearchInput()}
           </FlexBetBox>
@@ -270,9 +303,9 @@ const Topbar = () => {
                 fontSize: "30px",
                 marginTop: "2px",
                 marginLeft: "2px",
-                color: "rgba(0, 0, 0, 0.85)",
+                color: BLACK_85P,
                 "&:hover": {
-                  color: "blue",
+                  color: BLUE_85P,
                 },
               }}
             />
@@ -291,9 +324,9 @@ const Topbar = () => {
             <LinkedInIcon
               sx={{
                 fontSize: "34px",
-                color: "rgba(0, 0, 0, 0.85)",
+                color: BLACK_85P,
                 "&:hover": {
-                  color: "blue",
+                  color: BLUE_85P,
                 },
               }}
             />
