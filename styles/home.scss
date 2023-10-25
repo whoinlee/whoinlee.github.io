@@ -1,0 +1,23 @@
+@import 'config';
+
+/*
+$padding-xs: 6px;
+$padding-sm: 12px;
+$padding-md: 24px;
+$padding-lg: 36px;
+*/
+
+$top-bar-height: 60px;
+.topbar {
+    width: 100%;
+    height: $top-bar-height;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: $padding-md;
+    padding-bottom: $padding-md;
+    padding-left: $padding-sm;
+    padding-right: $padding-sm;
+    border-bottom: 0.5px solid rgba(black, .15);
+}
+

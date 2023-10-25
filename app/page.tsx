@@ -1,9 +1,20 @@
-import Image from 'next/image'
+"use client";
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import { createTheme } from "@mui/material/styles";
+import { themeSettings } from "./theme";
+import Home from '../pages/Home';
 
-export default function Home() {
+
+export default function App() {
+  const theme = createTheme(themeSettings);
+  // const theme = createTheme({});
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      Home
-    </main>
+    <div className="app">
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Home />
+      </ThemeProvider>
+    </div>
   )
 }

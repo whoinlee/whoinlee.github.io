@@ -1,1 +1,1 @@
-This is Whoin's Portfolio Site built with NextJS, Typescript, and MUI.
+This is Whoin's Portfolio Site built with NextJS, Typescript, MUI, and Strapi CMS.
