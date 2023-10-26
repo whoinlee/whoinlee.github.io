@@ -16,133 +16,112 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MenuIcon from "@mui/icons-material/Menu";
 import FlexBetBox from "./FlexBetBox";
 
-const BLACK_85P = "rgba(0,0,0,.85)";
-const BLUE_85P = "rgba(15,10,222,.85)";
-const Logo = ({ isLarge = true }) => {
-  const theme = useTheme();
-
-  return (
-    <FlexBetBox gap="0px">
-      {isLarge && (
-        <Box
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            height: "59px",
-            border: 2,
-            borderColor: BLACK_85P,
-            paddingLeft: "8px",
-            paddingRight: "8px",
-            paddingBottom: "0px",
-            margitnRight: "-1px",
-          }}
-        >
-          <Typography
-            fontWeight="700"
-            fontSize="22px"
-            sx={{
-              cursor: "default",
-              paddingTop: "0px",
-              color: BLACK_85P,
-              alignItems: "center",
-            }}
-          >
-            STUDIO
-          </Typography>
-        </Box>
-      )}
-      <Tooltip
-        title=" i "
-        placement="bottom"
-        componentsProps={{
-          tooltip: {
-            sx: {
-              bgcolor: "white",
-              color: "black",
-              boxShadow: theme.shadows[2],
-              padding: "5px 15px",
-              fontSize: "18px",
-            },
-          },
-        }}
-      >
-        <Box
-          sx={{
-            display: "flex",
-            borderBottom: 1,
-            borderLeft: 2,
-            borderRight: 2,
-            borderTop: 0,
-            borderColor: BLACK_85P,
-            backgroundColor: BLACK_85P,
-            pt: 1.4,
-            pb: 1.4,
-            pr: 0.5,
-            pl: 1,
-            cursor: "pointer",
-          }}
-        >
-          <Box
-            sx={{
-              display: "inline",
-              fontWeight: "bold",
-              fontSize: "24px",
-              color: "#fefefe",
-            }}
-          >
-            UU
-          </Box>
-          <Box
-            sx={{
-              display: "inline",
-              fontSize: "16px",
-              paddingTop: "5px",
-              color: "#fefefe",
-            }}
-          >
-            +
-          </Box>
-        </Box>
-      </Tooltip>
-    </FlexBetBox>
-  );
-};
-
 const Topbar = () => {
   /* xs: 0, sm: 600, md: 900, lg: 1200, xl: 1536 */
   const isXSmall = !useMediaQuery("(min-width: 400px)");
   const isLarge = useMediaQuery("(min-width: 800px)");
-  //   const theme = useTheme();
+  const theme = useTheme();
 
-  const runSearch = () => {
-    console.log("runSearch");
+  const BLACK_85P = "rgba(0,0,0,.85)";
+  const BLUE_85P = "rgba(15,10,222,.85)";
+
+  const Logo = () => {
+    return (
+      <FlexBetBox gap="0px">
+        {isLarge && (
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              height: "59px",
+              border: 2,
+              borderColor: BLACK_85P,
+              paddingLeft: "8px",
+              paddingRight: "8px",
+              paddingBottom: "0px",
+              margitnRight: "-1px",
+            }}
+          >
+            <Typography
+              fontWeight="700"
+              fontSize="22px"
+              sx={{
+                cursor: "default",
+                paddingTop: "0px",
+                color: BLACK_85P,
+                alignItems: "center",
+              }}
+            >
+              STUDIO
+            </Typography>
+          </Box>
+        )}
+        {!isXSmall && (
+          <Tooltip
+            title=" i "
+            placement="bottom"
+            componentsProps={{
+              tooltip: {
+                sx: {
+                  bgcolor: "white",
+                  color: "black",
+                  boxShadow: theme.shadows[2],
+                  padding: "5px 15px",
+                  fontSize: "18px",
+                },
+              },
+            }}
+          >
+            <Box
+              sx={{
+                display: "flex",
+                borderBottom: 1,
+                borderLeft: 2,
+                borderRight: 2,
+                borderTop: 0,
+                borderColor: BLACK_85P,
+                backgroundColor: BLACK_85P,
+                pt: 1.4,
+                pb: 1.4,
+                pr: 0.5,
+                pl: 1,
+                cursor: "pointer",
+              }}
+            >
+              <Box
+                sx={{
+                  display: "inline",
+                  fontWeight: "bold",
+                  fontSize: "24px",
+                  color: "#fefefe",
+                }}
+              >
+                UU
+              </Box>
+              <Box
+                sx={{
+                  display: "inline",
+                  fontSize: "16px",
+                  paddingTop: "5px",
+                  color: "#fefefe",
+                }}
+              >
+                +
+              </Box>
+            </Box>
+          </Tooltip>
+        )}
+      </FlexBetBox>
+    );
   };
 
-  const openLinkedIn = () => {
-    console.log("openLinkedIn");
-    window
-      .open("https://www.linkedin.com/in/whoin-lee-9729061/", "_blank")
-      ?.focus();
-  };
-
-  const openGithub = () => {
-    console.log("openLinkedIn");
-    window
-      .open("https://github.com/whoinlee/whoinlee.github.io", "_blank")
-      ?.focus();
-  };
-
-  const openMenu = () => {
-    console.log("openMenu");
-  };
-
-  const renderSearchInput = () => {
+  const SearchInput = () => {
     return (
       <FlexBetBox
         gap="4px"
         p="2px 10px"
         pr="4px"
-        width="158px"
+        width="160px"
         height="30px"
         marginRight="4px"
         // marginRight="60px"
@@ -188,12 +167,34 @@ const Topbar = () => {
     );
   };
 
+  const runSearch = () => {
+    console.log("runSearch");
+  };
+
+  const openLinkedIn = () => {
+    console.log("openLinkedIn");
+    window
+      .open("https://www.linkedin.com/in/whoin-lee-9729061/", "_blank")
+      ?.focus();
+  };
+
+  const openGithub = () => {
+    console.log("openLinkedIn");
+    window
+      .open("https://github.com/whoinlee/whoinlee.github.io", "_blank")
+      ?.focus();
+  };
+
+  const openMenu = () => {
+    console.log("openMenu");
+  };
+
   return (
     <Container
       className="topbar"
       maxWidth="xl" // maxWidth="lg"
     >
-      <Logo isLarge={isLarge} />
+      <Logo />
       <Toolbar
         sx={{
           width: "100%",
@@ -296,7 +297,8 @@ const Topbar = () => {
         )}
         {/* RIGHT SIDE */}
         <FlexBetBox gap="6px" position="absolute" right="-2px">
-          {!isXSmall && renderSearchInput()}
+          {/* {!isXSmall && <SearchInput />} */}
+          <SearchInput />
           <Box
             onClick={openGithub}
             sx={{
