@@ -14,6 +14,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MenuIcon from "@mui/icons-material/Menu";
+import "../../styles/topbar.scss";
 
 const Topbar = () => {
   /* xs: 0, sm: 600, md: 900, lg: 1200, xl: 1536 */
@@ -66,7 +67,8 @@ const Topbar = () => {
             componentsProps={{
               tooltip: {
                 sx: {
-                  bgcolor: "white",
+                //   bgcolor: "white",
+                  bgcolor: "yellow",
                   color: "black",
                   boxShadow: theme.shadows[2],
                   padding: "5px 15px",
@@ -85,6 +87,11 @@ const Topbar = () => {
                 pr: 0.65,
                 pl: 1.35,
                 cursor: "pointer",
+                "&:hover": {
+                  "& .MuiBox-root": {
+                    color: "yellow",
+                  },
+                },
               }}
             >
               <Box
@@ -183,13 +190,16 @@ const Topbar = () => {
     console.log("openMenu");
   };
 
+  const openSubmenu = () => {
+    console.log("openSubmenu");
+  };
+
   const openBlog = () => {
     window.open("http://www.whoin.net/", "_blank")?.focus();
   };
 
   return (
     <Container className="topbar" maxWidth="xl">
-      {/* <Logo /> */}
       <FlexBetBox
         width="100%"
         //   border="2px solid pink"
@@ -202,11 +212,12 @@ const Topbar = () => {
           {/* MENU */}
           {isLarge ? (
             <FlexBetBox
-            paddingLeft="12px"
-            // border="2px solid magenta"
+              paddingLeft="12px"
+              // border="2px solid magenta"
             >
-              <Box
-                className="topbar_menuItem"
+              <FlexBetBox
+                // className="topbar_menuItem"
+                // border="2px solid cyan"
                 sx={{
                   cursor: "pointer",
                   "&:hover": {
@@ -214,6 +225,9 @@ const Topbar = () => {
                     "& .MuiTypography-body1": {
                       color: "black",
                     },
+                    "& .MuiSvgIcon-root": {
+                        transform: "rotate(180deg)"
+                      },
                   },
                 }}
               >
@@ -222,14 +236,34 @@ const Topbar = () => {
                   fontSize="20px"
                   padding="2px 12px"
                   color={BLACK_85P}
-                  sx={{ textDecoration: "underline" }}
+                  //   sx={{ textDecoration: "underline" }}
                 >
                   Works
                 </Typography>
-              </Box>
+                <Box
+                className="topbar_arrowDown"
+                // border="1px solid red"
+                // sx={{
+                //     // transition: "transform ease 0.2s",
+                //     transform: "rotate(0deg)",
+                //     "&:hover": {
+                //         transform: "rotate(180deg)",
+                //     },
+                //     }}
+                >
+                <ArrowDropDownIcon
+                  sx={{
+                    marginTop: "6px",
+                    marginLeft: "-10px",
+                    color: BLACK_85P,
+                  }}
+                />
+                </Box>
+              </FlexBetBox>
               <Box
+                // border="2px solid cyan"
                 onClick={openBlog}
-                className="topbar_menuItem"
+                // className="topbar_menuItem"
                 sx={{
                   cursor: "pointer",
                   "&:hover": {
@@ -251,7 +285,8 @@ const Topbar = () => {
                 </Typography>
               </Box>
               <Box
-                className="topbar_menuItem"
+                //   border="2px solid cyan"
+                // className="topbar_menuItem"
                 sx={{
                   cursor: "pointer",
                   "&:hover": {
