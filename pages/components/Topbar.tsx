@@ -1,20 +1,19 @@
 import React from "react";
-import { styled } from "@mui/material/styles";
+import FlexBetBox from "./FlexBetBox";
 import {
   Box,
   Container,
   InputBase,
-  Toolbar,
   Tooltip,
   Typography,
   useTheme,
   useMediaQuery,
 } from "@mui/material";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import SearchIcon from "@mui/icons-material/Search";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MenuIcon from "@mui/icons-material/Menu";
-import FlexBetBox from "./FlexBetBox";
 
 const Topbar = () => {
   /* xs: 0, sm: 600, md: 900, lg: 1200, xl: 1536 */
@@ -27,19 +26,23 @@ const Topbar = () => {
 
   const Logo = () => {
     return (
-      <FlexBetBox gap="0px">
+      <FlexBetBox
+        gap="0px"
+        height="59px"
+        //   border="2px solid red"
+      >
         {isLarge && (
           <Box
             sx={{
               display: "flex",
               alignItems: "center",
-              height: "59px",
+              height: "59.5px",
               border: 2,
               borderColor: BLACK_85P,
               paddingLeft: "8px",
               paddingRight: "8px",
               paddingBottom: "0px",
-              margitnRight: "-1px",
+              margitnRight: "0px",
             }}
           >
             <Typography
@@ -75,16 +78,12 @@ const Topbar = () => {
             <Box
               sx={{
                 display: "flex",
-                borderBottom: 1,
-                borderLeft: 2,
-                borderRight: 2,
-                borderTop: 0,
-                borderColor: BLACK_85P,
+                border: "none",
                 backgroundColor: BLACK_85P,
-                pt: 1.4,
-                pb: 1.4,
-                pr: 0.5,
-                pl: 1,
+                pt: 1.45,
+                pb: 1.45,
+                pr: 0.65,
+                pl: 1.35,
                 cursor: "pointer",
               }}
             >
@@ -102,7 +101,7 @@ const Topbar = () => {
                 sx={{
                   display: "inline",
                   fontSize: "16px",
-                  paddingTop: "5px",
+                  paddingTop: "4px",
                   color: "#fefefe",
                 }}
               >
@@ -124,10 +123,7 @@ const Topbar = () => {
         width="160px"
         height="30px"
         marginRight="4px"
-        // marginRight="60px"
         border="1.5px solid rgba(0, 0, 0, 0.85)"
-        // border="1px solid #9e9e9e"
-        // borderRadius="4px"
         sx={{
           "&:hover": {
             border: "1.5px solid rgba(15, 10, 222, 0.85)",
@@ -172,14 +168,12 @@ const Topbar = () => {
   };
 
   const openLinkedIn = () => {
-    console.log("openLinkedIn");
     window
       .open("https://www.linkedin.com/in/whoin-lee-9729061/", "_blank")
       ?.focus();
   };
 
   const openGithub = () => {
-    console.log("openLinkedIn");
     window
       .open("https://github.com/whoinlee/whoinlee.github.io", "_blank")
       ?.focus();
@@ -189,115 +183,126 @@ const Topbar = () => {
     console.log("openMenu");
   };
 
+  const openBlog = () => {
+    window.open("http://www.whoin.net/", "_blank")?.focus();
+  };
+
   return (
-    <Container
-      className="topbar"
-      maxWidth="xl" // maxWidth="lg"
-    >
-      <Logo />
-      <Toolbar
-        sx={{
-          width: "100%",
-          // border: "1px solid red"    //-- testing
-        }}
+    <Container className="topbar" maxWidth="xl">
+      {/* <Logo /> */}
+      <FlexBetBox
+        width="100%"
+        //   border="2px solid pink"
       >
         {/* LEFT SIDE */}
-        {isLarge ? (
-          <FlexBetBox gap="4px" position="absolute" left="18px">
+        <FlexBetBox
+        // border="2px solid pink"
+        >
+          <Logo />
+          {/* MENU */}
+          {isLarge ? (
+            <FlexBetBox
+            paddingLeft="12px"
+            // border="2px solid magenta"
+            >
+              <Box
+                className="topbar_menuItem"
+                sx={{
+                  cursor: "pointer",
+                  "&:hover": {
+                    backgroundColor: "yellow",
+                    "& .MuiTypography-body1": {
+                      color: "black",
+                    },
+                  },
+                }}
+              >
+                <Typography
+                  fontWeight="400"
+                  fontSize="20px"
+                  padding="2px 12px"
+                  color={BLACK_85P}
+                  sx={{ textDecoration: "underline" }}
+                >
+                  Works
+                </Typography>
+              </Box>
+              <Box
+                onClick={openBlog}
+                className="topbar_menuItem"
+                sx={{
+                  cursor: "pointer",
+                  "&:hover": {
+                    backgroundColor: "yellow",
+                    "& .MuiTypography-body1": {
+                      color: "black",
+                    },
+                  },
+                }}
+              >
+                <Typography
+                  fontWeight="500"
+                  fontSize="20px"
+                  padding="2px 12px"
+                  letterSpacing="0.075px"
+                  color={BLACK_85P}
+                >
+                  Data Viz & Misc
+                </Typography>
+              </Box>
+              <Box
+                className="topbar_menuItem"
+                sx={{
+                  cursor: "pointer",
+                  "&:hover": {
+                    backgroundColor: "yellow",
+                    "& .MuiTypography-body1": {
+                      color: "black",
+                    },
+                  },
+                }}
+              >
+                <Typography
+                  fontWeight="500"
+                  fontSize="20px"
+                  padding="2px 12px"
+                  color={BLACK_85P}
+                >
+                  About
+                </Typography>
+              </Box>
+            </FlexBetBox>
+          ) : (
+            //-- hamnurger menu
             <Box
-              className="topbar_menuItem"
+              onClick={openMenu}
               sx={{
+                display: "flex",
+                alignItems: "center",
+                height: "59.5px",
+                border: 2,
+                padding: "0px 12px",
                 cursor: "pointer",
                 "&:hover": {
                   backgroundColor: "yellow",
-                  "& .MuiTypography-body1": {
-                    color: "black",
-                  },
                 },
               }}
             >
-              <Typography
-                fontWeight="400"
-                fontSize="20px"
-                padding="2px 12px"
-                color={BLACK_85P}
-                sx={{ textDecoration: "underline" }}
-              >
-                Works
-              </Typography>
+              <MenuIcon
+                sx={{
+                  fontSize: "34px",
+                  color: BLACK_85P,
+                }}
+              />
             </Box>
-            <Box
-              className="topbar_menuItem"
-              sx={{
-                cursor: "pointer",
-                "&:hover": {
-                  backgroundColor: "yellow",
-                  "& .MuiTypography-body1": {
-                    color: "black",
-                  },
-                },
-              }}
-            >
-              <Typography
-                fontWeight="500"
-                fontSize="20px"
-                padding="2px 12px"
-                letterSpacing="0.075px"
-                color={BLACK_85P}
-              >
-                Data Viz & Misc
-              </Typography>
-            </Box>
-            <Box
-              className="topbar_menuItem"
-              sx={{
-                cursor: "pointer",
-                "&:hover": {
-                  backgroundColor: "yellow",
-                  "& .MuiTypography-body1": {
-                    color: "black",
-                  },
-                },
-              }}
-            >
-              <Typography
-                fontWeight="500"
-                fontSize="20px"
-                padding="2px 12px"
-                color={BLACK_85P}
-              >
-                About
-              </Typography>
-            </Box>
-          </FlexBetBox>
-        ) : (
-          <Box
-            onClick={openMenu}
-            sx={{
-              position: "absolute",
-              display: "flex",
-              alignItems: "center",
-              height: "59px",
-              border: 2,
-              padding: "0px 12px",
-              cursor: "pointer",
-              left: "0px",
-              "&:hover": {
-                backgroundColor: "yellow",
-              },
-            }}
-          >
-            <MenuIcon
-              sx={{
-                fontSize: "34px",
-                color: BLACK_85P,
-              }}
-            />
-          </Box>
-        )}
+          )}
+        </FlexBetBox>
         {/* RIGHT SIDE */}
-        <FlexBetBox gap="6px" position="absolute" right="-2px">
-          {/* {!isXSmall && <SearchInput />} */}
+        <FlexBetBox
+          gap="6px"
+          marginRight="-4px"
+          //   border="4px solid orange"
+        >
           <SearchInput />
           <Box
             onClick={openGithub}
@@ -344,7 +349,7 @@ const Topbar = () => {
             />
           </Box>
         </FlexBetBox>
-      </Toolbar>
+      </FlexBetBox>
     </Container>
   );
 };
