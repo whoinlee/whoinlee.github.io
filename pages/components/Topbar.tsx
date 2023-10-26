@@ -6,7 +6,6 @@ import {
   InputBase,
   Toolbar,
   Tooltip,
-  //   tooltipClasses,
   Typography,
   useTheme,
   useMediaQuery,
@@ -60,9 +59,9 @@ const Logo = ({ isLarge = true }) => {
             sx: {
               bgcolor: "white",
               color: "black",
-              boxShadow: theme.shadows[1],
+              boxShadow: theme.shadows[2],
               padding: "5px 15px",
-              fontSize: "14px",
+              fontSize: "18px",
             },
           },
         }}
@@ -111,10 +110,9 @@ const Logo = ({ isLarge = true }) => {
 
 const Topbar = () => {
   /* xs: 0, sm: 600, md: 900, lg: 1200, xl: 1536 */
-  //   const isSmall = !useMediaQuery("(min-width: 600px)");
-  const isLarge = useMediaQuery("(min-width: 900px)");
-  const theme = useTheme();
-  console.log("theme?", theme);
+  const isXSmall = !useMediaQuery("(min-width: 400px)");
+  const isLarge = useMediaQuery("(min-width: 800px)");
+  //   const theme = useTheme();
 
   const runSearch = () => {
     console.log("runSearch");
@@ -122,6 +120,16 @@ const Topbar = () => {
 
   const openLinkedIn = () => {
     console.log("openLinkedIn");
+    window
+      .open("https://www.linkedin.com/in/whoin-lee-9729061/", "_blank")
+      ?.focus();
+  };
+
+  const openGithub = () => {
+    console.log("openLinkedIn");
+    window
+      .open("https://github.com/whoinlee/whoinlee.github.io", "_blank")
+      ?.focus();
   };
 
   const openMenu = () => {
@@ -130,14 +138,34 @@ const Topbar = () => {
 
   const renderSearchInput = () => {
     return (
-      <>
+      <FlexBetBox
+        gap="4px"
+        p="2px 10px"
+        pr="4px"
+        width="158px"
+        height="30px"
+        marginRight="4px"
+        // marginRight="60px"
+        border="1.5px solid rgba(0, 0, 0, 0.85)"
+        // border="1px solid #9e9e9e"
+        // borderRadius="4px"
+        sx={{
+          "&:hover": {
+            border: "1.5px solid rgba(15, 10, 222, 0.85)",
+            borderBottom: "2px solid rgba(15, 10, 222, 0.85)",
+            "& .MuiSvgIcon-root": {
+              color: BLUE_85P,
+              marginTop: "4.5px",
+            },
+          },
+        }}
+      >
         <InputBase placeholder="" className="search_input" />
         <Box
           onClick={runSearch}
           sx={{
             width: "34px",
             height: "34px",
-            marginTop: "2px",
             "&:hover": {
               backgroundColor: "transparent",
             },
@@ -147,7 +175,7 @@ const Topbar = () => {
             className="search_icon"
             sx={{
               fontSize: "26px",
-              marginLeft: "4px",
+              marginLeft: "6px",
               marginTop: "4px",
               color: BLACK_85P,
               "&:hover": {
@@ -156,7 +184,7 @@ const Topbar = () => {
             }}
           />
         </Box>
-      </>
+      </FlexBetBox>
     );
   };
 
@@ -165,7 +193,7 @@ const Topbar = () => {
       className="topbar"
       maxWidth="xl" // maxWidth="lg"
     >
-      <Logo isLarge={isLarge} theme={theme} />
+      <Logo isLarge={isLarge} />
       <Toolbar
         sx={{
           width: "100%",
@@ -268,27 +296,9 @@ const Topbar = () => {
         )}
         {/* RIGHT SIDE */}
         <FlexBetBox gap="6px" position="absolute" right="-2px">
-          <FlexBetBox
-            gap="4px"
-            p="2px 12px"
-            pr="4px"
-            width="200px"
-            height="30px"
-            marginRight="4px"
-            border="1.5px solid rgba(0, 0, 0, 0.85)"
-            sx={{
-              "&:hover": {
-                border: "1.5px solid rgba(15, 10, 222, 0.85)",
-                "& .MuiSvgIcon-root": {
-                  color: BLUE_85P,
-                },
-              },
-            }}
-          >
-            {renderSearchInput()}
-          </FlexBetBox>
+          {!isXSmall && renderSearchInput()}
           <Box
-            onClick={openLinkedIn}
+            onClick={openGithub}
             sx={{
               width: "34px",
               height: "34px",

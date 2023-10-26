@@ -14,7 +14,7 @@ const openSans = Open_Sans({
 
 export const metadata: Metadata = {
   title: 'UU+i',
-  description: 'Whoin Lee\'s portfolio site',
+  description: 'Studio Double W+i : Whoin Lee\'s portfolio site',
 }
 
 export default function RootLayout({
