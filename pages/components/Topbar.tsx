@@ -291,13 +291,13 @@ const Topbar = () => {
                     //   }
                 }}
                 >
-                  <MenuItem onClick={e => onSubmenuClick(e, 0)} selected={selectedSubIndex===0}>
+                  <MenuItem onClick={e => onSubmenuClick(e, 0)} disabled={selectedSubIndex === 0} selected={selectedSubIndex===0}>
                     <ListItemIcon>
                       <WebIcon fontSize="small" sx={{ color: "black" }} />
                     </ListItemIcon>
                     <ListItemText>Web</ListItemText>
                   </MenuItem>
-                  <MenuItem onClick={e => onSubmenuClick(e, 1)}  selected={selectedSubIndex===1}>
+                  <MenuItem onClick={e => onSubmenuClick(e, 1)} disabled={selectedSubIndex === 1} selected={selectedSubIndex===1}>
                     <ListItemIcon>
                       <DesktopMacIcon
                         fontSize="small"
@@ -306,7 +306,7 @@ const Topbar = () => {
                     </ListItemIcon>
                     <ListItemText>Desktop</ListItemText>
                   </MenuItem>
-                  <MenuItem onClick={e => onSubmenuClick(e, 2)}  selected={selectedSubIndex===2}>
+                  <MenuItem onClick={e => onSubmenuClick(e, 2)} disabled={selectedSubIndex === 2} selected={selectedSubIndex===2}>
                     <ListItemIcon>
                       <ConnectedTvIcon
                         fontSize="small"
@@ -315,13 +315,13 @@ const Topbar = () => {
                     </ListItemIcon>
                     <ListItemText>TV App</ListItemText>
                   </MenuItem>
-                  <MenuItem onClick={e => onSubmenuClick(e, 3)}  selected={selectedSubIndex===3}>
+                  <MenuItem onClick={e => onSubmenuClick(e, 3)} disabled={selectedSubIndex === 3} selected={selectedSubIndex===3}>
                     <ListItemIcon>
                       <TouchAppIcon fontSize="small" sx={{ color: "black" }} />
                     </ListItemIcon>
                     <ListItemText>Kiosk</ListItemText>
                   </MenuItem>
-                  <MenuItem onClick={e => onSubmenuClick(e, 4)}  selected={selectedSubIndex===4}>
+                  <MenuItem onClick={e => onSubmenuClick(e, 4)} disabled={selectedSubIndex === 4} selected={selectedSubIndex===4}>
                     <ListItemIcon>
                       <ExtensionIcon fontSize="small" sx={{ color: "black" }} />
                     </ListItemIcon>

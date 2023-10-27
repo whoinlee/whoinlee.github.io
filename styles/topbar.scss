@@ -18,18 +18,19 @@ $top-bar-height: 58px;
     padding-left: $padding-sm;
     padding-right: $padding-sm;
     border-bottom: 0.5px solid rgba(black, .15);
-    // color: #070812;
     // border-bottom: 0.5px solid rgba(black, 1);
 }
 
+//-- subMenu dropdown
 .MuiMenuItem-root {
-    // &:hover {
-    //     background-color: rgba(yellow, .75);
-    // }
     &.Mui-selected {
-        background-color: rgba(yellow, .75);
+        background-color: rgba(yellow, .6);
         &:hover {
-            background-color: rgba(yellow, .75);
+            background-color: rgba(yellow, .85);
         }
+    }
+
+    &.Mui-disabled {
+        opacity: 100%;
     }
   }
