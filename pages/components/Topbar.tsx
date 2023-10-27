@@ -246,7 +246,7 @@ const Topbar = () => {
               {/* Menu1: Works with subMenu*/}
               <>
                 <Box
-                  // className="topbar_menuItem"
+                //   className={`topbar_menuItem${open ? " open" : " close"}`}
                   // border="2px solid cyan"
                   onClick={showSubmenu}
                   //   onMouseEnter={showSubmenu}
@@ -261,9 +261,9 @@ const Topbar = () => {
                       "& .MuiTypography-body1": {
                         color: "black",
                       },
-                      "& .MuiSvgIcon-root": {
-                        transform: "rotate(180deg)",
-                      },
+                    //   "& .MuiSvgIcon-root": {
+                    //     transform: "rotate(180deg)",
+                    //   },
                     },
                   }}
                 >
@@ -276,58 +276,45 @@ const Topbar = () => {
                   >
                     Works
                   </Typography>
-                  <Box
-                    className="topbar_arrowDown"
-                    // border="1px solid red"
-                    // sx={{
-                    //     // transition: "transform ease 0.2s",
-                    //     transform: "rotate(0deg)",
-                    //     "&:hover": {
-                    //         transform: "rotate(180deg)",
-                    //     },
-                    //     }}
-                  >
+                  {/* <Box
+                  > */}
                     <ArrowDropDownIcon
                       sx={{
-                        marginTop: "6px",
                         marginLeft: "-10px",
                         color: BLACK_85P,
+                        transform: `${open ? "rotate(180deg)" : "rotate(0deg)"}`
                       }}
                     />
-                  </Box>
+                  {/* </Box> */}
                 </Box>
-                {/* import DesktopMacIcon from '@mui/icons-material/DesktopMac'; */}
-                {/* import ConnectedTvIcon from '@mui/icons-material/ConnectedTv'; */}
-                {/* import TouchAppIcon from '@mui/icons-material/TouchApp'; */}
-                {/* import ExtensionIcon from '@mui/icons-material/Extension'; */}
                 <Menu anchorEl={anchorEl} open={open} onClose={hideSubmenu}>
                   <MenuItem onClick={hideSubmenu}>
                     <ListItemIcon>
-                      <WebIcon fontSize="small" />
+                      <WebIcon fontSize="small" sx={{color:"black"}} />
                     </ListItemIcon>
                     <ListItemText>Web</ListItemText>
                   </MenuItem>
                   <MenuItem onClick={hideSubmenu}>
                     <ListItemIcon>
-                      <DesktopMacIcon fontSize="small" />
+                      <DesktopMacIcon fontSize="small" sx={{color:"black"}} />
                     </ListItemIcon>
                     <ListItemText>Desktop</ListItemText>
                   </MenuItem>
                   <MenuItem onClick={hideSubmenu}>
                     <ListItemIcon>
-                      <ConnectedTvIcon fontSize="small" />
+                      <ConnectedTvIcon fontSize="small" sx={{color:"black"}} />
                     </ListItemIcon>
                     <ListItemText>TV App</ListItemText>
                   </MenuItem>
                   <MenuItem onClick={hideSubmenu}>
                     <ListItemIcon>
-                      <TouchAppIcon fontSize="small" />
+                      <TouchAppIcon fontSize="small" sx={{color:"black"}} />
                     </ListItemIcon>
                     <ListItemText>Kiosk</ListItemText>
                   </MenuItem>
                   <MenuItem onClick={hideSubmenu}>
                     <ListItemIcon>
-                      <ExtensionIcon fontSize="small" />
+                      <ExtensionIcon fontSize="small" sx={{color:"black"}} />
                     </ListItemIcon>
                     <ListItemText>Plugin</ListItemText>
                   </MenuItem>
