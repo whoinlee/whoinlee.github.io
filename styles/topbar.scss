@@ -21,3 +21,15 @@ $top-bar-height: 58px;
     // color: #070812;
     // border-bottom: 0.5px solid rgba(black, 1);
 }
+
+.MuiMenuItem-root {
+    // &:hover {
+    //     background-color: rgba(yellow, .75);
+    // }
+    &.Mui-selected {
+        background-color: rgba(yellow, .75);
+        &:hover {
+            background-color: rgba(yellow, .75);
+        }
+    }
+  }

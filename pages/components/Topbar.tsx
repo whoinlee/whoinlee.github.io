@@ -26,30 +26,38 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import "../../styles/topbar.scss";
 
 const Topbar = () => {
-  /* xs: 0, sm: 600, md: 900, lg: 1200, xl: 1536 */
-  const isXSmall = !useMediaQuery("(min-width: 400px)");    //-- less than 400
-//   const isLT600 = !useMediaQuery("(min-width: 600px)");     //-- less than 600
-  const isLT620 = !useMediaQuery("(min-width: 620px)");     //-- less than 600
-//   const isLT700 = !useMediaQuery("(min-width: 700px)");     //-- less than or 700
-//   const isGTE700 = useMediaQuery("(min-width: 700px)");     //-- greter than or equal to 700
-//   const isNonSmall = useMediaQuery("(min-width: 800px)");   //-- greter than or equal to 800
-//   const isLarge = useMediaQuery("(min-width: 900px)");      //-- greater than or equal to 900
-  const isGTE800 = useMediaQuery("(min-width: 800px)");     //-- greter than or equal to 800
-  
-  const theme = useTheme();
+  //-- mediaQueries
+  /* MUI:: xs: 0, sm: 600, md: 900, lg: 1200, xl: 1536 */
+  const isLT400 = !useMediaQuery("(min-width: 400px)"); //-- less than 400
+  const isLT620 = !useMediaQuery("(min-width: 620px)"); //-- less than 600
+  const isGTE800 = useMediaQuery("(min-width: 800px)"); //-- greter than or equal to 800
 
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const open = Boolean(anchorEl);
-  const showSubmenu = (event: any) => {
-    setAnchorEl(event.currentTarget);
-  };
-  const hideSubmenu = () => {
-    setAnchorEl(null);
-  };
-
+  //-- colors
   const BLACK_85P = "rgba(0,0,0,.85)";
   const BLUE_75P = "rgba(15,10,222,.75)";
   const YELLOW_95P = "rgba(255,255,0,.95)";
+
+  //-- theme settings
+  const theme = useTheme();
+
+  //-- subMenu related
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [selectedSubIndex, setSelectedSubIndex] = React.useState(-1);
+  const open = Boolean(anchorEl);
+  const showSubmenu = (e: any) => {
+    setAnchorEl(e.currentTarget);
+    console.log("showSubmenu :: index? ", selectedSubIndex)
+  };
+  const hideSubmenu = () => {
+    setAnchorEl(null);
+    console.log("hideSubmenu :: index? ", selectedSubIndex)
+  };
+  const onSubmenuClick = (e:any, index:number) => {
+    hideSubmenu();
+    setSelectedSubIndex(index);
+    console.log("onSubmenuClick :: index? ", index)
+  };
+
   const Logo = () => {
     return (
       <FlexBetBox
@@ -73,7 +81,7 @@ const Topbar = () => {
           >
             <Typography
               fontWeight="700"
-              fontSize={`${isGTE800 ? "22px":"16px"}`}
+              fontSize={`${isGTE800 ? "22px" : "16px"}`}
               sx={{
                 cursor: "default",
                 paddingTop: "0px",
@@ -85,67 +93,61 @@ const Topbar = () => {
             </Typography>
           </Box>
         )}
-        {/* {!isXSmall && ( */}
-          <Tooltip
-            title=" i "
-            placement="bottom"
-            componentsProps={{
-              tooltip: {
-                sx: {
-                  bgcolor: "white",
-                  color: "black",
-                  boxShadow: theme.shadows[2],
-                  padding: "5px 15px",
-                  fontSize: "18px",
-                },
+        <Tooltip
+          title=" i "
+          placement="bottom"
+          componentsProps={{
+            tooltip: {
+              sx: {
+                bgcolor: "white",
+                color: "black",
+                boxShadow: theme.shadows[2],
+                padding: "5px 15px",
+                fontSize: "18px",
               },
+            },
+          }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              border: "none",
+              backgroundColor: BLACK_85P,
+              pl: `${isLT400 ? "7px" : "11px"}`,
+              pr: `${isLT400 ? "4px" : "7px"}`,
+              pt: `${isLT400 ? "8px" : "12px"}`,
+              pb: `${isLT400 ? "8px" : "12px"}`,
+              cursor: "pointer",
+              // "&:hover": {
+              //   "& .MuiBox-root": {
+              //     color: "yellow",
+              //   },
+              // },
             }}
           >
             <Box
               sx={{
-                display: "flex",
-                border: "none",
-                backgroundColor: BLACK_85P,
-                // pt: 1.45,
-                // pb: 1.45,
-                // pr: 0.65,
-                // pl: 1.35,
-                pl: `${isXSmall ? "7px" : "10px"}`,
-                pr: `${isXSmall ? "4px" : "6px"}`,
-                pt: `${isXSmall ? "8px" : "12px"}`,
-                pb: `${isXSmall ? "8px" : "12px"}`,
-                cursor: "pointer",
-                // "&:hover": {
-                //   "& .MuiBox-root": {
-                //     color: "yellow",
-                //   },
-                // },
+                display: "inline",
+                fontWeight: "bold",
+                //   fontSize: "24px",
+                fontSize: `${isLT400 ? "14px" : "24px"}`,
+                color: "#fefefe",
               }}
             >
-              <Box
-                sx={{
-                  display: "inline",
-                  fontWeight: "bold",
-                //   fontSize: "24px",
-                  fontSize: `${isXSmall ? "14px" : "24px"}`,
-                  color: "#fefefe",
-                }}
-              >
-                UU
-              </Box>
-              <Box
-                sx={{
-                  display: "inline",
-                  fontSize: `${isXSmall ? "8px" : "16px"}`,
-                  paddingTop: "4px",
-                //   paddingTop: `${isXSmall ? "4px" : "4px"}`,
-                  color: "#fefefe",
-                }}
-              >
-                +
-              </Box>
+              UU
             </Box>
-          </Tooltip>
+            <Box
+              sx={{
+                display: "inline",
+                fontSize: `${isLT400 ? "8px" : "16px"}`,
+                paddingTop: "4px",
+                color: "#fefefe",
+              }}
+            >
+              +
+            </Box>
+          </Box>
+        </Tooltip>
         {/* )} */}
       </FlexBetBox>
     );
@@ -163,11 +165,12 @@ const Topbar = () => {
         border="1.5px solid rgba(0, 0, 0, 0.75)"
         sx={{
           "&:hover": {
-            border: "1.5px solid rgba(15, 10, 222, 0.75)",
-            borderBottom: "2px solid rgba(15, 10, 222, 0.75)",
+            border: "1px solid rgba(0, 0, 0, 0.75)",
+            borderBottom: "1.5px solid black",
+            backgroundColor: YELLOW_95P,
             "& .MuiSvgIcon-root": {
-              color: BLUE_75P,
               marginTop: "4.5px",
+              marginRight: "0.5px",
             },
           },
         }}
@@ -190,9 +193,9 @@ const Topbar = () => {
               marginLeft: "6px",
               marginTop: "4px",
               color: BLACK_85P,
-              "&:hover": {
-                color: BLUE_75P,
-              },
+              //   "&:hover": {
+              //     color: BLUE_75P,
+              //   },
             }}
           />
         </Box>
@@ -222,10 +225,6 @@ const Topbar = () => {
 
   const openBlog = () => {
     window.open("http://www.whoin.net/", "_blank")?.focus();
-  };
-
-  const handleClose = () => {
-    console.log("handleClose");
   };
 
   return (
@@ -269,7 +268,7 @@ const Topbar = () => {
                 >
                   <Typography
                     fontWeight="400"
-                    fontSize={`${isGTE800 ? "20px":"18px"}`}
+                    fontSize={`${isGTE800 ? "20px" : "18px"}`}
                     padding="0px 12px"
                     color={BLACK_85P}
                     //   sx={{ textDecoration: "underline" }}
@@ -279,20 +278,26 @@ const Topbar = () => {
                   <ArrowDropDownIcon
                     sx={{
                       marginLeft: "-12px",
-                    //   border: "1px solid red",
+                      //   border: "1px solid red",
                       color: BLACK_85P,
                       transform: `${open ? "rotate(180deg)" : "rotate(0deg)"}`,
                     }}
                   />
                 </Box>
-                <Menu anchorEl={anchorEl} open={open} onClose={hideSubmenu}>
-                  <MenuItem onClick={hideSubmenu}>
+                <Menu anchorEl={anchorEl} open={open} onClose={hideSubmenu}
+                sx={{
+                    // &.MenuItem.Mui-selected {
+                    //     color: blue;
+                    //   }
+                }}
+                >
+                  <MenuItem onClick={e => onSubmenuClick(e, 0)} selected={selectedSubIndex===0}>
                     <ListItemIcon>
                       <WebIcon fontSize="small" sx={{ color: "black" }} />
                     </ListItemIcon>
                     <ListItemText>Web</ListItemText>
                   </MenuItem>
-                  <MenuItem onClick={hideSubmenu}>
+                  <MenuItem onClick={e => onSubmenuClick(e, 1)}  selected={selectedSubIndex===1}>
                     <ListItemIcon>
                       <DesktopMacIcon
                         fontSize="small"
@@ -301,7 +306,7 @@ const Topbar = () => {
                     </ListItemIcon>
                     <ListItemText>Desktop</ListItemText>
                   </MenuItem>
-                  <MenuItem onClick={hideSubmenu}>
+                  <MenuItem onClick={e => onSubmenuClick(e, 2)}  selected={selectedSubIndex===2}>
                     <ListItemIcon>
                       <ConnectedTvIcon
                         fontSize="small"
@@ -310,13 +315,13 @@ const Topbar = () => {
                     </ListItemIcon>
                     <ListItemText>TV App</ListItemText>
                   </MenuItem>
-                  <MenuItem onClick={hideSubmenu}>
+                  <MenuItem onClick={e => onSubmenuClick(e, 3)}  selected={selectedSubIndex===3}>
                     <ListItemIcon>
                       <TouchAppIcon fontSize="small" sx={{ color: "black" }} />
                     </ListItemIcon>
                     <ListItemText>Kiosk</ListItemText>
                   </MenuItem>
-                  <MenuItem onClick={hideSubmenu}>
+                  <MenuItem onClick={e => onSubmenuClick(e, 4)}  selected={selectedSubIndex===4}>
                     <ListItemIcon>
                       <ExtensionIcon fontSize="small" sx={{ color: "black" }} />
                     </ListItemIcon>
@@ -340,7 +345,7 @@ const Topbar = () => {
               >
                 <Typography
                   fontWeight="500"
-                  fontSize={`${isGTE800 ? "20px":"18px"}`}
+                  fontSize={`${isGTE800 ? "20px" : "18px"}`}
                   padding="0px 12px"
                   letterSpacing="0.075px"
                   color={BLACK_85P}
@@ -364,7 +369,7 @@ const Topbar = () => {
               >
                 <Typography
                   fontWeight="500"
-                  fontSize={`${isGTE800 ? "20px":"18px"}`}
+                  fontSize={`${isGTE800 ? "20px" : "18px"}`}
                   padding="0px 12px"
                   color={BLACK_85P}
                 >
@@ -379,9 +384,9 @@ const Topbar = () => {
               sx={{
                 display: "flex",
                 alignItems: "center",
-                height: `${isXSmall ? "37px" : "60px"}`,
+                height: `${isLT400 ? "37px" : "60px"}`,
                 border: 2,
-                padding: `${isXSmall ? "0px 2.5px" : "0px 12px"}`,
+                padding: `${isLT400 ? "0px 2.5px" : "0px 12px"}`,
                 cursor: "pointer",
                 "&:hover": {
                   backgroundColor: "yellow",
@@ -390,12 +395,11 @@ const Topbar = () => {
             >
               <MenuIcon
                 sx={{
-                  fontSize: `${isXSmall ? "30px" : "34px"}`,
+                  fontSize: `${isLT400 ? "30px" : "34px"}`,
                   color: BLACK_85P,
                 }}
               />
             </Box>
-
           )}
         </FlexBetBox>
         {/* RIGHT SIDE */}
