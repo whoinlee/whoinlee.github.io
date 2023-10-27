@@ -4,16 +4,25 @@ import {
   Box,
   Container,
   InputBase,
+  ListItemIcon,
+  ListItemText,
+  Menu,
+  MenuItem,
   Tooltip,
   Typography,
   useTheme,
   useMediaQuery,
 } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
+import WebIcon from "@mui/icons-material/Web";
+import DesktopMacIcon from "@mui/icons-material/DesktopMac";
+import ConnectedTvIcon from "@mui/icons-material/ConnectedTv";
+import TouchAppIcon from "@mui/icons-material/TouchApp";
+import ExtensionIcon from "@mui/icons-material/Extension";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import SearchIcon from "@mui/icons-material/Search";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import MenuIcon from "@mui/icons-material/Menu";
 import "../../styles/topbar.scss";
 
 const Topbar = () => {
@@ -21,6 +30,17 @@ const Topbar = () => {
   const isXSmall = !useMediaQuery("(min-width: 400px)");
   const isLarge = useMediaQuery("(min-width: 800px)");
   const theme = useTheme();
+
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const showSubmenu = (event: any) => {
+    setAnchorEl(event.currentTarget);
+    // console.log("show")
+  };
+  const hideSubmenu = () => {
+    setAnchorEl(null);
+    // console.log("hide")
+  };
 
   const BLACK_85P = "rgba(0,0,0,.85)";
   const BLUE_85P = "rgba(15,10,222,.85)";
@@ -67,7 +87,7 @@ const Topbar = () => {
             componentsProps={{
               tooltip: {
                 sx: {
-                //   bgcolor: "white",
+                  //   bgcolor: "white",
                   bgcolor: "yellow",
                   color: "black",
                   boxShadow: theme.shadows[2],
@@ -190,12 +210,20 @@ const Topbar = () => {
     console.log("openMenu");
   };
 
-  const openSubmenu = () => {
-    console.log("openSubmenu");
-  };
+  //   const openSubmenu = () => {
+  //     console.log("openSubmenu");
+  //   };
+
+  //   const closeSubmenu = () => {
+  //     console.log("closeSubmenu");
+  //   };
 
   const openBlog = () => {
     window.open("http://www.whoin.net/", "_blank")?.focus();
+  };
+
+  const handleClose = () => {
+    console.log("handleClose");
   };
 
   return (
@@ -215,51 +243,97 @@ const Topbar = () => {
               paddingLeft="12px"
               // border="2px solid magenta"
             >
-              <FlexBetBox
-                // className="topbar_menuItem"
-                // border="2px solid cyan"
-                sx={{
-                  cursor: "pointer",
-                  "&:hover": {
-                    backgroundColor: "yellow",
-                    "& .MuiTypography-body1": {
-                      color: "black",
-                    },
-                    "& .MuiSvgIcon-root": {
-                        transform: "rotate(180deg)"
-                      },
-                  },
-                }}
-              >
-                <Typography
-                  fontWeight="400"
-                  fontSize="20px"
-                  padding="2px 12px"
-                  color={BLACK_85P}
-                  //   sx={{ textDecoration: "underline" }}
-                >
-                  Works
-                </Typography>
+              {/* Menu1: Works with subMenu*/}
+              <>
                 <Box
-                className="topbar_arrowDown"
-                // border="1px solid red"
-                // sx={{
-                //     // transition: "transform ease 0.2s",
-                //     transform: "rotate(0deg)",
-                //     "&:hover": {
-                //         transform: "rotate(180deg)",
-                //     },
-                //     }}
-                >
-                <ArrowDropDownIcon
+                  // className="topbar_menuItem"
+                  // border="2px solid cyan"
+                  onClick={showSubmenu}
+                  //   onMouseEnter={showSubmenu}
+                  //   onMouseLeave={hideSubmenu}
                   sx={{
-                    marginTop: "6px",
-                    marginLeft: "-10px",
-                    color: BLACK_85P,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "flex-start",
+                    cursor: "pointer",
+                    "&:hover": {
+                      backgroundColor: "yellow",
+                      "& .MuiTypography-body1": {
+                        color: "black",
+                      },
+                      "& .MuiSvgIcon-root": {
+                        transform: "rotate(180deg)",
+                      },
+                    },
                   }}
-                />
+                >
+                  <Typography
+                    fontWeight="400"
+                    fontSize="20px"
+                    padding="2px 12px"
+                    color={BLACK_85P}
+                    //   sx={{ textDecoration: "underline" }}
+                  >
+                    Works
+                  </Typography>
+                  <Box
+                    className="topbar_arrowDown"
+                    // border="1px solid red"
+                    // sx={{
+                    //     // transition: "transform ease 0.2s",
+                    //     transform: "rotate(0deg)",
+                    //     "&:hover": {
+                    //         transform: "rotate(180deg)",
+                    //     },
+                    //     }}
+                  >
+                    <ArrowDropDownIcon
+                      sx={{
+                        marginTop: "6px",
+                        marginLeft: "-10px",
+                        color: BLACK_85P,
+                      }}
+                    />
+                  </Box>
                 </Box>
-              </FlexBetBox>
+                {/* import DesktopMacIcon from '@mui/icons-material/DesktopMac'; */}
+                {/* import ConnectedTvIcon from '@mui/icons-material/ConnectedTv'; */}
+                {/* import TouchAppIcon from '@mui/icons-material/TouchApp'; */}
+                {/* import ExtensionIcon from '@mui/icons-material/Extension'; */}
+                <Menu anchorEl={anchorEl} open={open} onClose={hideSubmenu}>
+                  <MenuItem onClick={hideSubmenu}>
+                    <ListItemIcon>
+                      <WebIcon fontSize="small" />
+                    </ListItemIcon>
+                    <ListItemText>Web</ListItemText>
+                  </MenuItem>
+                  <MenuItem onClick={hideSubmenu}>
+                    <ListItemIcon>
+                      <DesktopMacIcon fontSize="small" />
+                    </ListItemIcon>
+                    <ListItemText>Desktop</ListItemText>
+                  </MenuItem>
+                  <MenuItem onClick={hideSubmenu}>
+                    <ListItemIcon>
+                      <ConnectedTvIcon fontSize="small" />
+                    </ListItemIcon>
+                    <ListItemText>TV App</ListItemText>
+                  </MenuItem>
+                  <MenuItem onClick={hideSubmenu}>
+                    <ListItemIcon>
+                      <TouchAppIcon fontSize="small" />
+                    </ListItemIcon>
+                    <ListItemText>Kiosk</ListItemText>
+                  </MenuItem>
+                  <MenuItem onClick={hideSubmenu}>
+                    <ListItemIcon>
+                      <ExtensionIcon fontSize="small" />
+                    </ListItemIcon>
+                    <ListItemText>Plugin</ListItemText>
+                  </MenuItem>
+                </Menu>
+                {/* Menu2: Data Viz & */}
+              </>
               <Box
                 // border="2px solid cyan"
                 onClick={openBlog}
@@ -284,6 +358,7 @@ const Topbar = () => {
                   Data Viz & Misc
                 </Typography>
               </Box>
+              {/* Menu3: About */}
               <Box
                 //   border="2px solid cyan"
                 // className="topbar_menuItem"
