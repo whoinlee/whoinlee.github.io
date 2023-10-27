@@ -110,7 +110,7 @@ const Topbar = () => {
                 // pb: 1.45,
                 // pr: 0.65,
                 // pl: 1.35,
-                pl: `${isXSmall ? "8px" : "10px"}`,
+                pl: `${isXSmall ? "7px" : "10px"}`,
                 pr: `${isXSmall ? "4px" : "6px"}`,
                 pt: `${isXSmall ? "8px" : "12px"}`,
                 pb: `${isXSmall ? "8px" : "12px"}`,
