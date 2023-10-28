@@ -24,13 +24,11 @@ $top-bar-height: 58px;
 //-- subMenu dropdown
 .MuiMenuItem-root {
     &.Mui-selected {
-        background-color: rgba(yellow, .6);
-        &:hover {
-            background-color: rgba(yellow, .85);
-        }
+        // background-color: rgba(yellow, .65);
+        background-color: rgba(grey, .25);
     }
 
     &.Mui-disabled {
         opacity: 100%;
     }
-  }
+}

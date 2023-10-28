@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import FlexBetBox from "./FlexBetBox";
 import {
   Box,
@@ -23,9 +23,12 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import SearchIcon from "@mui/icons-material/Search";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { SiteContext } from "../contexts/SiteState";
 import "../../styles/topbar.scss";
 
 const Topbar = () => {
+  const { selectedPage, setSelectedPage } = useContext(SiteContext);
+
   //-- mediaQueries
   /* MUI:: xs: 0, sm: 600, md: 900, lg: 1200, xl: 1536 */
   const isLT400 = !useMediaQuery("(min-width: 400px)"); //-- less than 400
@@ -35,7 +38,8 @@ const Topbar = () => {
   //-- colors
   const BLACK_85P = "rgba(0,0,0,.85)";
   const BLUE_75P = "rgba(15,10,222,.75)";
-  const YELLOW_95P = "rgba(255,255,0,.95)";
+  const YELLOW_75P = "rgba(255,255,0,.75)";
+  // const YELLOW_LIGHT = "rgba(255,255,0,.5)";
 
   //-- theme settings
   const theme = useTheme();
@@ -45,19 +49,49 @@ const Topbar = () => {
   const [selectedSubIndex, setSelectedSubIndex] = React.useState(-1);
   const open = Boolean(anchorEl);
   const showSubmenu = (e: any) => {
+    if (anchorEl !== e.currentTarget)
     setAnchorEl(e.currentTarget);
-    console.log("showSubmenu :: index? ", selectedSubIndex)
+    console.log("showSubmenu :: index? ", selectedSubIndex);
   };
   const hideSubmenu = () => {
     setAnchorEl(null);
-    console.log("hideSubmenu :: index? ", selectedSubIndex)
+    console.log("hideSubmenu :: index? ", selectedSubIndex);
   };
-  const onSubmenuClick = (e:any, index:number) => {
+  const onSubmenuClick = (e: any, index: number) => {
     hideSubmenu();
     setSelectedSubIndex(index);
-    console.log("onSubmenuClick :: index? ", index)
+    console.log("onSubmenuClick :: index? ", index);
   };
 
+  const MenuTooltip = ({
+    children,
+    title,
+  }: {
+    children: React.ReactElement;
+    title: string;
+  }) => {
+    return (
+      <Tooltip
+        title={title}
+        placement="bottom"
+        // followCursor
+        componentsProps={{
+          tooltip: {
+            sx: {
+              bgcolor: "white",
+              color: "black",
+              boxShadow: theme.shadows[2],
+              padding: "5px 15px",
+              fontSize: "15px",
+              // maxWidth: "200px",
+            },
+          },
+        }}
+      >
+        {children}
+      </Tooltip>
+    );
+  };
   const Logo = () => {
     return (
       <FlexBetBox
@@ -66,48 +100,39 @@ const Topbar = () => {
         //   border="2px solid red"
       >
         {isGTE800 && (
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              height: "60px",
-              border: 2,
-              borderColor: BLACK_85P,
-              paddingLeft: "8px",
-              paddingRight: "8px",
-              paddingBottom: "0px",
-              margitnRight: "0px",
-            }}
-          >
-            <Typography
-              fontWeight="700"
-              fontSize={`${isGTE800 ? "22px" : "16px"}`}
+          // <MenuTooltip title="home">
+            <Box
               sx={{
-                cursor: "default",
-                paddingTop: "0px",
-                color: BLACK_85P,
+                display: "flex",
                 alignItems: "center",
+                height: "60px",
+                border: 2,
+                borderColor: BLACK_85P,
+                paddingLeft: "8px",
+                paddingRight: "8px",
+                paddingBottom: "0px",
+                margitnRight: "0px",
+                cursor: "pointer",
+                "&:hover": {
+                  background: YELLOW_75P,
+                },
               }}
             >
-              STUDIO
-            </Typography>
-          </Box>
+              <Typography
+                fontWeight="700"
+                fontSize={`${isGTE800 ? "22px" : "16px"}`}
+                sx={{
+                  paddingTop: "0px",
+                  color: BLACK_85P,
+                  alignItems: "center",
+                }}
+              >
+                STUDIO
+              </Typography>
+            </Box>
+          // </MenuTooltip>
         )}
-        <Tooltip
-          title=" i "
-          placement="bottom"
-          componentsProps={{
-            tooltip: {
-              sx: {
-                bgcolor: "white",
-                color: "black",
-                boxShadow: theme.shadows[2],
-                padding: "5px 15px",
-                fontSize: "18px",
-              },
-            },
-          }}
-        >
+        <MenuTooltip title="i">
           <Box
             sx={{
               display: "flex",
@@ -118,11 +143,11 @@ const Topbar = () => {
               pt: `${isLT400 ? "8px" : "12px"}`,
               pb: `${isLT400 ? "8px" : "12px"}`,
               cursor: "pointer",
-              // "&:hover": {
-              //   "& .MuiBox-root": {
-              //     color: "yellow",
-              //   },
-              // },
+              "&:hover": {
+                "& .MuiBox-root": {
+                  color: "yellow",
+                },
+              },
             }}
           >
             <Box
@@ -147,8 +172,7 @@ const Topbar = () => {
               +
             </Box>
           </Box>
-        </Tooltip>
-        {/* )} */}
+        </MenuTooltip>
       </FlexBetBox>
     );
   };
@@ -167,7 +191,8 @@ const Topbar = () => {
           "&:hover": {
             border: "1px solid rgba(0, 0, 0, 0.75)",
             borderBottom: "1.5px solid black",
-            backgroundColor: YELLOW_95P,
+            // backgroundColor: YELLOW_75P,
+            backgroundColor: "rgba(150, 150, 150, .075)", //grey
             "& .MuiSvgIcon-root": {
               marginTop: "4.5px",
               marginRight: "0.5px",
@@ -193,9 +218,6 @@ const Topbar = () => {
               marginLeft: "6px",
               marginTop: "4px",
               color: BLACK_85P,
-              //   "&:hover": {
-              //     color: BLUE_75P,
-              //   },
             }}
           />
         </Box>
@@ -228,7 +250,8 @@ const Topbar = () => {
   };
 
   return (
-    <Container className="topbar" maxWidth="lg">
+    // <Container className="topbar" maxWidth="lg">
+    <div className="topbar">
       <FlexBetBox
         width="100%"
         //   border="2px solid pink"
@@ -240,64 +263,84 @@ const Topbar = () => {
           <Logo />
           {/* MENU */}
           {!isLT620 ? (
-            <FlexBetBox
-              paddingLeft="12px"
-              // border="2px solid magenta"
-            >
+            <FlexBetBox paddingLeft="12px">
               {/* Menu1: Works with subMenu*/}
-              <>
-                <Box
-                  // border="2px solid cyan"
-                  onClick={showSubmenu}
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "flex-start",
-                    cursor: "pointer",
-                    paddingRight: "4px",
-                    "&:hover": {
-                      backgroundColor: YELLOW_95P,
-                      "& .MuiTypography-body1": {
-                        color: "black",
-                      },
-                      //   "& .MuiSvgIcon-root": {
-                      //     transform: "rotate(180deg)",
-                      //   },
-                    },
-                  }}
-                >
-                  <Typography
-                    fontWeight="400"
-                    fontSize={`${isGTE800 ? "20px" : "18px"}`}
-                    padding="0px 12px"
-                    color={BLACK_85P}
-                    //   sx={{ textDecoration: "underline" }}
-                  >
-                    Works
-                  </Typography>
-                  <ArrowDropDownIcon
+              {/* <div onMouseEnter={showSubmenu} onMouseLeave={hideSubmenu}> */}
+                
+                  <Box
+                    // onMouseEnter={showSubmenu}
+                    // onMouseLeave={hideSubmenu}
+                    onClick={showSubmenu}
+                    /*
                     sx={{
-                      marginLeft: "-12px",
-                      //   border: "1px solid red",
-                      color: BLACK_85P,
-                      transform: `${open ? "rotate(180deg)" : "rotate(0deg)"}`,
+                        marginLeft: "-12px",
+                        color: BLACK_85P,
+                        transform: `${
+                          open ? "rotate(180deg)" : "rotate(0deg)"
+                        }`,
+                      }}
+                    */
+                    sx={{
+                      backgroundColor: `${open? "rgba(255,255,0,.75)":"transparent"}`,
+                      // border: "1px solid red",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "flex-start",
+                      cursor: "pointer",
+                      paddingRight: "4px",
+                      "&:hover": {
+                        backgroundColor: YELLOW_75P,
+                        "& .MuiTypography-body1": {
+                          color: "black",
+                        },
+                      },
                     }}
-                  />
-                </Box>
-                <Menu anchorEl={anchorEl} open={open} onClose={hideSubmenu}
-                sx={{
-                    // &.MenuItem.Mui-selected {
-                    //     color: blue;
-                    //   }
-                }}
+                  >
+                    <Typography
+                      fontWeight="400"
+                      fontSize={`${isGTE800 ? "19px" : "17px"}`}
+                      padding="0px 12px"
+                      color={BLACK_85P}
+
+                      //   sx={{ textDecoration: "underline" }}
+                    >
+                      Works
+                    </Typography>
+                    <ArrowDropDownIcon
+                      sx={{
+                        marginLeft: "-12px",
+                        color: BLACK_85P,
+                        transform: `${
+                          open ? "rotate(180deg)" : "rotate(0deg)"
+                        }`,
+                      }}
+                    />
+                  </Box>
+                <Menu
+                  anchorEl={anchorEl}
+                  open={open}
+                  onClose={hideSubmenu}
+                  // anchorOrigin={{
+                  //   vertical: 0,
+                  //   horizontal: 'left',
+                  // }}
+                  MenuListProps={{ onMouseLeave: hideSubmenu }}
                 >
-                  <MenuItem onClick={e => onSubmenuClick(e, 0)} disabled={selectedSubIndex === 0} selected={selectedSubIndex===0}>
+                  <MenuItem
+                    onClick={(e) => onSubmenuClick(e, 0)}
+                    disabled={selectedSubIndex === 0}
+                    selected={selectedSubIndex === 0}
+                  >
                     <ListItemIcon>
                       <WebIcon fontSize="small" sx={{ color: "black" }} />
                     </ListItemIcon>
                     <ListItemText>Web</ListItemText>
                   </MenuItem>
-                  <MenuItem onClick={e => onSubmenuClick(e, 1)} disabled={selectedSubIndex === 1} selected={selectedSubIndex===1}>
+                  <MenuItem
+                    onClick={(e) => onSubmenuClick(e, 1)}
+                    disabled={selectedSubIndex === 1}
+                    selected={selectedSubIndex === 1}
+                  >
                     <ListItemIcon>
                       <DesktopMacIcon
                         fontSize="small"
@@ -306,7 +349,11 @@ const Topbar = () => {
                     </ListItemIcon>
                     <ListItemText>Desktop</ListItemText>
                   </MenuItem>
-                  <MenuItem onClick={e => onSubmenuClick(e, 2)} disabled={selectedSubIndex === 2} selected={selectedSubIndex===2}>
+                  <MenuItem
+                    onClick={(e) => onSubmenuClick(e, 2)}
+                    disabled={selectedSubIndex === 2}
+                    selected={selectedSubIndex === 2}
+                  >
                     <ListItemIcon>
                       <ConnectedTvIcon
                         fontSize="small"
@@ -315,52 +362,62 @@ const Topbar = () => {
                     </ListItemIcon>
                     <ListItemText>TV App</ListItemText>
                   </MenuItem>
-                  <MenuItem onClick={e => onSubmenuClick(e, 3)} disabled={selectedSubIndex === 3} selected={selectedSubIndex===3}>
+                  <MenuItem
+                    onClick={(e) => onSubmenuClick(e, 3)}
+                    disabled={selectedSubIndex === 3}
+                    selected={selectedSubIndex === 3}
+                  >
                     <ListItemIcon>
                       <TouchAppIcon fontSize="small" sx={{ color: "black" }} />
                     </ListItemIcon>
                     <ListItemText>Kiosk</ListItemText>
                   </MenuItem>
-                  <MenuItem onClick={e => onSubmenuClick(e, 4)} disabled={selectedSubIndex === 4} selected={selectedSubIndex===4}>
+                  <MenuItem
+                    onClick={(e) => onSubmenuClick(e, 4)}
+                    disabled={selectedSubIndex === 4}
+                    selected={selectedSubIndex === 4}
+                  >
                     <ListItemIcon>
                       <ExtensionIcon fontSize="small" sx={{ color: "black" }} />
                     </ListItemIcon>
                     <ListItemText>Plugin</ListItemText>
                   </MenuItem>
                 </Menu>
-                {/* Menu2: Data Viz & */}
-              </>
-              <Box
-                // border="2px solid cyan"
-                onClick={openBlog}
-                sx={{
-                  cursor: "pointer",
-                  "&:hover": {
-                    backgroundColor: YELLOW_95P,
-                    "& .MuiTypography-body1": {
-                      color: "black",
+              {/* </div> */}
+              {/* Menu2: Data Viz & */}
+              {/* <MenuTooltip title="data viz & personal works"> */}
+                <Box
+                  // border="2px solid cyan"
+                  onClick={openBlog}
+                  sx={{
+                    cursor: "pointer",
+                    "&:hover": {
+                      backgroundColor: YELLOW_75P,
+                      "& .MuiTypography-body1": {
+                        color: "black",
+                      },
                     },
-                  },
-                }}
-              >
-                <Typography
-                  fontWeight="500"
-                  fontSize={`${isGTE800 ? "20px" : "18px"}`}
-                  padding="0px 12px"
-                  letterSpacing="0.075px"
-                  color={BLACK_85P}
+                  }}
                 >
-                  {`Data Viz &${isGTE800 ? " Misc" : ""}`}
-                </Typography>
-              </Box>
+                  <Typography
+                    fontWeight="500"
+                    fontSize={`${isGTE800 ? "19px" : "17px"}`}
+                    padding="0px 12px"
+                    letterSpacing="0.075px"
+                    color={BLACK_85P}
+                  >
+                    {`Data Viz &${isGTE800 ? " Misc" : ""}`}
+                  </Typography>
+                </Box>
+              {/* </MenuTooltip> */}
               {/* Menu3: About */}
-              <Box
+              {/* <Box
                 //   border="2px solid cyan"
                 // className="topbar_menuItem"
                 sx={{
                   cursor: "pointer",
                   "&:hover": {
-                    backgroundColor: YELLOW_95P,
+                    backgroundColor: YELLOW_75P,
                     "& .MuiTypography-body1": {
                       color: "black",
                     },
@@ -369,13 +426,13 @@ const Topbar = () => {
               >
                 <Typography
                   fontWeight="500"
-                  fontSize={`${isGTE800 ? "20px" : "18px"}`}
+                  fontSize={`${isGTE800 ? "19px" : "17px"}`}
                   padding="0px 12px"
                   color={BLACK_85P}
                 >
                   About
                 </Typography>
-              </Box>
+              </Box> */}
             </FlexBetBox>
           ) : (
             //-- hamburger menu
@@ -389,7 +446,7 @@ const Topbar = () => {
                 padding: `${isLT400 ? "0px 2.5px" : "0px 12px"}`,
                 cursor: "pointer",
                 "&:hover": {
-                  backgroundColor: "yellow",
+                  backgroundColor: "#FFFF33",
                 },
               }}
             >
@@ -455,7 +512,8 @@ const Topbar = () => {
           </Box>
         </FlexBetBox>
       </FlexBetBox>
-    </Container>
+      {/* </Container> */}
+    </div>
   );
 };
 
