@@ -32,8 +32,8 @@ const Topbar = () => {
   //-- mediaQueries
   /* MUI:: xs: 0, sm: 600, md: 900, lg: 1200, xl: 1536 */
   const isLT400 = !useMediaQuery("(min-width: 400px)"); //-- less than 400
-  const isLT620 = !useMediaQuery("(min-width: 620px)"); //-- less than 600
-  const isGTE800 = useMediaQuery("(min-width: 800px)"); //-- greter than or equal to 800
+  const isLT600 = !useMediaQuery("(min-width: 600px)"); //-- less than 600
+  const isGTE750 = useMediaQuery("(min-width: 750px)"); //-- greter than or equal to 750
 
   //-- colors
   const BLACK_85P = "rgba(0,0,0,.85)";
@@ -74,6 +74,7 @@ const Topbar = () => {
       <Tooltip
         title={title}
         placement="bottom"
+        // placement="right-start"
         // followCursor
         componentsProps={{
           tooltip: {
@@ -99,8 +100,8 @@ const Topbar = () => {
         height="59px"
         //   border="2px solid red"
       >
-        {isGTE800 && (
-          // <MenuTooltip title="home">
+        {isGTE750 && (
+          <MenuTooltip title="home">
             <Box
               sx={{
                 display: "flex",
@@ -120,7 +121,7 @@ const Topbar = () => {
             >
               <Typography
                 fontWeight="700"
-                fontSize={`${isGTE800 ? "22px" : "16px"}`}
+                fontSize={`${isGTE750 ? "22px" : "16px"}`}
                 sx={{
                   paddingTop: "0px",
                   color: BLACK_85P,
@@ -130,7 +131,7 @@ const Topbar = () => {
                 STUDIO
               </Typography>
             </Box>
-          // </MenuTooltip>
+          </MenuTooltip>
         )}
         <MenuTooltip title="i">
           <Box
@@ -262,7 +263,7 @@ const Topbar = () => {
         >
           <Logo />
           {/* MENU */}
-          {!isLT620 ? (
+          {!isLT600 ? (
             <FlexBetBox paddingLeft="12px">
               {/* Menu1: Works with subMenu*/}
               {/* <div onMouseEnter={showSubmenu} onMouseLeave={hideSubmenu}> */}
@@ -298,7 +299,7 @@ const Topbar = () => {
                   >
                     <Typography
                       fontWeight="400"
-                      fontSize={`${isGTE800 ? "19px" : "17px"}`}
+                      fontSize={`${isGTE750 ? "19px" : "17px"}`}
                       padding="0px 12px"
                       color={BLACK_85P}
 
@@ -401,12 +402,12 @@ const Topbar = () => {
                 >
                   <Typography
                     fontWeight="500"
-                    fontSize={`${isGTE800 ? "19px" : "17px"}`}
+                    fontSize={`${isGTE750 ? "19px" : "17px"}`}
                     padding="0px 12px"
                     letterSpacing="0.075px"
                     color={BLACK_85P}
                   >
-                    {`Data Viz &${isGTE800 ? " Misc" : ""}`}
+                    {`Data Viz &${isGTE750 ? " Misc" : ""}`}
                   </Typography>
                 </Box>
               {/* </MenuTooltip> */}
@@ -426,7 +427,7 @@ const Topbar = () => {
               >
                 <Typography
                   fontWeight="500"
-                  fontSize={`${isGTE800 ? "19px" : "17px"}`}
+                  fontSize={`${isGTE750 ? "19px" : "17px"}`}
                   padding="0px 12px"
                   color={BLACK_85P}
                 >
