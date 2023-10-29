@@ -71,6 +71,7 @@ export const themeSettings = {
   },
   typography: {
     fontSize: 12,
+    fontFamily: FONT_FAMILY,
     h1: {
       fontFamily: FONT_FAMILY,
       fontSize: 40,
@@ -89,7 +90,7 @@ export const themeSettings = {
     },
     h5: {
       fontFamily: FONT_FAMILY,
-      fontSize: 16,
+      fontSize: 18,
     },
     h6: {
       fontFamily: FONT_FAMILY,
@@ -97,6 +98,7 @@ export const themeSettings = {
     },
   },
 };
+
 /*
 .palette
 .typography

@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
-import { Inter, Open_Sans } from 'next/font/google';
-import '../styles/layout.scss';
+import 'normalize.css/normalize.css';
+import './styles/global.scss';
 
+import { Inter, Open_Sans } from 'next/font/google';
 //-- fonts
 const inter = Inter({ 
   subsets: ['latin'],
@@ -14,7 +15,7 @@ const openSans = Open_Sans({
 
 export const metadata: Metadata = {
   title: 'UU+i',
-  description: 'Studio Double W+i : Whoin Lee\'s portfolio site',
+  description: 'Studio W+i by Whoin Lee',
 }
 
 export default function RootLayout({
