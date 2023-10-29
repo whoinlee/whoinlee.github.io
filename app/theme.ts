@@ -74,7 +74,7 @@ export const themeSettings = {
     fontFamily: FONT_FAMILY,
     h1: {
       fontFamily: FONT_FAMILY,
-      fontSize: 40,
+      fontSize: 48,
     },
     h2: {
       fontFamily: FONT_FAMILY,

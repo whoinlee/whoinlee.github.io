@@ -1,0 +1,27 @@
+@import "config";
+
+.app {
+  .topbar {
+    z-index: 100; //-- to the top
+    // border: 1px solid red;
+  }
+
+  .pageHolder {
+    position: absolute;
+    top: 100px;
+    // z-index: 50;
+    height: calc(100% - 100px);
+
+    padding-left: $padding-sm;
+    padding-right: $padding-sm;
+    width: calc(100% - $padding-md * 2);
+    max-width: calc($min-width-lg - $padding-md * 2);
+    
+    .headline {
+      display: flex;
+      justify-content: flex-start;
+      align-items: baseline;
+    //   color: rgba(black, .85);
+    }
+  }
+}

@@ -13,6 +13,10 @@ $BLUE_75P: "rgba(15,10,222,.75)";
 $YELLOW_75P: "rgba(255,255,0,.75)";
 
 .topbar {
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  background-color: "transparent";
   width: 100%;
   height: $top-bar-height;
   display: flex;
@@ -23,15 +27,17 @@ $YELLOW_75P: "rgba(255,255,0,.75)";
   padding-left: $padding-sm;
   padding-right: $padding-sm;
   border-bottom: 0.5px solid rgba(black, 0.15);
+  //   border: 1px solid green;
+
 }
 
-  //-- Works subMenu dropdown
-  .MuiMenuItem-root {
-    &.Mui-selected {
-      background-color: rgba(grey, 0.25);
-    }
-
-    &.Mui-disabled {
-      opacity: 100%;
-    }
+//-- Works subMenu dropdown
+.MuiMenuItem-root {
+  &.Mui-selected {
+    background-color: rgba(grey, 0.25);
   }
+
+  &.Mui-disabled {
+    opacity: 100%;
+  }
+}

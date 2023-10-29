@@ -38,9 +38,9 @@ const Topbar = () => {
 
   //-- mediaQueries
   /* MUI:: xs: 0, sm: 600, md: 900, lg: 1200, xl: 1536 */
-  const isLT400 = !useMediaQuery("(min-width: 400px)"); //-- less than 400
-  const isLT600 = !useMediaQuery("(min-width: 600px)"); //-- less than 600
-  const isGTE750 = useMediaQuery("(min-width: 750px)"); //-- greter than or equal to 750
+  const isLT400 = !useMediaQuery("(min-width: 425px)"); //-- less than 400
+  const isLT600 = !useMediaQuery("(min-width: 625px)"); //-- less than 600
+  const isGTE700 = useMediaQuery("(min-width: 700px)"); //-- greter than or equal to 700
 
   //-- theme settings
   const theme = useTheme();
@@ -70,7 +70,7 @@ const Topbar = () => {
   };
   const resetSelectedSubIndex = () => {
     if (selectedSubIndex !== -1) setSelectedSubIndex(-1);
-  }
+  };
 
   const MenuTooltip = ({
     children,
@@ -103,24 +103,22 @@ const Topbar = () => {
     );
   };
 
-  const onHomeLogoClick = (e:any) => {
+  const onHomeLogoClick = (e: any) => {
     if (selectedPage !== "home") setSelectedPage("home");
     resetSelectedSubIndex();
-  }
+  };
 
-  const onAboutLogoClick = (e:any) => {
+  const onAboutClick = (e: any) => {
     if (selectedPage !== "about") setSelectedPage("about");
     resetSelectedSubIndex();
-  }
+  };
 
   const Logo = () => {
-    return (
-      <FlexBetBox gap="0px" height="59px">
-        {/* STUDIO */}
-        {isGTE750 && (
-          // <MenuTooltip title="home">
+    const StudioLogo = () => {
+      return (
+        <MenuTooltip title="home">
           <Box
-            onClick={onHomeLogoClick}
+            // onClick={onHomeLogoClick}
             sx={{
               display: "flex",
               alignItems: "center",
@@ -131,19 +129,22 @@ const Topbar = () => {
               pr: "8px",
               pb: "0px",
               mr: "0px",
+              background: `${
+                selectedPage === "home" ? YELLOW_75P : "transparent"
+              }`,
               // cursor: `${selectedPage === "home" ? "default" : "pointer"}`,
               cursor: "pointer",
               "&:hover": {
                 // background: `${
                 //   selectedPage === "home" ? "transparent" : YELLOW_75P
                 // }`,
-                background: YELLOW_75P
+                background: YELLOW_75P,
               },
             }}
           >
             <Typography
               fontWeight="700"
-              fontSize={`${isGTE750 ? "22px" : "16px"}`}
+              fontSize={`${isGTE700 ? "22px" : "16px"}`}
               sx={{
                 paddingTop: "0px",
                 color: BLACK_85P,
@@ -153,38 +154,48 @@ const Topbar = () => {
               STUDIO
             </Typography>
           </Box>
-          // </MenuTooltip>
-        )}
-        {/* UU+ */}
-        <MenuTooltip title="i">
+        </MenuTooltip>
+      );
+    };
+
+    return (
+      // <FlexBetBox gap="0px" height="59px"></FlexBetBox>
+      // <MenuTooltip title="Studio W+">
           <Box
-            className="logo_about"
-            onClick={onAboutLogoClick}
+            onClick={onHomeLogoClick}
             sx={{
               display: "flex",
               border: "none",
               backgroundColor: BLACK_85P,
+              color: "#fefefe",
+              // pl: "7px",
+              // pr: "4px",
+              // pt: "8px",
+              // pb: "8px",
+              cursor: "pointer",
+
+              // color: `${selectedPage === "home" ? "yellow" : "#fefefe"}`,
+              
               pl: `${isLT400 ? "7px" : "10px"}`,
               pr: `${isLT400 ? "4px" : "7px"}`,
               pt: `${isLT400 ? "8px" : "12px"}`,
               pb: `${isLT400 ? "8px" : "12px"}`,
-              // cursor: `${selectedPage === "about" ? "default" : "pointer"}`,
-              cursor: "pointer",
-              "&:hover": {
-                "& .MuiBox-root": {
-                  // color: `${selectedPage === "about" ? "#fefefe" : "yellow"}`,
-                  color: "yellow"
-                },
-              },
+              // cursor: `${selectedPage === "home" ? "default" : "pointer"}`,
+              
+              // "&:hover": {
+              //   "& .MuiBox-root": {
+              //     // color: `${selectedPage === "home" ? "#fefefe" : "yellow"}`,
+              //     color: "yellow",
+              //   },
+              // },
             }}
           >
             <Box
               sx={{
                 display: "inline",
                 fontWeight: "bold",
-                //   fontSize: "24px",
+                // fontSize: "14px",
                 fontSize: `${isLT400 ? "14px" : "24px"}`,
-                color: "#fefefe",
               }}
             >
               UU
@@ -192,16 +203,16 @@ const Topbar = () => {
             <Box
               sx={{
                 display: "inline",
+                // paddingTop: "4px",
+                paddingTop: `${isLT400 ? "3px" : "4px"}`,
+                // fontSize: "10px",
                 fontSize: `${isLT400 ? "8px" : "16px"}`,
-                paddingTop: "4px",
-                color: "#fefefe",
               }}
             >
               +
             </Box>
           </Box>
-        </MenuTooltip>
-      </FlexBetBox>
+        // </MenuTooltip>
     );
   };
 
@@ -276,7 +287,14 @@ const Topbar = () => {
     window.open("http://www.whoin.net/", "_blank")?.focus();
   };
 
-  const IconComponents = [WebIcon, DesktopMacIcon, ConnectedTvIcon, TouchAppIcon, ExtensionIcon];
+  const IconComponents = [
+    WebIcon,
+    DesktopMacIcon,
+    ConnectedTvIcon,
+    TouchAppIcon,
+    ExtensionIcon,
+  ];
+
   return (
     <div className="topbar">
       <FlexBetBox width="100%">
@@ -287,15 +305,16 @@ const Topbar = () => {
           {!isLT600 ? (
             <FlexBetBox paddingLeft="12px">
               {/* Menu1: Works with subMenu*/}
-              {/* <div onMouseEnter={showSubmenu} onMouseLeave={hideSubmenu}> */}
-
               <Box
-                // onMouseEnter={showSubmenu}
-                // onMouseLeave={hideSubmenu}
                 onClick={showSubmenu}
                 sx={{
+                  // backgroundColor: `${
+                  //   open ? "rgba(255,255,0,.75)" : "transparent"
+                  // }`,
                   backgroundColor: `${
-                    open ? "rgba(255,255,0,.75)" : "transparent"
+                    selectedPage === "works" || open
+                      ? "rgba(255,255,0,.75)"
+                      : "transparent"
                   }`,
                   // border: "1px solid red",
                   display: "flex",
@@ -312,9 +331,9 @@ const Topbar = () => {
                 }}
               >
                 <Typography
-                  fontWeight="400"
-                  fontSize={`${isGTE750 ? "19px" : "17px"}`}
-                  padding="0px 12px"
+                  // fontWeight="400"
+                  fontSize={`${isGTE700 ? "19px" : "17px"}`}
+                  padding="0px 10px"
                   color={BLACK_85P}
                   // sx={{
                   //   // textDecoration: "underline"
@@ -340,17 +359,21 @@ const Topbar = () => {
                 {WorksArr.map((category, index) => {
                   const ComponentName = IconComponents[index];
                   return (
-                    <MenuItem key={category + index}
+                    <MenuItem
+                      key={category + index}
                       onClick={(e) => onSubmenuClick(e, index)}
                       disabled={selectedSubIndex === index}
                       selected={selectedSubIndex === index}
                     >
                       <ListItemIcon>
-                        <ComponentName fontSize="small" sx={{ color: "black" }} />
+                        <ComponentName
+                          fontSize="small"
+                          sx={{ color: "black" }}
+                        />
                       </ListItemIcon>
                       <ListItemText>{category}</ListItemText>
                     </MenuItem>
-                  )
+                  );
                 })}
               </Menu>
               {/* </div> */}
@@ -363,6 +386,7 @@ const Topbar = () => {
                   cursor: "pointer",
                   "&:hover": {
                     backgroundColor: YELLOW_75P,
+                    
                     "& .MuiTypography-body1": {
                       color: "black",
                     },
@@ -370,22 +394,26 @@ const Topbar = () => {
                 }}
               >
                 <Typography
-                  fontWeight="500"
-                  fontSize={`${isGTE750 ? "19px" : "17px"}`}
-                  padding="0px 12px"
+                  // fontWeight="500"
+                  fontSize={`${isGTE700 ? "19px" : "17px"}`}
+                  padding="0px 10px"
                   letterSpacing="0.075px"
                   color={BLACK_85P}
                 >
-                  {`Data Viz &${isGTE750 ? " Misc" : ""}`}
+                  {`Data Viz &${isGTE700 ? " Misc" : ""}`}
                 </Typography>
               </Box>
               {/* </MenuTooltip> */}
               {/* Menu3: About */}
-              {/* <Box
-                //   border="2px solid cyan"
-                // className="topbar_menuItem"
+              <Box
+                onClick={onAboutClick}
                 sx={{
                   cursor: "pointer",
+                  backgroundColor: `${
+                    selectedPage === "about"
+                      ? "rgba(255,255,0,.75)"
+                      : "transparent"
+                  }`,
                   "&:hover": {
                     backgroundColor: YELLOW_75P,
                     "& .MuiTypography-body1": {
@@ -395,14 +423,14 @@ const Topbar = () => {
                 }}
               >
                 <Typography
-                  fontWeight="500"
-                  fontSize={`${isGTE750 ? "19px" : "17px"}`}
-                  padding="0px 12px"
+                  // fontWeight="500"
+                  fontSize={`${isGTE700 ? "19px" : "17px"}`}
+                  padding="0px 10px"
                   color={BLACK_85P}
                 >
-                  About
+                  i
                 </Typography>
-              </Box> */}
+              </Box>
             </FlexBetBox>
           ) : (
             //-- hamburger menu
