@@ -8,20 +8,13 @@ import '../styles/about.scss';
 const About = () => {
   
   return (
-    <div className="about" 
-    style={{ position: "absolute", top: "0px" }}
-    >
-      <div className="headline">
+    <div className="page about" >
         <Typography
           variant="h1"
-          fontWeight={600}
-          sx={{
-            mr: "12px",
-          }}
+          // fontWeight={600}
         >
           About
         </Typography>
-      </div>
     </div>
   );
 };

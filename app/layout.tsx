@@ -2,16 +2,21 @@ import type { Metadata } from 'next'
 import 'normalize.css/normalize.css';
 import './styles/global.scss';
 
-import { Inter, Open_Sans } from 'next/font/google';
-//-- fonts
-const inter = Inter({ 
-  subsets: ['latin'],
-  variable: '--font-inter'
- });
-const openSans = Open_Sans({ 
-  subsets: ['latin'],
-  variable: '--font-open-sans'
- });
+// import { Inter, Open_Sans, Roboto } from 'next/font/google';
+// //-- fonts
+// const inter = Inter({ 
+//   subsets: ['latin'],
+//   variable: '--font-inter'
+//  });
+//  const roboto = Roboto({ 
+//   weight: ['400', '500', '700'],
+//   subsets: ['latin'],
+//   variable: '--font-roboto'
+//  });
+// const openSans = Open_Sans({ 
+//   subsets: ['latin'],
+//   variable: '--font-open-sans'
+//  });
 
 export const metadata: Metadata = {
   title: 'UU+i',

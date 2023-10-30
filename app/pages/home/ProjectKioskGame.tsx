@@ -1,12 +1,13 @@
 import React from 'react';
 import BaseProject from './BaseProject';
 
-const ProjectNBCU = () => {
+const ProjectKioskGame = () => {
   return (
-    <div className="project nbcU">
+    <div>
         ProjectNBCU
+      <BaseProject />
     </div>
   )
 }
 
-export default ProjectNBCU;
+export default ProjectKioskGame;

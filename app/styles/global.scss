@@ -1,20 +1,6 @@
-// :root {
-//   --foreground-rgb: 0, 0, 0;
-//   --background-start-rgb: 214, 219, 220;
-//   --background-end-rgb: 255, 255, 255;
-// }
-
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Source+Code+Pro:wght@400;600;700&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&family=Source+Code+Pro:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap');
 @import 'config';
-
-/*
-$margin-bottom-p
-$bg-color: #fefefe;
-$line-height-p: 1.66;
-$line-height-h: 1.25;
-*/
 
 *, *:before, *:after {
     box-sizing: border-box;
@@ -22,17 +8,24 @@ $line-height-h: 1.25;
 
 html, body {
     background: $bg-color;
+    font-family: "Inter", "Open Sans", sans-serif;
+    font-weight: 400;
+    color: $text-color;
 }
 
+/*
+$line-height-p: 1.66;
+$line-height-h: 1.25;
+*/
 p {
     margin: 0 0 $margin-bottom-p;
     line-height: $line-height-p;
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    font-family: var(--font-inter), var(--font-open-sans);
+    // font-family: var(--font-inter), var(--font-open-sans);
     font-weight: 400;
-    color: rgba(0, 0, 0, .85);
+    color: $text-color;
     line-height: $line-height-h;
     margin: 0;
 }

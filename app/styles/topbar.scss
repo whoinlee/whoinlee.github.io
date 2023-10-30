@@ -1,34 +1,27 @@
 @import "config";
 
-/*
-$padding-xs: 6px;
-$padding-sm: 12px;
-$padding-md: 24px;
-$padding-lg: 36px;
-*/
-$top-bar-height: 58px;
-
-$BLACK_85P: "rgba(0,0,0,.85)";
-$BLUE_75P: "rgba(15,10,222,.75)";
-$YELLOW_75P: "rgba(255,255,0,.75)";
+$top-bar-height: 60px;
 
 .topbar {
-  // position: absolute;
-  // top: 0;
-  // left: 0;
-  background-color: "transparent";
-  width: 100%;
-  height: $top-bar-height;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  // width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: $padding-md;
-  padding-bottom: $padding-md;
-  padding-left: $padding-sm;
-  padding-right: $padding-sm;
-  border-bottom: 0.5px solid rgba(black, 0.15);
-  //   border: 1px solid green;
+  padding: 0 $padding-sm;
+  padding-bottom: $padding-sm;
+  background-color: rgba($bg-color, .75);
+  border-bottom: $hr-border-bottom;
 
+  backdrop-filter: blur(10px);
+  
+  // background-color: yellow;
+  // border: 1px solid blue;
+
+  // z-index: 100; //-- to the top
+  // border: 1px solid red;
 }
 
 //-- Works subMenu dropdown
