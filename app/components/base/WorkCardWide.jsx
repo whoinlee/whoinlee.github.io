@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useState, useRef } from "react";
 import {
   Box,
   Button,
@@ -10,8 +10,9 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
+import FlexBetBox from "./FlexBetBox";
 
-const WorkCard = ({
+const WorkCardWide = ({
   imgPath = "",
   imgWidth = 0,
   imgHeight = 0,
@@ -22,12 +23,14 @@ const WorkCard = ({
   buttonLabel = "",
   onClick,
 }) => {
+  const [isCardOver, setIsCardOver] = useState(false);
   const onCardOver = () => {
     overlayRef.current.style.opacity = 1;
     // console.log("onCardOver, overlayRef.current? ", overlayRef.current);
   };
   const onCardOut = () => {
     overlayRef.current.style.opacity = 0;
+    // console.log("onCardOver, overlayRef.current? ", overlayRef.current);
   };
 
   const overlayRef = useRef(null);
@@ -39,14 +42,7 @@ const WorkCard = ({
       borderRadius: "10px",
     },
 
-    media: {
-      // filter: "brightness(1)",
-      // transition: "all .5s ease-out",
-      // "&:hover": {
-      //   filter: "brightness(.75)",
-      //   // scale: "1.2"
-      // },
-    },
+    // media: {},
 
     overlay: {
       position: "absolute",
@@ -67,11 +63,13 @@ const WorkCard = ({
 
   return (
     <Card variant="outlined" sx={cardStyles.card}>
-      <CardActionArea
+      
+      <FlexBetBox>
+        {/* <CardActionArea
         onClick={onClick}
         onMouseOver={onCardOver}
         onMouseLeave={onCardOut}
-      >
+      > */}
         <CardMedia
           component="img"
           width={imgWidth}
@@ -80,29 +78,18 @@ const WorkCard = ({
           alt={imgAlt}
           sx={cardStyles.media}
         />
-        <div style={cardStyles.overlay} ref={overlayRef}>
+      {/* </CardActionArea> */}
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
           {cardTitle}
-        </div>
-        {cardDesc && cardDesc !== "" && (
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              {cardTitle}
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              {cardDesc}
-            </Typography>
-          </CardContent>
-        )}
-        {buttonLabel && buttonLabel !== "" && (
-          <CardActions>
-            <Button size="small" color="primary" onClick={onClick}>
-              {buttonLabel}
-            </Button>
-          </CardActions>
-        )}
-      </CardActionArea>
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          {cardDesc}
+        </Typography>
+      </CardContent>
+      </FlexBetBox>
     </Card>
   );
 };
 
-export default WorkCard;
+export default WorkCardWide;

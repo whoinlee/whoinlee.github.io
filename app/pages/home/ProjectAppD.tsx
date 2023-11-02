@@ -14,16 +14,12 @@ import "../../styles/project.scss";
 import FlexBetBox from "@/app/components/base/FlexBetBox";
 import FlexStartBox from "@/app/components/base/FlexStartBox";
 import WorkCard from "@/app/components/base/WorkCard";
+import WorkCardWide from "@/app/components/base/WorkCardWide";
 import { SiteContext } from "../../page";
-// import DatePicker from "../../components/base/DatePicker/DatePicker";
 
 const ProjectAppD = () => {
   const theme = useTheme();
-  const {
-    // isLT425,
-    isLT625,
-    // isGTE700
-  } = useContext<any>(SiteContext);
+  const { isLT625 } = useContext<any>(SiteContext);
 
   const openLink = (url: string) => {
     window.open(url, "_blank")?.focus();
@@ -33,19 +29,19 @@ const ProjectAppD = () => {
       <Typography
         variant="h2"
         color={theme.palette.primary.light}
-        fontWeight={500} sx={{cursor: "default"}}
+        fontWeight={500}
+        sx={{ cursor: "default" }}
       >
         Particle
       </Typography>
-      <Typography variant="h2" fontWeight={600} sx={{cursor: "default"}}>
+      <Typography variant="h2" fontWeight={600} sx={{ cursor: "default" }}>
         Design System
       </Typography>
       <Typography
         variant="h2"
         sx={{
           textAlign: "center",
-          width: `${isLT625 ? "275px":"170px"}`,
-          // width: "170px",
+          width: `${isLT625 ? "275px" : "170px"}`,
           textDecoration: "underline",
           cursor: "pointer",
           "&:hover": { backgroundColor: "yellow" },
@@ -54,15 +50,17 @@ const ProjectAppD = () => {
       >
         Prototypes
       </Typography>
-      <Typography variant="h2" sx={{cursor: "default"}}
-      // fontWeight={400}
+      <Typography
+        variant="h2"
+        sx={{ cursor: "default" }}
+        // fontWeight={400}
       >
         and
       </Typography>
       <Typography
         variant="h2"
         sx={{
-          width: `${isLT625 ? "275px":"215px"}`,
+          width: `${isLT625 ? "275px" : "215px"}`,
           textDecoration: "underline",
           cursor: "pointer",
           "&:hover": { backgroundColor: "yellow" },
@@ -89,7 +87,7 @@ const ProjectAppD = () => {
         >
           Plugins
         </Button> 
-      </FlexStartBox>*/}
+      </FlexStartBox> */}
     </>
   );
   const titleContent2 = (
@@ -154,53 +152,105 @@ const ProjectAppD = () => {
         >
           {titleContent1}
         </Box>
-        {/* <Card variant="outlined" sx={{ maxWidth: 750, minWidth: 250 }}> */}
         {!isLT625 && (
           <Card
             variant="outlined"
             sx={{
-              minWidth: 800,  //850?
-              minHeight: 500,
-              borderRadius: "10px",
+              padding: "24px",
+              paddingRight: "0px",
+              minWidth: 836, //850?
+              minHeight: 660,
+              borderRadius: "12px",
               border: "none",
-              // borderColor: "rgba(0, 0, 0, .5)", //-- black 50%
               // borderRight: "none",
 
+              // borderColor: "rgba(0, 0, 0, .5)", //-- black 50%
               // borderColor: "rgba(150, 150, 150, .075)",  //-- grey
               // borderColor: "#42a5f5",  //-- light blue
-              // borderColor: "rgba(66, 165, 245, 0.085)",
+              // borderColor: "rgba(66, 165, 245, 0.085)",  //-- light blue
 
               borderTopRightRadius: 0,
               borderBottomRightRadius: 0,
-              backgroundColor: "rgba(150, 150, 150, .075)",//-- grey
-
+              backgroundColor: "rgba(150, 150, 150, .075)", //-- grey
               // backgroundColor: "rgba(66, 165, 245, .075)"
             }}
           >
-            {/* <FlexBetBox gap="12px">
-            <WorkCard
-              imgPath="/media/p1skeleton425x325.jpg"
-              imgWidth={212}
-              imgHeight={162}
-              imgAlt="Skeleton Loading"
-              cardTitle="Skeleton Loading"
-              cardDesc="Skeleton Loading Description goes here"
-              buttonLabel="view"
-              onButtonClick={() =>
-                openLink(
-                  "https://particle-prototypes.netlify.app/skeletonScreen"
-                )
-              }
-            />
-            <WorkCard
+            <FlexStartBox gap="12px">
+              <WorkCard
+                imgPath="/media/p1skeleton425x325.jpg"
+                imgWidth={400}
+                imgHeight={306}
+                cardWidth={425}
+                cardTitle="Skeleton Loading Screen"
+                onClick={() =>
+                  openLink(
+                    "https://particle-prototypes.netlify.app/skeletonScreen"
+                  )
+                }
+              />
+              <div>
+                <WorkCardWide
+                  imgPath="/media/p1skeleton425x325.jpg"
+                  imgWidth={200}
+                  imgHeight={150}
+                  cardWidth={325}
+                  cardTitle="Skeleton Loading Screen"
+                  onClick={() =>
+                    openLink(
+                      "https://particle-prototypes.netlify.app/skeletonScreen"
+                    )
+                  }
+                />
+                <WorkCardWide
+                  imgPath="/media/p1skeleton425x325.jpg"
+                  imgWidth={200}
+                  imgHeight={150}
+                  imgAlt="Skeleton Loading"
+                  cardWidth={325}
+                  cardTitle="Skeleton Loading Screen"
+                  onClick={() =>
+                    openLink(
+                      "https://particle-prototypes.netlify.app/skeletonScreen"
+                    )
+                  }
+                />
+              </div>
+            </FlexStartBox>
+            <FlexStartBox gap="12px">
+              <WorkCard
+                imgPath="/media/p1skeleton425x325.jpg"
+                imgWidth={400}
+                imgHeight={306}
+                cardWidth={425}
+                cardTitle="Skeleton Loading Screen"
+                onClick={() =>
+                  openLink(
+                    "https://particle-prototypes.netlify.app/inspectorPanel"
+                  )
+                }
+              />
+              <WorkCard
+                imgPath="/media/p1skeleton425x325.jpg"
+                imgWidth={400}
+                imgHeight={306}
+                cardWidth={425}
+                cardTitle="Skeleton Loading Screen"
+                onClick={() =>
+                  openLink(
+                    "https://particle-prototypes.netlify.app/relationshipGraph"
+                  )
+                }
+              />
+            </FlexStartBox>
+            {/* <WorkCard
               imgPath="/media/p1skeleton425x325.jpg"
               imgWidth={212}
               imgHeight={162}
               imgAlt="Inspector Panel"
               cardTitle="Inspector Panel"
               cardDesc="Inspector Panel description goes here"
-              buttonLabel="view"
-              onButtonClick={() =>
+              // buttonLabel="view"
+              onClick={() =>
                 openLink(
                   "https://particle-prototypes.netlify.app/inspectorPanel"
                 )
@@ -213,15 +263,15 @@ const ProjectAppD = () => {
               imgAlt="Relationship Graph"
               cardTitle="Relationship Graph"
               cardDesc="Relationship Graph description goes here"
-              buttonLabel="view"
-              onButtonClick={() =>
+              // buttonLabel="view"
+              onClick={() =>
                 openLink(
                   "https://particle-prototypes.netlify.app/relationshipGraph"
                 )
               }
-            />
-          </FlexBetBox>
-          <FlexBetBox gap="12px">
+            /> */}
+
+            {/* <FlexBetBox gap="20px">
             <WorkCard
               imgPath="/media/p1skeleton425x325.jpg"
               imgWidth={212}
@@ -230,7 +280,7 @@ const ProjectAppD = () => {
               cardTitle="Reusable Components"
               cardDesc="Skeleton Loading Description goes here"
               buttonLabel=""
-              onButtonClick={() =>{}}
+              onClick={() =>{}}
             />
             <WorkCard
               imgPath="/media/p1skeleton425x325.jpg"
@@ -240,7 +290,7 @@ const ProjectAppD = () => {
               cardTitle="Data Viz Plugin"
               cardDesc="Skeleton Loading Description goes here"
               buttonLabel=""
-              onButtonClick={() =>{}}
+              onClick={() =>{}}
             />
             <WorkCard
               imgPath="/media/p1skeleton425x325.jpg"
@@ -250,7 +300,7 @@ const ProjectAppD = () => {
               cardTitle="Jira & Figma Plugin"
               cardDesc="Skeleton Loading Description goes here"
               buttonLabel=""
-              onButtonClick={() =>{}}
+              onClick={() =>{}}
             />
           </FlexBetBox> */}
           </Card>

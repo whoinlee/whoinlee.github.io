@@ -1,25 +1,17 @@
 import React, { useRef } from "react";
 import {
-  Box,
-  Button,
   Card,
   CardActionArea,
-  CardActions,
-  CardContent,
   CardMedia,
-  Typography,
-  useTheme,
 } from "@mui/material";
 
-const WorkCard = ({
+const WorkCardImg = ({
   imgPath = "",
   imgWidth = 0,
   imgHeight = 0,
-  imgAlt = "",
+  // imgAlt = "",
   cardWidth = 345,
   cardTitle = "",
-  cardDesc = "",
-  buttonLabel = "",
   onClick,
 }) => {
   const onCardOver = () => {
@@ -77,32 +69,15 @@ const WorkCard = ({
           width={imgWidth}
           height={imgHeight}
           image={imgPath}
-          alt={imgAlt}
+          alt={cardTitle}
           sx={cardStyles.media}
         />
         <div style={cardStyles.overlay} ref={overlayRef}>
           {cardTitle}
         </div>
-        {cardDesc && cardDesc !== "" && (
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              {cardTitle}
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              {cardDesc}
-            </Typography>
-          </CardContent>
-        )}
-        {buttonLabel && buttonLabel !== "" && (
-          <CardActions>
-            <Button size="small" color="primary" onClick={onClick}>
-              {buttonLabel}
-            </Button>
-          </CardActions>
-        )}
       </CardActionArea>
     </Card>
   );
 };
 
-export default WorkCard;
+export default WorkCardImg;
