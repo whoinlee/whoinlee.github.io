@@ -33,21 +33,49 @@ const ProjectAppD = () => {
       <Typography
         variant="h2"
         color={theme.palette.primary.light}
-        fontWeight={500}
+        fontWeight={500} sx={{cursor: "default"}}
       >
         Particle
       </Typography>
-      <Typography variant="h2" fontWeight={500}>
+      <Typography variant="h2" fontWeight={600} sx={{cursor: "default"}}>
         Design System
       </Typography>
-      <Typography variant="h2" fontWeight={500}>
-        Prototypes &
+      <Typography
+        variant="h2"
+        sx={{
+          textAlign: "center",
+          width: `${isLT625 ? "275px":"170px"}`,
+          // width: "170px",
+          textDecoration: "underline",
+          cursor: "pointer",
+          "&:hover": { backgroundColor: "yellow" },
+        }}
+        onClick={() => openLink("https://github.com/whoinlee/prototypeSite")}
+      >
+        Prototypes
       </Typography>
-      <Typography variant="h2" fontWeight={500}>
+      <Typography variant="h2" sx={{cursor: "default"}}
+      // fontWeight={400}
+      >
+        and
+      </Typography>
+      <Typography
+        variant="h2"
+        sx={{
+          width: `${isLT625 ? "275px":"215px"}`,
+          textDecoration: "underline",
+          cursor: "pointer",
+          "&:hover": { backgroundColor: "yellow" },
+        }}
+        onClick={() => openLink("https://github.com/whoinlee/figmaPlugins")}
+      >
         Figma Plugins
       </Typography>
-      <FlexStartBox gap="12px">
-        <Button
+      {/* <FlexStartBox
+        gap="12px"
+        sx={{ justifyContent: `${isLT625 ? "center" : "felx-start"}` }}
+      > 
+         <Button
           variant="contained"
           sx={{ mt: "12px" }}
           onClick={() => openLink("https://github.com/whoinlee/prototypeSite")}
@@ -60,8 +88,8 @@ const ProjectAppD = () => {
           onClick={() => openLink("https://github.com/whoinlee/figmaPlugins")}
         >
           Plugins
-        </Button>
-      </FlexStartBox>
+        </Button> 
+      </FlexStartBox>*/}
     </>
   );
   const titleContent2 = (
@@ -114,16 +142,42 @@ const ProjectAppD = () => {
   );
   return (
     <div className="project appD">
-      <FlexBetBox>
+      <FlexBetBox
+        sx={{ justifyContent: `${isLT625 ? "center" : "space-between"}` }}
+      >
         <Box
-          minWidth={375}
-          sx={{ border: "1px solid grey", textAlign: `${"left"}` }}
+          minWidth={275}
+          sx={{
+            textAlign: `${isLT625 ? "center" : "left"}`,
+            // border: "1px solid grey",
+          }}
         >
           {titleContent1}
         </Box>
         {/* <Card variant="outlined" sx={{ maxWidth: 750, minWidth: 250 }}> */}
-        <Card variant="outlined" sx={{ minWidth: 750, minHeight: 500 }}>
-          {/* <FlexBetBox gap="12px">
+        {!isLT625 && (
+          <Card
+            variant="outlined"
+            sx={{
+              minWidth: 800,  //850?
+              minHeight: 500,
+              borderRadius: "10px",
+              border: "none",
+              // borderColor: "rgba(0, 0, 0, .5)", //-- black 50%
+              // borderRight: "none",
+
+              // borderColor: "rgba(150, 150, 150, .075)",  //-- grey
+              // borderColor: "#42a5f5",  //-- light blue
+              // borderColor: "rgba(66, 165, 245, 0.085)",
+
+              borderTopRightRadius: 0,
+              borderBottomRightRadius: 0,
+              backgroundColor: "rgba(150, 150, 150, .075)",//-- grey
+
+              // backgroundColor: "rgba(66, 165, 245, .075)"
+            }}
+          >
+            {/* <FlexBetBox gap="12px">
             <WorkCard
               imgPath="/media/p1skeleton425x325.jpg"
               imgWidth={212}
@@ -199,14 +253,15 @@ const ProjectAppD = () => {
               onButtonClick={() =>{}}
             />
           </FlexBetBox> */}
-        </Card>
+          </Card>
+        )}
       </FlexBetBox>
-      <FlexBetBox>
+      {/* <FlexBetBox>
         <Box width={325}>{titleContent2}</Box>
         <Card variant="outlined" sx={{ height: "600px" }}>
           {cardContent2}
         </Card>
-      </FlexBetBox>
+      </FlexBetBox> */}
     </div>
   );
 };

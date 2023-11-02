@@ -16,7 +16,7 @@ const themeSettings = {
   typography: {
     fontSize: 16,
     fontFamily: FONT_FAMILY,
-    color: "rgba(0,0,0,.85)",
+    color: "rgba(0,0,0,.85)", //black 85%
 
     h1: {
       fontFamily: FONT_FAMILY,
@@ -24,20 +24,21 @@ const themeSettings = {
       fontSize: "3.25rem",
     },
     h2: {
+      fontWeight: 500,
       fontFamily: FONT_FAMILY,
-      fontSize: 32,
+      fontSize: "2rem",
     },
     h3: {
       fontFamily: FONT_FAMILY,
-      fontSize: 24,
+      fontSize: "1.75rem",
     },
     h4: {
       fontFamily: FONT_FAMILY,
-      fontSize: 20,
+      fontSize: "1.5rem",
     },
     h5: {
       fontFamily: FONT_FAMILY,
-      fontSize: 18,
+      fontSize: "1.25rem",
     },
     h6: {
       fontFamily: FONT_FAMILY,

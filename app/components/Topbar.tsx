@@ -385,7 +385,6 @@ const Topbar = () => {
               }}
             >
               <Typography
-                // fontWeight="500"
                 mt="-3px"
                 fontSize={`${isGTE700 ? "18px" : "18px"}`}
                 fontWeight={500}
@@ -406,6 +405,7 @@ const Topbar = () => {
               alignItems: "center",
               height: `${isLT425 ? "37px" : "60px"}`,
               border: 2,
+              ml: "-2px",
               padding: `${isLT425 ? "0px 2.5px" : "0px 12px"}`,
               cursor: "pointer",
               "&:hover": {

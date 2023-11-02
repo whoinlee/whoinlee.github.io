@@ -40,7 +40,7 @@ export default function App() {
           isGTE700,
         }}
       >
-        <Container maxWidth="xl" className="app">
+        <Container maxWidth="lg" className="app">
           <Topbar />
           {selectedPage === "home" && <Home />}
           {selectedPage === "works" && <Works />}
