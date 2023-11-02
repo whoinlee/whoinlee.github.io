@@ -3,6 +3,8 @@
 .app {
   //-- Container
   // border: 2px solid black;
+  // overflow: -moz-hidden-unscrollable;
+  overflow: hidden;
 
   .page {
     // background-color: #cfe8fc;

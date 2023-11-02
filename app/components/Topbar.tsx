@@ -10,7 +10,7 @@ import {
   Tooltip,
   Typography,
   useTheme,
-  useMediaQuery,
+  // useMediaQuery,
 } from "@mui/material";
 //-- icons
 import MenuIcon from "@mui/icons-material/Menu";
@@ -34,14 +34,14 @@ const Topbar = () => {
     setSelectedPage,
     selectedSubIndex,
     setSelectedSubIndex,
+    isLT425, isLT625, isGTE700
   } = useContext<any>(SiteContext);
   // console.log("Topbar :: selectedPage? ", selectedPage);
 
-  //-- mediaQueries
-  /* MUI:: xs: 0, sm: 600, md: 900, lg: 1200, xl: 1536 */
-  const isLT400 = !useMediaQuery("(min-width: 425px)"); //-- less than 400
-  const isLT600 = !useMediaQuery("(min-width: 625px)"); //-- less than 600
-  const isGTE700 = useMediaQuery("(min-width: 700px)"); //-- greter than or equal to 700
+
+  // const isLT425 = !useMediaQuery("(min-width: 425px)"); //-- less than 400
+  // const isLT625 = !useMediaQuery("(min-width: 625px)"); //-- less than 600
+  // const isGTE700 = useMediaQuery("(min-width: 700px)"); //-- greter than or equal to 700
 
   //-- MUI theme
   const theme = useTheme();
@@ -56,17 +56,17 @@ const Topbar = () => {
   const open = Boolean(anchorEl);
   const showSubmenu = (e: any) => {
     if (anchorEl !== e.currentTarget) setAnchorEl(e.currentTarget);
-    console.log("showSubmenu :: index? ", selectedSubIndex);
+    // console.log("showSubmenu :: index? ", selectedSubIndex);
   };
   const hideSubmenu = () => {
     setAnchorEl(null);
-    console.log("hideSubmenu :: index? ", selectedSubIndex);
+    // console.log("hideSubmenu :: index? ", selectedSubIndex);
   };
   const onSubmenuClick = (e: any, index: number) => {
     hideSubmenu();
     setSelectedSubIndex(index);
     if (selectedPage !== "works") setSelectedPage("works");
-    console.log("onSubmenuClick :: index? ", index);
+    // console.log("onSubmenuClick :: index? ", index);
   };
   const resetSelectedSubIndex = () => {
     if (selectedSubIndex !== -1) setSelectedSubIndex(-1);
@@ -89,10 +89,10 @@ const Topbar = () => {
           tooltip: {
             sx: {
               bgcolor: "white",
-              color: "black",
+              color: BLACK_85P,
               boxShadow: theme.shadows[2],
               padding: "5px 15px",
-              fontSize: "15px",
+              fontSize: "14px",
               // maxWidth: "200px",
             },
           },
@@ -119,8 +119,9 @@ const Topbar = () => {
         onClick={onHomeLogoClick}
         sx={{
           display: "flex",
-          border: "none",
+          border: "2px solid rgba(0,0,0,.85)",
           backgroundColor: BLACK_85P,
+
           color: "#fefefe",
           cursor: "pointer",
 
@@ -131,16 +132,17 @@ const Topbar = () => {
           // pt: "12px",
           // pb: "12px",
 
-          pl: `${isLT400 ? "7px" : "10px"}`,
-          pr: `${isLT400 ? "4px" : "7px"}`,
-          pt: `${isLT400 ? "8px" : "12px"}`,
-          pb: `${isLT400 ? "8px" : "12px"}`,
+          pl: `${isLT425 ? "5px" : "8px"}`,
+          pr: `${isLT425 ? "2px" : "5px"}`,
+          pt: `${isLT425 ? "6px" : "10px"}`,
+          pb: `${isLT425 ? "6px" : "10px"}`,
           // cursor: `${selectedPage === "home" ? "default" : "pointer"}`,
 
           "&:hover": {
+            backgroundColor: "#fefefe",
             "& .MuiBox-root": {
               // color: `${selectedPage === "home" ? "#fefefe" : "yellow"}`,
-              color: "yellow",
+              color: "black",
             },
           },
         }}
@@ -150,7 +152,7 @@ const Topbar = () => {
             display: "inline",
             fontWeight: "bold",
             // fontSize: "14px",
-            fontSize: `${isLT400 ? "14px" : "24px"}`,
+            fontSize: `${isLT425 ? "14px" : "24px"}`,
           }}
         >
           UU
@@ -159,9 +161,9 @@ const Topbar = () => {
           sx={{
             display: "inline",
             // paddingTop: "4px",
-            paddingTop: `${isLT400 ? "3px" : "4px"}`,
+            paddingTop: `${isLT425 ? "3px" : "4px"}`,
             // fontSize: "10px",
-            fontSize: `${isLT400 ? "8px" : "16px"}`,
+            fontSize: `${isLT425 ? "8px" : "16px"}`,
           }}
         >
           +
@@ -218,7 +220,7 @@ const Topbar = () => {
   };
 
   const runSearch = () => {
-    console.log("runSearch");
+    // console.log("runSearch");
   };
 
   const openLinkedIn = () => {
@@ -255,7 +257,7 @@ const Topbar = () => {
       <FlexBetBox>
         <Logo />
         {/* MENU */}
-        {!isLT600 ? (
+        {!isLT625 ? (
           <FlexBetBox paddingLeft="12px">
             {/* Menu1: Works with subMenu*/}
             <Box
@@ -355,39 +357,45 @@ const Topbar = () => {
             </Box>
             {/* </MenuTooltip> */}
             {/* Menu3: About */}
+            <MenuTooltip title="About"> 
             <Box
               onClick={onAboutClick}
               sx={{
                 borderRadius: "50%",
-                ml: "6px",
+                // ml: "8px",
+                ml: `${isGTE700 ? "8px" : "6px"}`,
                 width: "24px",
                 height: "24px",
                 cursor: "pointer",
-                border: "1.5px solid black",
+                border: "2px solid rgba(0,0,0,.85)",
                 backgroundColor: `${
                   selectedPage === "about"
                     ? "rgba(255,255,0,.75)"
                     : "transparent"
                 }`,
                 "&:hover": {
-                  backgroundColor: YELLOW_75P,
+                  border:"2px solid black",
+                  // backgroundColor: YELLOW_75P,
+                  backgroundColor: BLACK_85P,
                   "& .MuiTypography-body1": {
-                    color: "black",
+                    // color: "black",
+                    color: "white",
                   },
                 },
               }}
             >
               <Typography
                 // fontWeight="500"
-                mt="-2px"
-                fontSize={`${isGTE700 ? "17px" : "15px"}`}
-                fontWeight="bold"
-                padding="0px 8px"
+                mt="-3px"
+                fontSize={`${isGTE700 ? "18px" : "18px"}`}
+                fontWeight={500}
+                padding="0px 7.5px"
                 color={BLACK_85P}
               >
                 i
               </Typography>
             </Box>
+            </MenuTooltip> 
           </FlexBetBox>
         ) : (
           //-- hamburger menu
@@ -396,9 +404,9 @@ const Topbar = () => {
             sx={{
               display: "flex",
               alignItems: "center",
-              height: `${isLT400 ? "37px" : "60px"}`,
+              height: `${isLT425 ? "37px" : "60px"}`,
               border: 2,
-              padding: `${isLT400 ? "0px 2.5px" : "0px 12px"}`,
+              padding: `${isLT425 ? "0px 2.5px" : "0px 12px"}`,
               cursor: "pointer",
               "&:hover": {
                 backgroundColor: "#FFFF33",
@@ -407,7 +415,7 @@ const Topbar = () => {
           >
             <MenuIcon
               sx={{
-                fontSize: `${isLT400 ? "30px" : "34px"}`,
+                fontSize: `${isLT425 ? "30px" : "34px"}`,
                 color: BLACK_85P,
               }}
             />
@@ -439,7 +447,8 @@ const Topbar = () => {
               marginLeft: "2px",
               color: BLACK_85P,
               "&:hover": {
-                color: BLUE_75P,
+                // color: BLUE_75P,
+                color: "rgba(125, 125, 125, .85)",
               },
             }}
           />
@@ -460,7 +469,8 @@ const Topbar = () => {
               fontSize: "34px",
               color: BLACK_85P,
               "&:hover": {
-                color: BLUE_75P,
+                // color: BLUE_75P,
+                color: "rgba(125, 125, 125, .85)",
               },
             }}
           />

@@ -1,0 +1,31 @@
+$padding-xs: 6px;
+$padding-sm: 12px;
+$padding-md: 24px;
+$padding-lg: 36px;
+
+$min-width-sm: 600px;
+$min-width-md: 900px;
+$min-width-lg: 1200px;
+$min-width-xl: 1536px;
+
+$hr-border-bottom: 0.5px solid rgba(black, 0.15);
+
+$margin-bottom-p : 30px;
+$line-height-p: 1.66;
+$line-height-h: 1.25;
+
+//-- colors
+$bg-color: #fefefe;
+$text-color: rgba(black, 0.85);
+$hover-color-yellow: rgba(yellow, 0.75);
+$primary-blue: #1976d2;         //-- palette.primary.main
+$primary-blue-dark: #1565c0;    //-- palette.primary.dark
+$primary-blue-light: #42a5f5;   //-- palette.primary.light
+$primary-purple: #9c27b0;       //-- palette.secondary.main
+$primary-red: #d32f2f;          //-- palette.error.main
+$primary-orange: #ed6c02;       //-- palette.warning.main
+$primary-green: #2e7d32;        //-- palette.success.main
+
+$BLACK_85P: "rgba(0,0,0,.85)";
+$BLUE_75P: "rgba(15,10,222,.75)";
+$YELLOW_75P: "rgba(255,255,0,.75)";

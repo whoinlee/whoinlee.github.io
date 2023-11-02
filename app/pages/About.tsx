@@ -9,12 +9,7 @@ const About = () => {
   
   return (
     <div className="page about" >
-        <Typography
-          variant="h1"
-          // fontWeight={600}
-        >
-          About
-        </Typography>
+          <Typography variant="h1">Studio UU+i</Typography>
     </div>
   );
 };

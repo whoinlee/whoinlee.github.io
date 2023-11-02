@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import 'normalize.css/normalize.css';
 import './styles/global.scss';
 
 // import { Inter, Open_Sans, Roboto } from 'next/font/google';

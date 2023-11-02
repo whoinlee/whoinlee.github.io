@@ -14,14 +14,14 @@ import { createTheme } from "@mui/material/styles";
 const FONT_FAMILY = ["Inter", "Open Sans", "sans-serif"].join(",");
 const themeSettings = {
   typography: {
-    fontSize: 12,
+    fontSize: 16,
     fontFamily: FONT_FAMILY,
     color: "rgba(0,0,0,.85)",
 
     h1: {
       fontFamily: FONT_FAMILY,
       fontWeight: 500,
-      fontSize: 52,
+      fontSize: "3.25rem",
     },
     h2: {
       fontFamily: FONT_FAMILY,
@@ -41,7 +41,7 @@ const themeSettings = {
     },
     h6: {
       fontFamily: FONT_FAMILY,
-      fontSize: 14,
+      fontSize: "1rem", //16px
     },
   },
 };

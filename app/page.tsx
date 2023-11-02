@@ -1,6 +1,11 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import { Box, CssBaseline, ThemeProvider, Container } from "@mui/material";
+import React, { useState } from "react";
+import {
+  CssBaseline,
+  ThemeProvider,
+  Container,
+  useMediaQuery,
+} from "@mui/material";
 import { theme } from "./theme";
 import { createContext } from "react";
 import Topbar from "./components/Topbar";
@@ -9,13 +14,6 @@ import About from "./pages/About";
 import Works from "./pages/Works";
 import "./styles/page.scss";
 
-// import * as All from "./pages";
-// const Components = {
-//   Home: All.Home,
-//   Works: All.Works,
-//   About: All.About,
-// };
-
 export const SiteContext = createContext({});
 export const WorkCatetories = ["Web", "Desktop", "TV App", "Kiosk", "Plugin"];
 export type Pages = "home" | "works" | "about";
@@ -23,8 +21,10 @@ export type Pages = "home" | "works" | "about";
 export default function App() {
   const [selectedPage, setSelectedPage] = useState<Pages>("home");
   const [selectedSubIndex, setSelectedSubIndex] = useState<number>(-1);
-  // const PageComponents = [Home, Works, About];
-  // const pages = ["home", "works", "about"];
+  /* MUI:: xs: 0, sm: 600, md: 900, lg: 1200, xl: 1536 */
+  const isLT425 = !useMediaQuery("(min-width: 425px)"); //-- less than 425
+  const isLT625 = !useMediaQuery("(min-width: 625px)"); //-- less than 625
+  const isGTE700 = useMediaQuery("(min-width: 700px)"); //-- greter than or equal to 700
 
   return (
     <ThemeProvider theme={theme}>
@@ -35,9 +35,12 @@ export default function App() {
           setSelectedPage,
           selectedSubIndex,
           setSelectedSubIndex,
+          isLT425,
+          isLT625,
+          isGTE700,
         }}
       >
-        <Container maxWidth="lg" className="app">
+        <Container maxWidth="xl" className="app">
           <Topbar />
           {selectedPage === "home" && <Home />}
           {selectedPage === "works" && <Works />}

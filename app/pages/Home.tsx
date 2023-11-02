@@ -8,7 +8,6 @@ import "../styles/home.scss";
 const Home = () => {
   return (
     <div className="page home">
-      <Typography variant="h1">Studio UU+</Typography>
       <ProjectAppD />
       {/* <ProjectNBCU /> */}
     </div>
