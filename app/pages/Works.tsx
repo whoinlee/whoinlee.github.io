@@ -8,8 +8,8 @@ import TouchAppIcon from "@mui/icons-material/TouchApp";
 import ExtensionIcon from "@mui/icons-material/Extension";
 import { SiteContext } from "../page";
 import { WorkCatetories } from "../page";
-import "../styles/page.scss";
-import "../styles/works.scss";
+// import "../styles/page.scss";
+// import "../styles/works.scss";
 
 // interface WorksProps {
 //   category: string;

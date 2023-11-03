@@ -252,6 +252,7 @@ const Topbar = () => {
   ];
 
   return (
+    // <div className="topbar">
     <FlexBetBox className="topbar" width="100%">
       {/* LEFT SIDE */}
       <FlexBetBox>
@@ -428,7 +429,7 @@ const Topbar = () => {
         marginRight="-4px"
         //   border="4px solid orange"
       >
-        <SearchInput />
+        {/* <SearchInput /> */}
         <Box
           onClick={openGithub}
           sx={{
@@ -477,6 +478,7 @@ const Topbar = () => {
         </Box>
       </FlexBetBox>
     </FlexBetBox>
+    // </div>
   );
 };
 

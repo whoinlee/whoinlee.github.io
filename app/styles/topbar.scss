@@ -1,36 +1,32 @@
 @import "config";
 
 $top-bar-height: 60px;
+// $hr-border-bottom: 0.5px solid rgba(black, 0.15);
+$hr-border-bottom: 0.5px solid rgba(black, 0.25);
 
 .topbar {
   position: sticky;
   position: -webkit-sticky;
   top: 0;
-  // width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 $padding-sm;
-  padding-bottom: $padding-sm;
-  background-color: rgba($bg-color, .75);
+  padding: $padding-sm;
+  background-color: rgba($bg-color, 0.75);
   border-bottom: $hr-border-bottom;
-
+  // border-bottom: .5px solid rgba(0, 0, 0, .85);
   backdrop-filter: blur(10px);
-  
-  // background-color: yellow;
-  // border: 1px solid blue;
+  z-index: 100;             //-- to the top
+  // border: 1px solid red; //-- testing
 
-  // z-index: 100; //-- to the top
-  // border: 1px solid red;
-}
+  //-- Works subMenu dropdown
+  .MuiMenuItem-root {
+    &.Mui-selected {
+      background-color: rgba(grey, 0.25);
+    }
 
-//-- Works subMenu dropdown
-.MuiMenuItem-root {
-  &.Mui-selected {
-    background-color: rgba(grey, 0.25);
-  }
-
-  &.Mui-disabled {
-    opacity: 100%;
+    &.Mui-disabled {
+      opacity: 100%;
+    }
   }
 }

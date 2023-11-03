@@ -2,13 +2,11 @@
 
 .app {
   //-- Container
-  // border: 2px solid black;
-  // overflow: -moz-hidden-unscrollable;
-  overflow: hidden;
+  // overflow: hidden;  //-- this prevents the sticky toolbar stickiness
 
   .page {
-    // background-color: #cfe8fc;
     margin: $padding-md $padding-sm;
+    // border: 1px solid red;
     
     .headlineHolder {
       //-- for Works headline with an icon

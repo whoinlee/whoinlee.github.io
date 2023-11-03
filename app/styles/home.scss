@@ -1,6 +1,17 @@
-// @import 'config';
-// @import 'globals';
-// @import 'grid';
+@import "config";
 
+.project {
+  padding-top: $padding-md;
+  padding-bottom: $padding-md;
+  width: 100%;
+  overflow: hidden;
+  // border: 0.5px solid rgba(grey, 0.25);
+  // background-image: linear-gradient($bg-color, rgba(blue, .15));
+}
 
-
+hr {
+  margin-left: -$padding-sm;
+  margin-right: -$padding-sm;
+  border: 0.5px solid $LIGHT_BLUE_75P;
+  opacity: .75;
+}

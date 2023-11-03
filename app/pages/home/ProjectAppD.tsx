@@ -10,12 +10,12 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
-import "../../styles/project.scss";
 import FlexBetBox from "@/app/components/base/FlexBetBox";
 import FlexStartBox from "@/app/components/base/FlexStartBox";
 import WorkCard from "@/app/components/base/WorkCard";
 import WorkCardWide from "@/app/components/base/WorkCardWide";
 import { SiteContext } from "../../page";
+// import "../../styles/project.scss";
 
 const ProjectAppD = () => {
   const theme = useTheme();
@@ -32,7 +32,7 @@ const ProjectAppD = () => {
         fontWeight={500}
         sx={{ cursor: "default" }}
       >
-        Particle
+        AppDynamics
       </Typography>
       <Typography variant="h2" fontWeight={600} sx={{ cursor: "default" }}>
         Design System
@@ -194,10 +194,10 @@ const ProjectAppD = () => {
                   imgWidth={200}
                   imgHeight={150}
                   cardWidth={325}
-                  cardTitle="Skeleton Loading Screen"
+                  cardTitle="Inspector Panel"
                   onClick={() =>
                     openLink(
-                      "https://particle-prototypes.netlify.app/skeletonScreen"
+                      "https://particle-prototypes.netlify.app/inspectorPanel"
                     )
                   }
                 />
@@ -207,10 +207,10 @@ const ProjectAppD = () => {
                   imgHeight={150}
                   imgAlt="Skeleton Loading"
                   cardWidth={325}
-                  cardTitle="Skeleton Loading Screen"
+                  cardTitle="Relationship Graph"
                   onClick={() =>
                     openLink(
-                      "https://particle-prototypes.netlify.app/skeletonScreen"
+                      "https://particle-prototypes.netlify.app/relationshipGraph"
                     )
                   }
                 />
@@ -222,10 +222,10 @@ const ProjectAppD = () => {
                 imgWidth={400}
                 imgHeight={306}
                 cardWidth={425}
-                cardTitle="Skeleton Loading Screen"
+                cardTitle="Data Visualization Plugin"
                 onClick={() =>
                   openLink(
-                    "https://particle-prototypes.netlify.app/inspectorPanel"
+                    "https://github.com/whoinlee/figmaPlugins"
                   )
                 }
               />
@@ -234,7 +234,7 @@ const ProjectAppD = () => {
                 imgWidth={400}
                 imgHeight={306}
                 cardWidth={425}
-                cardTitle="Skeleton Loading Screen"
+                cardTitle="Jira & Figma Comm. Plugin"
                 onClick={() =>
                   openLink(
                     "https://particle-prototypes.netlify.app/relationshipGraph"

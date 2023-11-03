@@ -8,12 +8,6 @@ $min-width-md: 900px;
 $min-width-lg: 1200px;
 $min-width-xl: 1536px;
 
-$hr-border-bottom: 0.5px solid rgba(black, 0.15);
-
-$margin-bottom-p : 30px;
-$line-height-p: 1.66;
-$line-height-h: 1.25;
-
 //-- colors
 $bg-color: #fefefe;
 $text-color: rgba(black, 0.85);
@@ -26,6 +20,11 @@ $primary-red: #d32f2f;          //-- palette.error.main
 $primary-orange: #ed6c02;       //-- palette.warning.main
 $primary-green: #2e7d32;        //-- palette.success.main
 
-$BLACK_85P: "rgba(0,0,0,.85)";
-$BLUE_75P: "rgba(15,10,222,.75)";
-$YELLOW_75P: "rgba(255,255,0,.75)";
+$BLACK_85P: rgba(0,0,0,.85);
+$BLUE_75P: rgba(15,10,222,.75);
+$LIGHT_BLUE_75P: rgba(66,165,245,.75);
+$YELLOW_75P: rgba(255,255,0,.75);
+
+// $margin-bottom-p : 30px;
+// $line-height-p: 1.66;
+// $line-height-h: 1.25;
