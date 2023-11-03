@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import {
-  Box,
+  // Box,
   Button,
   Card,
   CardActionArea,
@@ -8,7 +8,7 @@ import {
   CardContent,
   CardMedia,
   Typography,
-  useTheme,
+  // useTheme,
 } from "@mui/material";
 
 const WorkCard = ({
@@ -32,7 +32,7 @@ const WorkCard = ({
 
   const overlayRef = useRef(null);
 
-  const cardStyles = {
+  const workCardStyles = {
     card: {
       position: "relative",
       maxWidth: cardWidth,
@@ -66,7 +66,7 @@ const WorkCard = ({
   };
 
   return (
-    <Card variant="outlined" sx={cardStyles.card}>
+    <Card variant="outlined" sx={workCardStyles.card}>
       <CardActionArea
         onClick={onClick}
         onMouseOver={onCardOver}
@@ -78,9 +78,9 @@ const WorkCard = ({
           height={imgHeight}
           image={imgPath}
           alt={imgAlt}
-          sx={cardStyles.media}
+          sx={workCardStyles.media}
         />
-        <div style={cardStyles.overlay} ref={overlayRef}>
+        <div style={workCardStyles.overlay} ref={overlayRef}>
           {cardTitle}
         </div>
         {cardDesc && cardDesc !== "" && (

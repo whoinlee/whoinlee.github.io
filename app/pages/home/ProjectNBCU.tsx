@@ -47,8 +47,7 @@ const ProjectNBCU = () => {
           "&:hover": { backgroundColor: "yellow" },
         }}
         onClick={() => openLink("https://github.com/whoinlee/fireTV_Air")}
-      >
-        Prototypes
+      >Desktop
       </Typography>
       <Typography
         variant="h2"
@@ -60,14 +59,14 @@ const ProjectNBCU = () => {
       <Typography
         variant="h2"
         sx={{
-          width: `${isLT625 ? "275px" : "87px"}`,
+          width: `${isLT625 ? "275px" : "125px"}`,
           textDecoration: "underline",
           cursor: "pointer",
           "&:hover": { backgroundColor: "yellow" },
         }}
         onClick={() => openLink("https://github.com/whoinlee/fireTV_ReactNative")}
       >
-        POCs
+        TV App
       </Typography>
     </>
   );

@@ -34,14 +34,9 @@ const Topbar = () => {
     setSelectedPage,
     selectedSubIndex,
     setSelectedSubIndex,
-    isLT425, isLT625, isGTE700
+    // isLT425, isLT625, isGTE700,
+    isXS, isSM, isSMED
   } = useContext<any>(SiteContext);
-  // console.log("Topbar :: selectedPage? ", selectedPage);
-
-
-  // const isLT425 = !useMediaQuery("(min-width: 425px)"); //-- less than 400
-  // const isLT625 = !useMediaQuery("(min-width: 625px)"); //-- less than 600
-  // const isGTE700 = useMediaQuery("(min-width: 700px)"); //-- greter than or equal to 700
 
   //-- MUI theme
   const theme = useTheme();
@@ -132,10 +127,10 @@ const Topbar = () => {
           // pt: "12px",
           // pb: "12px",
 
-          pl: `${isLT425 ? "5px" : "8px"}`,
-          pr: `${isLT425 ? "2px" : "5px"}`,
-          pt: `${isLT425 ? "6px" : "10px"}`,
-          pb: `${isLT425 ? "6px" : "10px"}`,
+          pl: `${isXS ? "5px" : "8px"}`,
+          pr: `${isXS ? "2px" : "5px"}`,
+          pt: `${isXS ? "6px" : "10px"}`,
+          pb: `${isXS ? "6px" : "10px"}`,
           // cursor: `${selectedPage === "home" ? "default" : "pointer"}`,
 
           "&:hover": {
@@ -152,7 +147,7 @@ const Topbar = () => {
             display: "inline",
             fontWeight: "bold",
             // fontSize: "14px",
-            fontSize: `${isLT425 ? "14px" : "24px"}`,
+            fontSize: `${isXS ? "14px" : "24px"}`,
           }}
         >
           UU
@@ -161,9 +156,9 @@ const Topbar = () => {
           sx={{
             display: "inline",
             // paddingTop: "4px",
-            paddingTop: `${isLT425 ? "3px" : "4px"}`,
+            paddingTop: `${isXS ? "3px" : "4px"}`,
             // fontSize: "10px",
-            fontSize: `${isLT425 ? "8px" : "16px"}`,
+            fontSize: `${isXS ? "8px" : "16px"}`,
           }}
         >
           +
@@ -258,7 +253,7 @@ const Topbar = () => {
       <FlexBetBox>
         <Logo />
         {/* MENU */}
-        {!isLT625 ? (
+        {!isSM ? (
           <FlexBetBox paddingLeft="12px">
             {/* Menu1: Works with subMenu*/}
             <Box
@@ -288,7 +283,7 @@ const Topbar = () => {
             >
               <Typography
                 // fontWeight="400"
-                fontSize={`${isGTE700 ? "19px" : "17px"}`}
+                fontSize={`${isSMED ? "19px" : "17px"}`}
                 padding="0px 10px"
                 color={BLACK_85P}
                 // sx={{
@@ -348,12 +343,12 @@ const Topbar = () => {
             >
               <Typography
                 // fontWeight="500"
-                fontSize={`${isGTE700 ? "19px" : "17px"}`}
+                fontSize={`${isSMED ? "19px" : "17px"}`}
                 padding="0px 10px"
                 letterSpacing="0.075px"
                 color={BLACK_85P}
               >
-                {`Data Viz &${isGTE700 ? " Misc" : ""}`}
+                {`Data Viz &${isSMED ? " Misc" : ""}`}
               </Typography>
             </Box>
             {/* </MenuTooltip> */}
@@ -364,7 +359,7 @@ const Topbar = () => {
               sx={{
                 borderRadius: "50%",
                 // ml: "8px",
-                ml: `${isGTE700 ? "8px" : "6px"}`,
+                ml: `${isSMED ? "8px" : "6px"}`,
                 width: "24px",
                 height: "24px",
                 cursor: "pointer",
@@ -387,7 +382,7 @@ const Topbar = () => {
             >
               <Typography
                 mt="-3px"
-                fontSize={`${isGTE700 ? "18px" : "18px"}`}
+                fontSize={`${isSMED ? "18px" : "18px"}`}
                 fontWeight={500}
                 padding="0px 7.5px"
                 color={BLACK_85P}
@@ -404,10 +399,10 @@ const Topbar = () => {
             sx={{
               display: "flex",
               alignItems: "center",
-              height: `${isLT425 ? "37px" : "60px"}`,
+              height: `${isXS ? "37px" : "60px"}`,
               border: 2,
               ml: "-2px",
-              padding: `${isLT425 ? "0px 2.5px" : "0px 12px"}`,
+              padding: `${isXS ? "0px 2.5px" : "0px 12px"}`,
               cursor: "pointer",
               "&:hover": {
                 backgroundColor: "#FFFF33",
@@ -416,7 +411,7 @@ const Topbar = () => {
           >
             <MenuIcon
               sx={{
-                fontSize: `${isLT425 ? "30px" : "34px"}`,
+                fontSize: `${isXS ? "30px" : "34px"}`,
                 color: BLACK_85P,
               }}
             />
