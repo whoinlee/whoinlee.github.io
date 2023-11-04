@@ -45,7 +45,7 @@ export default function App() {
           isSMED,
         }}
       >
-        <Container maxWidth="lg" className="app">
+        <Container maxWidth="xl" className="app">
           <Topbar />
           {selectedPage === "home" && <Home />}
           {selectedPage === "works" && <Works />}

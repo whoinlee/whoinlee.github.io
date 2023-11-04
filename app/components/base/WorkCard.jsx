@@ -22,6 +22,8 @@ const WorkCard = ({
   buttonLabel = "",
   onClick,
 }) => {
+  const overlayRef = useRef(null);
+  
   const onCardOver = () => {
     overlayRef.current.style.opacity = 1;
     // console.log("onCardOver, overlayRef.current? ", overlayRef.current);
@@ -30,22 +32,13 @@ const WorkCard = ({
     overlayRef.current.style.opacity = 0;
   };
 
-  const overlayRef = useRef(null);
+  
 
   const workCardStyles = {
     card: {
       position: "relative",
       maxWidth: cardWidth,
       borderRadius: "10px",
-    },
-
-    media: {
-      // filter: "brightness(1)",
-      // transition: "all .5s ease-out",
-      // "&:hover": {
-      //   filter: "brightness(.75)",
-      //   // scale: "1.2"
-      // },
     },
 
     overlay: {
@@ -78,9 +71,8 @@ const WorkCard = ({
           height={imgHeight}
           image={imgPath}
           alt={imgAlt}
-          sx={workCardStyles.media}
         />
-        <div style={workCardStyles.overlay} ref={overlayRef}>
+        {/* <div style={workCardStyles.overlay} ref={overlayRef}>
           {cardTitle}
         </div>
         {cardDesc && cardDesc !== "" && (
@@ -99,7 +91,7 @@ const WorkCard = ({
               {buttonLabel}
             </Button>
           </CardActions>
-        )}
+        )} */}
       </CardActionArea>
     </Card>
   );

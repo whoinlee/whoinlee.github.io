@@ -1,18 +1,13 @@
 import React, { useContext } from "react";
 import {
   Box,
-  Button,
   Card,
-  CardActionArea,
-  CardActions,
-  CardContent,
-  CardMedia,
   Typography,
   useTheme,
 } from "@mui/material";
 import FlexBetBox from "@/app/components/base/FlexBetBox";
 import FlexStartBox from "@/app/components/base/FlexStartBox";
-import WorkCard from "@/app/components/base/WorkCard";
+import WorkCardImg from "@/app/components/base/WorkCardImg";
 import WorkCardWide from "@/app/components/base/WorkCardWide";
 import { SiteContext } from "../../page";
 
@@ -69,17 +64,21 @@ const ProjectAppD = () => {
 
   const projectCardStyles = {
     card: {
-      padding: "18px",  //--"24px"
+      padding: "18px",
       paddingRight: "0px",
-      minWidth: 874, //850?
-      minHeight: 650,
+      minWidth: 874,  //-- 18 + 425 + 6 + 425 = 874
+      minHeight: 696, //-- 18 + 325 + 10 + 325 + 18 = 696
       border: "none",
+      // border: "0.5px solid rgba(0, 0, 0, .25)",
       borderRadius: "12px",
       borderTopRightRadius: 0,
       borderBottomRightRadius: 0,
       backgroundColor: "rgba(150, 150, 150, .075)", //-- grey
       // backgroundColor: "rgba(66, 165, 245, .075)"  //-- light blue
     },
+
+    vGap: "10px",
+    hGap: "6px"
   };
 
   return (
@@ -90,8 +89,8 @@ const ProjectAppD = () => {
         </Box>
         {!isSM && (
           <Card variant="outlined" sx={projectCardStyles.card}>
-            <FlexStartBox gap="6px" sx={{ pb: "10px"} }>
-              <WorkCard
+            <FlexStartBox gap={projectCardStyles.hGap} sx={{ pb: projectCardStyles.vGap }}>
+              <WorkCardImg
                 imgPath="/media/p1skeleton425x325.jpg"
                 imgWidth={425}
                 imgHeight={325}
@@ -103,13 +102,15 @@ const ProjectAppD = () => {
                   )
                 }
               />
-              <div>
+              <div style={{display: "flex", flexDirection: "column", justifyContent: "space-between", height: "325px"}}>
                 <WorkCardWide
-                  imgPath=""
-                  imgWidth={200}
-                  imgHeight={150}
-                  cardWidth={325}
+                  imgPath="/media/p2inspector320x320.jpg"
+                  imgWidth={146}
+                  imgHeight={146}
+                  cardWidth={425}
+                  imgAlt="Inspector Panel"
                   cardTitle="Inspector Panel"
+                  fontSize=".75rem"
                   onClick={() =>
                     openLink(
                       "https://particle-prototypes.netlify.app/inspectorPanel"
@@ -117,11 +118,11 @@ const ProjectAppD = () => {
                   }
                 />
                 <WorkCardWide
-                  imgPath=""
-                  imgWidth={200}
-                  imgHeight={150}
-                  imgAlt="Skeleton Loading"
-                  cardWidth={325}
+                  imgPath="/media/p3relation320x320.jpg"
+                  imgWidth={146}
+                  imgHeight={146}
+                  cardWidth={425}
+                  imgAlt="Relationship Graph"
                   cardTitle="Relationship Graph"
                   onClick={() =>
                     openLink(
@@ -131,8 +132,8 @@ const ProjectAppD = () => {
                 />
               </div>
             </FlexStartBox>
-            <FlexStartBox gap="6px">
-              <WorkCard
+            <FlexStartBox gap={projectCardStyles.hGap}>
+              <WorkCardImg
                 imgPath="/media/dataVizPlugin425x325_3.jpg"
                 imgWidth={425}
                 imgHeight={325}
@@ -142,7 +143,7 @@ const ProjectAppD = () => {
                   openLink("https://github.com/whoinlee/figmaPlugins")
                 }
               />
-              <WorkCard
+              <WorkCardImg
                 imgPath="/media/figmaJiraPlugin425x325.jpg"
                 imgWidth={425}
                 imgHeight={325}
