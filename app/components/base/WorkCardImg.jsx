@@ -11,6 +11,7 @@ const WorkCardImg = ({
   imgHeight = 0,
   fontSize = "0.85rem",
   cardWidth = 345,
+  imgAlt = "",
   cardTitle = "",
   onClick,
 }) => {
@@ -18,18 +19,15 @@ const WorkCardImg = ({
 
   const onCardOver = () => {
     if (overlayRef) overlayRef.current.style.opacity = 1;
-    // console.log("onCardOver, overlayRef.current? ", overlayRef.current);
   };
   const onCardOut = () => {
     if (overlayRef) overlayRef.current.style.opacity = 0;
   };
 
-  
-
   const cardStyles = {
     card: {
       position: "relative",
-      maxWidth: cardWidth,
+      minWidth: cardWidth,
       borderRadius: "10px",
     },
 
@@ -63,11 +61,11 @@ const WorkCardImg = ({
           width={imgWidth}
           height={imgHeight}
           image={imgPath}
-          alt={cardTitle}
+          alt={imgAlt}
           sx={cardStyles.media}
         />
         <div style={cardStyles.overlay} ref={overlayRef}>
-          {cardTitle}
+          {imgAlt}
         </div>
       </CardActionArea>
     </Card>

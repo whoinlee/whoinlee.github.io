@@ -95,7 +95,8 @@ const ProjectAppD = () => {
                 imgWidth={425}
                 imgHeight={325}
                 cardWidth={425}
-                cardTitle="Skeleton Loading Screen"
+                imgAlt="Skeleton Loading Screen"
+                // cardTitle="Skeleton Loading Screen"
                 onClick={() =>
                   openLink(
                     "https://particle-prototypes.netlify.app/skeletonScreen"
@@ -109,8 +110,10 @@ const ProjectAppD = () => {
                   imgHeight={146}
                   cardWidth={425}
                   imgAlt="Inspector Panel"
-                  cardTitle="Inspector Panel"
+                  cardTitle="Inspector Panel Resizing"
+                  cardDesc="Grid based layout adjustment for improving space usability while keeping minimum panel width requirement"
                   fontSize=".75rem"
+                  buttonLabel="VIEW"
                   onClick={() =>
                     openLink(
                       "https://particle-prototypes.netlify.app/inspectorPanel"
@@ -123,7 +126,9 @@ const ProjectAppD = () => {
                   imgHeight={146}
                   cardWidth={425}
                   imgAlt="Relationship Graph"
-                  cardTitle="Relationship Graph"
+                  cardTitle="Relationship Graph Improvements"
+                  cardDesc="To improve space adaptability and selected entity discoverability, and to accomodate long entity labels"
+                  buttonLabel="VIEW"
                   onClick={() =>
                     openLink(
                       "https://particle-prototypes.netlify.app/relationshipGraph"
@@ -134,11 +139,11 @@ const ProjectAppD = () => {
             </FlexStartBox>
             <FlexStartBox gap={projectCardStyles.hGap}>
               <WorkCardImg
-                imgPath="/media/dataVizPlugin425x325_3.jpg"
+                imgPath="/media/dataVizPlugin425x325_1.jpg"
                 imgWidth={425}
                 imgHeight={325}
                 cardWidth={425}
-                cardTitle="Data Visualization Plugin"
+                imgAlt="Data Visualization Plugin"
                 onClick={() =>
                   openLink("https://github.com/whoinlee/figmaPlugins")
                 }
@@ -148,7 +153,7 @@ const ProjectAppD = () => {
                 imgWidth={425}
                 imgHeight={325}
                 cardWidth={425}
-                cardTitle="Jira & Figma Comm. Plugin"
+                imgAlt="Jira & Figma Comm. Plugin"
                 onClick={() =>
                   openLink("https://github.com/whoinlee/figmaPlugins")
                 }

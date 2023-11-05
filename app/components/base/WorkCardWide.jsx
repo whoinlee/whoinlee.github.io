@@ -1,16 +1,11 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 import {
-  Box,
   Button,
   Card,
-  CardActionArea,
-  CardActions,
   CardContent,
-  CardMedia,
   Typography,
-  useTheme,
 } from "@mui/material";
-import FlexBetBox from "./FlexBetBox";
+import FlexStartBox from "./FlexStartBox";
 import WorkCardImg from "./WorkCardImg";
 
 const WorkCardWide = ({
@@ -25,26 +20,14 @@ const WorkCardWide = ({
   buttonLabel = "",
   onClick,
 }) => {
-  // const [isCardOver, setIsCardOver] = useState(false);
-  // const onCardOver = () => {
-  //   overlayRef.current.style.opacity = 1;
-  //   // console.log("onCardOver, overlayRef.current? ", overlayRef.current);
-  // };
-  // const onCardOut = () => {
-  //   overlayRef.current.style.opacity = 0;
-  //   // console.log("onCardOver, overlayRef.current? ", overlayRef.current);
-  // };
-
-  // const overlayRef = useRef(null);
-
   const cardStyles = {
     card: {
       position: "relative",
-      minWidth: cardWidth,
+      maxWidth: cardWidth,
       borderRadius: "10px",
       padding: "6px",
       backgroundColor: "rgba(150, 150, 150, .15)",
-      border: "none"
+      border: "none",
     },
 
     media: {},
@@ -52,32 +35,27 @@ const WorkCardWide = ({
 
   return (
     <Card variant="outlined" sx={cardStyles.card}>
-      
-      <FlexBetBox>
-        {/* <CardActionArea
-        onClick={onClick}
-        onMouseOver={onCardOver}
-        onMouseLeave={onCardOut}
-      > */}
+      <FlexStartBox sx={{alignItems: "flex-start"}}>
         <WorkCardImg
           imgPath={imgPath}
           imgWidth={imgWidth}
           imgHeight={imgHeight}
-          fontSize="0.75rem"
+          imgAlt={imgAlt}
+          fontSize={fontSize}
           cardWidth={imgWidth}
           cardTitle={cardTitle}
           onClick={onClick}
         />
-      {/* </CardActionArea> */}
-      {/* <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          {cardTitle}
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          {cardDesc}
-        </Typography>
-      </CardContent> */}
-      </FlexBetBox>
+        <CardContent sx={{height: imgHeight}}>
+          <Typography component="div" sx={{fontSize: 14, fontWeight: 500, pb: "6px"}}>
+            {cardTitle}
+          </Typography>
+          <Typography variant="body2" color="text.secondary" sx={{fontSize: 12, fontWeight: 400, pb: "6px"}}>
+            {cardDesc}
+          </Typography>
+          <Button size="small" variant="outlined" sx={{fontSize: 12}} onClick={onClick}>{buttonLabel}</Button>
+        </CardContent>
+      </FlexStartBox>
     </Card>
   );
 };
