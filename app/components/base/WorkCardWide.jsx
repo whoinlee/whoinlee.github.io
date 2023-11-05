@@ -19,6 +19,7 @@ const WorkCardWide = ({
   cardTitle = "",
   cardDesc = "",
   buttonLabel = "",
+  cardBkgColor = "rgba(150, 150, 150, .15)",
   onClick,
 }) => {
   const cardStyles = {
@@ -27,7 +28,7 @@ const WorkCardWide = ({
       maxWidth: cardWidth,
       borderRadius: "10px",
       padding: "6px",
-      backgroundColor: "rgba(150, 150, 150, .15)",
+      backgroundColor: cardBkgColor,
       border: "none",
     },
 

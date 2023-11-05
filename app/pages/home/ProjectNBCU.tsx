@@ -3,7 +3,7 @@ import { Box, Card, Typography, useTheme } from "@mui/material";
 import FlexBetBox from "@/app/components/base/FlexBetBox";
 import FlexStartBox from "@/app/components/base/FlexStartBox";
 import WorkCardImg from "@/app/components/base/WorkCardImg";
-// import WorkCardWide from "@/app/components/base/WorkCardWide";
+import WorkCardWide from "@/app/components/base/WorkCardWide";
 import { SiteContext } from "../../page";
 
 const ProjectNBCU = () => {
@@ -92,51 +92,89 @@ const ProjectNBCU = () => {
             >
               <WorkCardImg
                 imgPath="/media/fireTVblackWhite425x325.jpg"
-                imgWidth={425}
-                imgHeight={325}
-                cardWidth={425}
+                imgWidth={210}
+                imgHeight={160}
+                cardWidth={210}
                 imgAlt="Desktop App in Black and White"
-                // cardTitle="Skeleton Loading Screen"
+                fontSize="0.75rem"
                 onClick={() =>
                   openLink("https://github.com/whoinlee/fireTV_Air")
                 }
               />
               <WorkCardImg
                 imgPath="/media/fireTVcolor425x325.jpg"
-                imgWidth={425}
-                imgHeight={325}
-                cardWidth={425}
+                imgWidth={210}
+                imgHeight={160}
+                cardWidth={210}
                 imgAlt="Desktop App in Color"
+                fontSize="0.75rem"
+                onClick={() =>
+                  openLink("https://github.com/whoinlee/fireTV_Air")
+                }
+              />
+
+              <WorkCardImg
+                imgPath="/media/fireTVvideoPlayer425x325.jpg"
+                imgWidth={210}
+                imgHeight={160}
+                cardWidth={210}
+                imgAlt="Video Player"
+                fontSize="0.75rem"
+                onClick={() =>
+                  openLink("https://github.com/whoinlee/fireTV_Air")
+                }
+              />
+              <WorkCardImg
+                imgPath="/media/fireTVWeb425x325.jpg"
+                imgWidth={210}
+                imgHeight={160}
+                cardWidth={210}
+                imgAlt="Web App Prototype"
+                fontSize="0.75rem"
+                onClick={() =>
+                  openLink("https://github.com/whoinlee/fireTV_React")
+                }
+              />
+            </FlexStartBox>
+            <FlexStartBox gap={projectCardStyles.hGap}>
+              <WorkCardImg
+                imgPath="/media/fireTVbravo425x340.jpg"
+                imgWidth={425}
+                imgHeight={340}
+                cardWidth={425}
+                imgAlt="Customization for Bravo"
+                onClick={() =>
+                  openLink("https://github.com/whoinlee/fireTV_Air")
+                }
+              />
+              <WorkCardImg
+                imgPath="/media/fireTVvariations425x340.jpg"
+                imgWidth={425}
+                imgHeight={340}
+                cardWidth={425}
+                imgAlt="Customizations for USA, Telemundo, and E!"
                 onClick={() =>
                   openLink("https://github.com/whoinlee/fireTV_Air")
                 }
               />
             </FlexStartBox>
-            <FlexStartBox gap={projectCardStyles.hGap}>
-              
-            <WorkCardImg
-                imgPath="/media/fireTVWeb425x325.jpg"
-                imgWidth={425}
-                imgHeight={325}
-                cardWidth={425}
-                imgAlt="Web App Prototype"
-                onClick={() =>
-                  openLink("https://github.com/whoinlee/fireTV_React")
-                }
-              />
-              <WorkCardImg
-                imgPath="/media/fireTVReactNative425x325.jpg"
-                imgWidth={425}
-                imgHeight={325}
-                cardWidth={425}
-                imgAlt="Android Platform TV App"
-                onClick={() =>
-                  openLink("https://github.com/whoinlee/fireTV_ReactNative")
-                }
-              />
-              
-            </FlexStartBox>
-           
+            <Box sx={{pt: "10px"}}>
+            <WorkCardWide
+                  imgPath="/media/fireTVReactNative425x325.jpg"
+                  imgWidth={146}
+                  imgHeight={146}
+                  cardWidth={858}
+                  imgAlt="Android TV App"
+                  cardTitle="Android Platform Fire TV App POC in React Native"
+                  cardDesc="Android Platform TV App developed in React Native for the first time in streaming industry, when React Native just started supporting Android Platform in 2018."
+                  buttonLabel="View Source"
+                  onClick={() =>
+                    openLink(
+                      "https://github.com/whoinlee/fireTV_ReactNative"
+                    )
+                  }
+                />
+            </Box>
           </Card>
         )}
       </FlexBetBox>
