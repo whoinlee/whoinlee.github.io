@@ -29,16 +29,29 @@ const ProjectAlternet = () => {
       >
         Alternet
       </Typography>
-      <Typography variant="h2" sx={{ cursor: "default" }} fontWeight={600}>
+      <Typography variant="h2" sx={{
+          cursor: "default",
+          width: `${isSM ? "275px" : "186px"}`,
+          backgroundColor: "rgba(0, 0, 0, .85)",
+          color: "#fefefe",
+          mt: "2px",
+          mb: "2px"
+        }}>
         Large Scale
       </Typography>
-      <Typography variant="h2" sx={{ cursor: "default" }} fontWeight={600}>
-        Data Driven
+      <Typography variant="h2" sx={{
+          cursor: "default",
+          width: `${isSM ? "275px" : "186px"}`,
+          backgroundColor: "rgba(0, 0, 0, .85)",
+          color: "#fefefe",
+          mb: "2px",
+        }}>
+        Data-Driven
       </Typography>
       <Typography
         variant="h2"
         sx={{
-          width: `${isSM ? "100%" : "260px"}`,
+          width: `${isSM ? "275px" : "260px"}`,
           textDecoration: "underline",
           cursor: "pointer",
           "&:hover": { backgroundColor: "yellow" },
@@ -53,7 +66,7 @@ const ProjectAlternet = () => {
       <Typography
         variant="h2"
         sx={{
-          width: `${isSM ? "100%" : "265px"}`,
+          width: `${isSM ? "275px" : "265px"}`,
           textDecoration: "underline",
           cursor: "pointer",
           "&:hover": { backgroundColor: "yellow" },

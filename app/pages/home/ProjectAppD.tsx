@@ -1,10 +1,5 @@
 import React, { useContext } from "react";
-import {
-  Box,
-  Card,
-  Typography,
-  useTheme,
-} from "@mui/material";
+import { Box, Card, Typography, useTheme } from "@mui/material";
 import FlexBetBox from "@/app/components/base/FlexBetBox";
 import FlexStartBox from "@/app/components/base/FlexStartBox";
 import WorkCardImg from "@/app/components/base/WorkCardImg";
@@ -23,13 +18,23 @@ const ProjectAppD = () => {
     <>
       <Typography
         variant="h2"
-        sx={{ cursor: "pointer" }}
+        sx={{ cursor: "pointer", fontWeight: 500 }}
         color={theme.palette.primary.light}
         onClick={() => openLink("https://www.appdynamics.com/")}
       >
         AppDynamics
       </Typography>
-      <Typography variant="h2" sx={{ cursor: "default" }} fontWeight={600}>
+      <Typography
+        variant="h2"
+        sx={{
+          cursor: "default",
+          width: `${isSM ? "275px" : "230px"}`,
+          backgroundColor: "rgba(0, 0, 0, .85)",
+          color: "#fefefe",
+          mt: "2px",
+          mb: "2px" 
+        }}
+      >
         Design System
       </Typography>
       <Typography
@@ -66,7 +71,7 @@ const ProjectAppD = () => {
     card: {
       padding: "18px",
       paddingRight: "0px",
-      minWidth: 874,  //-- 18 + 425 + 6 + 425 = 874
+      minWidth: 874, //-- 18 + 425 + 6 + 425 = 874
       minHeight: 696, //-- 18 + 325 + 10 + 325 + 18 = 696
       border: "none",
       // border: "0.5px solid rgba(0, 0, 0, .25)",
@@ -78,18 +83,23 @@ const ProjectAppD = () => {
     },
 
     vGap: "10px",
-    hGap: "6px"
+    hGap: "6px",
   };
 
   return (
     <div className="project appD">
-      <FlexBetBox sx={{ justifyContent: `${isSM ? "center" : "space-between"}` }}>
+      <FlexBetBox
+        sx={{ justifyContent: `${isSM ? "center" : "space-between"}` }}
+      >
         <Box minWidth={275} sx={{ textAlign: `${isSM ? "center" : "left"}` }}>
           {titleContent}
         </Box>
         {!isSM && (
           <Card variant="outlined" sx={projectCardStyles.card}>
-            <FlexStartBox gap={projectCardStyles.hGap} sx={{ pb: projectCardStyles.vGap }}>
+            <FlexStartBox
+              gap={projectCardStyles.hGap}
+              sx={{ pb: projectCardStyles.vGap }}
+            >
               <WorkCardImg
                 imgPath="/media/p1skeleton425x325.jpg"
                 imgWidth={425}
@@ -103,7 +113,14 @@ const ProjectAppD = () => {
                   )
                 }
               />
-              <div style={{display: "flex", flexDirection: "column", justifyContent: "space-between", height: "325px"}}>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                  height: "325px",
+                }}
+              >
                 <WorkCardWide
                   imgPath="/media/p2inspector320x320.jpg"
                   imgWidth={146}

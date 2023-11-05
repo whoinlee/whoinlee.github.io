@@ -13,7 +13,18 @@ const ProjectWeb = () => {
   const titleContent = (
     <>
       <Typography variant="h2" sx={{ cursor: "default" }}>
-        Award Winning Websites
+        Award Winning{" "}
+        <Box
+          component="span"
+          sx={{
+            backgroundColor: "rgba(0, 0, 0, .85)",
+            color: "#fefefe",
+            pl: "2px",
+            pr: "2px",
+          }}
+        >
+          Websites
+        </Box>
       </Typography>
     </>
   );

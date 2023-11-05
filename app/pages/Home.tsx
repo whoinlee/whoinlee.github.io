@@ -1,4 +1,5 @@
 import React from "react";
+import Divider from '@mui/material/Divider';
 import ProjectAppD from "./home/ProjectAppD";
 import ProjectNBCU from "./home/ProjectNBCU";
 import ProjectMISC from "./home/ProjectMISC";
@@ -10,14 +11,15 @@ const Home = () => {
   return (
     <div className="page home">
       <ProjectAppD />
+      {/* <Divider className="hr"/> */}
       <hr />
       <ProjectNBCU />
+      <hr />
+      <ProjectAlternet />
       <hr />
       <ProjectMISC />
       <hr />
       <ProjectWeb />
-      <hr />
-      <ProjectAlternet />
     </div>
   );
 };

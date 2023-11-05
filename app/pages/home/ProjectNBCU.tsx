@@ -24,7 +24,17 @@ const ProjectNBCU = () => {
       >
         NBCUniversal
       </Typography>
-      <Typography variant="h2" sx={{ cursor: "default" }} fontWeight={600}>
+      <Typography
+        variant="h2"
+        sx={{
+          cursor: "default",
+          width: `${isSM ? "275px" : "112px"}`,
+          backgroundColor: "rgba(0, 0, 0, .85)",
+          color: "#fefefe",
+          mt: "2px",
+          mb: "2px",
+        }}
+      >
         Fire TV
       </Typography>
       <Typography
@@ -158,22 +168,20 @@ const ProjectNBCU = () => {
                 }
               />
             </FlexStartBox>
-            <Box sx={{pt: "10px"}}>
-            <WorkCardWide
-                  imgPath="/media/fireTVReactNative425x325.jpg"
-                  imgWidth={146}
-                  imgHeight={146}
-                  cardWidth={858}
-                  imgAlt="Android TV App"
-                  cardTitle="Android Platform Fire TV App POC in React Native"
-                  cardDesc="Android Platform TV App developed in React Native for the first time in streaming industry, when React Native just started supporting Android Platform in 2018."
-                  buttonLabel="View Source"
-                  onClick={() =>
-                    openLink(
-                      "https://github.com/whoinlee/fireTV_ReactNative"
-                    )
-                  }
-                />
+            <Box sx={{ pt: "10px" }}>
+              <WorkCardWide
+                imgPath="/media/fireTVReactNative425x325.jpg"
+                imgWidth={146}
+                imgHeight={146}
+                cardWidth={858}
+                imgAlt="Android TV App"
+                cardTitle="Android Platform Fire TV App POC in React Native"
+                cardDesc="Android Platform TV App developed in React Native for the first time in streaming industry, when React Native just started supporting Android Platform in 2018."
+                buttonLabel="View Source"
+                onClick={() =>
+                  openLink("https://github.com/whoinlee/fireTV_ReactNative")
+                }
+              />
             </Box>
           </Card>
         )}
