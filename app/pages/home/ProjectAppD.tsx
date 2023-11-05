@@ -34,8 +34,8 @@ const ProjectAppD = () => {
       <Typography
         variant="h2"
         sx={{
-          textAlign: "center",
-          width: `${isSM ? "300px" : "170px"}`,
+          // textAlign: `${isSM ? "center" : "left"}`,
+          width: `${isSM ? "275px" : "170px"}`,
           textDecoration: "underline",
           cursor: "pointer",
           "&:hover": { backgroundColor: "yellow" },

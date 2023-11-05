@@ -29,6 +29,7 @@ const WorkCardImg = ({
       position: "relative",
       minWidth: cardWidth,
       borderRadius: "10px",
+      border: "none"
     },
 
     overlay: {
@@ -50,7 +51,7 @@ const WorkCardImg = ({
   };
 
   return (
-    <Card variant="outlined" sx={cardStyles.card}>
+    <Card sx={cardStyles.card}>
       <CardActionArea
         onClick={onClick}
         onMouseOver={onCardOver}

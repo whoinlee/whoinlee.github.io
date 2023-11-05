@@ -5,6 +5,7 @@ import {
   CardContent,
   Typography,
 } from "@mui/material";
+import LaunchIcon from '@mui/icons-material/Launch';
 import FlexStartBox from "./FlexStartBox";
 import WorkCardImg from "./WorkCardImg";
 
@@ -53,7 +54,7 @@ const WorkCardWide = ({
           <Typography variant="body2" color="text.secondary" sx={{fontSize: 12, fontWeight: 400, pb: "6px"}}>
             {cardDesc}
           </Typography>
-          <Button size="small" variant="outlined" sx={{fontSize: 12}} onClick={onClick}>{buttonLabel}</Button>
+          <Button size="small" variant="outlined" sx={{fontSize: 12, textTransform: "none"}} onClick={onClick}>{buttonLabel} <LaunchIcon sx={{ml: "6px", fontSize: "small"}} /></Button>
         </CardContent>
       </FlexStartBox>
     </Card>
