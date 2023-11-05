@@ -11,7 +11,7 @@ import WorkCardImg from "@/app/components/base/WorkCardImg";
 import WorkCardWide from "@/app/components/base/WorkCardWide";
 import { SiteContext } from "../../page";
 
-const ProjectAppD = () => {
+const ProjectAlternet = () => {
   const theme = useTheme();
   const { isSM } = useContext<any>(SiteContext);
 
@@ -25,39 +25,24 @@ const ProjectAppD = () => {
         variant="h2"
         sx={{ cursor: "pointer" }}
         color={theme.palette.primary.light}
-        onClick={() => openLink("https://www.appdynamics.com/")}
+        onClick={() => openLink("http://www.alternetinc.com/index.html")}
       >
-        AppDynamics
+        Alternet
       </Typography>
       <Typography variant="h2" sx={{ cursor: "default" }} fontWeight={600}>
-        Design System
+        Large Scale Data Driven
       </Typography>
       <Typography
         variant="h2"
         sx={{
-          width: `${isSM ? "275px" : "170px"}`,
+          width: `${isSM ? "100%" : "215px"}`,
           textDecoration: "underline",
           cursor: "pointer",
           "&:hover": { backgroundColor: "yellow" },
         }}
-        onClick={() => openLink("https://github.com/whoinlee/prototypeSite")}
+        onClick={() => openLink("http://www.alternetinc.com/ivy.html")}
       >
-        Prototypes
-      </Typography>
-      <Typography variant="h2" sx={{ cursor: "default" }}>
-        and
-      </Typography>
-      <Typography
-        variant="h2"
-        sx={{
-          width: `${isSM ? "275px" : "215px"}`,
-          textDecoration: "underline",
-          cursor: "pointer",
-          "&:hover": { backgroundColor: "yellow" },
-        }}
-        onClick={() => openLink("https://github.com/whoinlee/figmaPlugins")}
-      >
-        Figma Plugins
+        Applications
       </Typography>
     </>
   );
@@ -166,4 +151,4 @@ const ProjectAppD = () => {
   );
 };
 
-export default ProjectAppD;
+export default ProjectAlternet;

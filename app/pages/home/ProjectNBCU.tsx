@@ -3,7 +3,7 @@ import { Box, Card, Typography, useTheme } from "@mui/material";
 import FlexBetBox from "@/app/components/base/FlexBetBox";
 import FlexStartBox from "@/app/components/base/FlexStartBox";
 import WorkCardImg from "@/app/components/base/WorkCardImg";
-import WorkCardWide from "@/app/components/base/WorkCardWide";
+// import WorkCardWide from "@/app/components/base/WorkCardWide";
 import { SiteContext } from "../../page";
 
 const ProjectNBCU = () => {
@@ -18,8 +18,9 @@ const ProjectNBCU = () => {
     <>
       <Typography
         variant="h2"
-        sx={{ cursor: "default" }}
+        sx={{ cursor: "pointer" }}
         color={theme.palette.primary.light}
+        onClick={() => openLink("https://www.nbcuniversal.com/")}
       >
         NBCUniversal
       </Typography>
@@ -29,7 +30,6 @@ const ProjectNBCU = () => {
       <Typography
         variant="h2"
         sx={{
-          // textAlign: `${isSM ? "center" : "left"}`,
           width: `${isSM ? "275px" : "216px"}`,
           textDecoration: "underline",
           cursor: "pointer",
@@ -66,12 +66,10 @@ const ProjectNBCU = () => {
       minWidth: 874, //-- 18 + 425 + 6 + 425 = 874
       minHeight: 696, //-- 18 + 325 + 10 + 325 + 18 = 696
       border: "none",
-      // border: "0.5px solid rgba(0, 0, 0, .25)",
       borderRadius: "12px",
       borderTopRightRadius: 0,
       borderBottomRightRadius: 0,
       backgroundColor: "rgba(150, 150, 150, .075)", //-- grey
-      // backgroundColor: "rgba(66, 165, 245, .075)"  //-- light blue
     },
 
     vGap: "10px",
