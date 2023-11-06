@@ -17,8 +17,8 @@ const Home = () => {
       <ProjectAlternet />
       <hr />
       <ProjectMISC />
-      {/* <hr />
-      <ProjectWeb /> */}
+      <hr />
+      <ProjectWeb />
     </div>
   );
 };
