@@ -52,13 +52,16 @@ const ProjectMISC = () => {
         {titleContent}
       </Box>
       <Box sx={{ flexGrow: 1 }}>
-        <Grid container spacing={1} justifyContent="space-between">
-          <Grid item sm={12} md={6} lg={4}>
+          {/* <Grid item sm={12} md={6} lg={4}> */}
+          <Grid container spacing={1} justifyContent="space-between">
+          <Grid item sm={12} md={6} xl={3} sx={{ flexGrow: 1}}>
             <WorkCardWide
               imgPath="/media/MiscOsiao265x210.jpg"
-              imgWidth={200}
-              imgHeight={158}
+              // imgWidth={200}
+              // imgHeight={158}
               cardWidth={800}
+              imgWidth={(isLG)? 150: (isXS? 190: 200)}
+              imgHeight={(isLG)? 150: (isXS? 150: 158)}
               imgAlt="OSIAO Kiosk"
               cardTitle="Estée Lauder"
               cardDesc="CMS managed OSIAO Kiosk in Chinese and English"
@@ -67,11 +70,11 @@ const ProjectMISC = () => {
               isOverlay={false}
             />
           </Grid>
-          <Grid item sm={12} md={6} lg={4}>
+          <Grid item sm={12} md={6} xl={3} sx={{ flexGrow: 1}}>
             <WorkCardWide
               imgPath="/media/MiscXerox265x210.jpg"
-              imgWidth={200}
-              imgHeight={158}
+              imgWidth={(isLG)? 150: (isXS? 190: 200)}
+              imgHeight={(isLG)? 150: (isXS? 150: 158)}
               cardWidth={800}
               imgAlt="Automated Intelligence Challenge Game"
               cardTitle="Blue Telescope"
@@ -82,11 +85,11 @@ const ProjectMISC = () => {
               isOverlay={false}
             />
           </Grid>
-          <Grid item sm={12} md={6} lg={4}>
+          <Grid item sm={12} md={6} xl={3} sx={{ flexGrow: 1}}>
             <WorkCardWide
               imgPath="/media/MiscSubtexter265x210.jpg"
-              imgWidth={200}
-              imgHeight={158}
+              imgWidth={(isLG)? 150: (isXS? 190: 200)}
+              imgHeight={(isLG)? 150: (isXS? 150: 158)}
               cardWidth={800}
               imgAlt="Subtexter Facebook App"
               cardTitle="Droga5, Solarsilk"
@@ -102,11 +105,11 @@ const ProjectMISC = () => {
               }
             />
           </Grid>
-          <Grid item sm={12} md={6} lg={4}>
+          <Grid item sm={12} md={6} xl={3} sx={{ flexGrow: 1}}>
             <WorkCardWide
               imgPath="/media/Misc3DCard265x210.jpg"
-              imgWidth={200}
-              imgHeight={158}
+              imgWidth={(isLG)? 150: (isXS? 190: 200)}
+              imgHeight={(isLG)? 150: (isXS? 150: 158)}
               cardWidth={800}
               imgAlt="3D Holiday Card"
               cardTitle="Ogilvy"
@@ -116,7 +119,7 @@ const ProjectMISC = () => {
               isOverlay={false}
             />
           </Grid>
-          {isLG && (
+          {/* {isLG && (
             <>
               <Grid item lg={4}>
                 <WorkCardWide
@@ -152,7 +155,7 @@ const ProjectMISC = () => {
                 />
               </Grid>
             </>
-          )}
+          )} */}
         </Grid>
       </Box>
     </div>
