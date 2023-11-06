@@ -40,8 +40,8 @@ const ProjectWeb = () => {
           <Grid item sm={12} md={6} lg={3} sx={{ flexGrow: 1}}>
             <WorkCardWide
               imgPath="/media/WebIBM260x240.jpg"
-              imgWidth={isLG? 150: 200}
-              imgHeight={isLG? 150: 185}
+              imgWidth={(isLG||isXS)? 150: 200}
+              imgHeight={(isLG||isXS)? 150: 185}
               cardWidth={800}
               imgAlt="IBM 'Whatson' Website"
               cardTitle="IBM, Ogilvy"
@@ -55,8 +55,8 @@ const ProjectWeb = () => {
           <Grid item sm={12} md={6} lg={3} sx={{ flexGrow: 1}}>
             <WorkCardWide
               imgPath="/media/WebDove260x240.jpg"
-              imgWidth={isLG? 150: 200}
-              imgHeight={isLG? 150: 185}
+              imgWidth={(isLG||isXS)? 150: 200}
+              imgHeight={(isLG||isXS)? 150: 185}
               cardWidth={800}
               imgAlt="Dove 'Go Fresh' Website"
               cardTitle="Unilever, Ogilvy"
@@ -75,8 +75,8 @@ const ProjectWeb = () => {
           <Grid item sm={12} md={6} lg={3} sx={{ flexGrow: 1}}>
             <WorkCardWide
               imgPath="/media/WebFBSnowball260x240.jpg"
-              imgWidth={isLG? 150: 200}
-              imgHeight={isLG? 150: 185}
+              imgWidth={(isLG||isXS)? 150: 200}
+              imgHeight={(isLG||isXS)? 150: 185}
               cardWidth={800}
               imgAlt="Firstborn Snowball Fight"
               cardTitle="Firstborn"
@@ -95,8 +95,8 @@ const ProjectWeb = () => {
           <Grid item sm={12} md={6} lg={3} sx={{ flexGrow: 1}}>
             <WorkCardWide
               imgPath="/media/WebTAG260x240.jpg"
-              imgWidth={isLG? 150: 200}
-              imgHeight={isLG? 150: 185}
+              imgWidth={(isLG||isXS)? 150: 200}
+              imgHeight={(isLG||isXS)? 150: 185}
               cardWidth={800}
               imgAlt="TAG Testees Website"
               cardTitle="Arnold, Firstborn"

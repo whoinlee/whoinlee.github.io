@@ -134,7 +134,7 @@ const ProjectMISC = () => {
               </Grid>
               <Grid item lg={4}>
                 <WorkCardWide
-                  imgPath="/media/Misc3D_Apple265x210.jpg"
+                  imgPath="/media/Misc3DIphone265x210.jpg"
                   imgWidth={200}
                   imgHeight={158}
                   cardWidth={800}
