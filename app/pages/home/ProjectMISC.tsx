@@ -8,7 +8,6 @@ import WorkCardWide from "@/app/components/base/WorkCardWide";
 import { SiteContext } from "../../contexts/SiteState";
 
 const ProjectMISC = () => {
-  // const theme = useTheme();
   const { isXS, isLG } = useContext<any>(SiteContext);
 
   const openLink = (url: string) => {
@@ -29,7 +28,7 @@ const ProjectMISC = () => {
         <Box component="span" fontWeight="bold">
           Social Media
         </Box>{" "}
-        App, and{" "}
+        , and{" "}
         <Box
           component="span"
           sx={{
