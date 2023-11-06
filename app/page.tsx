@@ -21,14 +21,11 @@ export type Pages = "home" | "works" | "about";
 export default function App() {
   const [selectedPage, setSelectedPage] = useState<Pages>("home");
   const [selectedSubIndex, setSelectedSubIndex] = useState<number>(-1);
-  /* MUI:: xs: 0, sm: 600, md: 900, lg: 1200, xl: 1536 */
-  const isXS = !useMediaQuery("(min-width: 425px)");  //-- less than 425
-  const isSM = !useMediaQuery("(min-width: 600px)");  //-- less than 600
-  const isSMED = useMediaQuery("(min-width: 700px)"); //-- greter than or equal to 700
-
-  // const isLT425 = !useMediaQuery("(min-width: 425px)"); //-- less than 425
-  // const isLT625 = !useMediaQuery("(min-width: 600px)"); //-- less than 600
-  // const isGTE700 = useMediaQuery("(min-width: 700px)"); //-- greter than or equal to 700
+  /* MUI:: 0<xs<600, 600<=sm<900, 900<=md<1200, 1200<=lg<1536, 1536<=1536 */
+  const isXXS = !useMediaQuery("(min-width: 425px)"); //-- less than 425, isXXS
+  const isXS = !useMediaQuery("(min-width: 600px)");  //-- less than 600, isXS
+  const isSMED = useMediaQuery("(min-width: 700px)"); //-- greter than or equal to 700, Med SM
+  const isLG = useMediaQuery("(min-width: 1200px)");  //-- greter than or equal to 1200
 
   return (
     <ThemeProvider theme={theme}>
@@ -39,10 +36,10 @@ export default function App() {
           setSelectedPage,
           selectedSubIndex,
           setSelectedSubIndex,
-          // isLT425,           isLT625,           isGTE700,
+          isXXS,
           isXS,
-          isSM,
           isSMED,
+          isLG
         }}
       >
         <Container maxWidth="xl" className="app">

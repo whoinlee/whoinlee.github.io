@@ -4,7 +4,7 @@ import { SiteContext } from "../../page";
 
 const ProjectWeb = () => {
   const theme = useTheme();
-  const { isSM } = useContext<any>(SiteContext);
+  const { isXS } = useContext<any>(SiteContext);
 
   const openLink = (url: string) => {
     window.open(url, "_blank")?.focus();
@@ -31,7 +31,7 @@ const ProjectWeb = () => {
 
   return (
     <div className="project misc">
-      <Box sx={{ textAlign: `${isSM ? "center" : "left"}` }}>
+      <Box sx={{ textAlign: `${isXS ? "center" : "left"}` }}>
         {titleContent}
       </Box>
     </div>

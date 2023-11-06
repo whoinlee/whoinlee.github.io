@@ -26,9 +26,11 @@ const themeSettings = {
     h2: {
       fontWeight: 500,
       fontFamily: FONT_FAMILY,
-      fontSize: "2rem",
+      // fontSize: "2rem",
+      fontSize: "1.85rem",
     },
     h3: {
+      fontWeight: 500,
       fontFamily: FONT_FAMILY,
       fontSize: "1.75rem",
     },
@@ -42,9 +44,24 @@ const themeSettings = {
     },
     h6: {
       fontFamily: FONT_FAMILY,
-      fontSize: "1rem", //16px
+      fontSize: "0.95rem", //16px
     },
   },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 800,  //900, 700
+      lg: 1200,
+      xl: 1536,
+    },
+  }
 };
+
+/*
+  const isXS = !useMediaQuery("(min-width: 425px)");  //-- less than 425
+  const isSM = !useMediaQuery("(min-width: 600px)");  //-- less than 600
+  const isSMED = useMediaQuery("(min-width: 700px)"); //-- greter than or equal to 700
+*/
 
 export const theme = createTheme(themeSettings);

@@ -35,7 +35,7 @@ const Topbar = () => {
     selectedSubIndex,
     setSelectedSubIndex,
     // isLT425, isLT625, isGTE700,
-    isXS, isSM, isSMED
+    isXXS, isXS, isSMED
   } = useContext<any>(SiteContext);
 
   //-- MUI theme
@@ -127,10 +127,10 @@ const Topbar = () => {
           // pt: "12px",
           // pb: "12px",
 
-          pl: `${isXS ? "5px" : "8px"}`,
-          pr: `${isXS ? "2px" : "5px"}`,
-          pt: `${isXS ? "6px" : "10px"}`,
-          pb: `${isXS ? "6px" : "10px"}`,
+          pl: `${isXXS ? "5px" : "8px"}`,
+          pr: `${isXXS ? "2px" : "5px"}`,
+          pt: `${isXXS ? "6px" : "10px"}`,
+          pb: `${isXXS ? "6px" : "10px"}`,
           // cursor: `${selectedPage === "home" ? "default" : "pointer"}`,
 
           "&:hover": {
@@ -147,7 +147,7 @@ const Topbar = () => {
             display: "inline",
             fontWeight: "bold",
             // fontSize: "14px",
-            fontSize: `${isXS ? "14px" : "24px"}`,
+            fontSize: `${isXXS ? "14px" : "24px"}`,
           }}
         >
           UU
@@ -156,9 +156,9 @@ const Topbar = () => {
           sx={{
             display: "inline",
             // paddingTop: "4px",
-            paddingTop: `${isXS ? "3px" : "4px"}`,
+            paddingTop: `${isXXS ? "3px" : "4px"}`,
             // fontSize: "10px",
-            fontSize: `${isXS ? "8px" : "16px"}`,
+            fontSize: `${isXXS ? "8px" : "16px"}`,
           }}
         >
           +
@@ -253,7 +253,7 @@ const Topbar = () => {
       <FlexBetBox>
         <Logo />
         {/* MENU */}
-        {!isSM ? (
+        {!isXS ? (
           <FlexBetBox paddingLeft="12px">
             {/* Menu1: Works with subMenu*/}
             <Box
@@ -399,10 +399,10 @@ const Topbar = () => {
             sx={{
               display: "flex",
               alignItems: "center",
-              height: `${isXS ? "37px" : "60px"}`,
+              height: `${isXXS ? "37px" : "60px"}`,
               border: 2,
               ml: "-2px",
-              padding: `${isXS ? "0px 2.5px" : "0px 12px"}`,
+              padding: `${isXXS ? "0px 2.5px" : "0px 12px"}`,
               cursor: "pointer",
               "&:hover": {
                 backgroundColor: "#FFFF33",
@@ -411,7 +411,7 @@ const Topbar = () => {
           >
             <MenuIcon
               sx={{
-                fontSize: `${isXS ? "30px" : "34px"}`,
+                fontSize: `${isXXS ? "30px" : "34px"}`,
                 color: BLACK_85P,
               }}
             />

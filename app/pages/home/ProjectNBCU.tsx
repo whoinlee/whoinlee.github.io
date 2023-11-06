@@ -8,7 +8,7 @@ import { SiteContext } from "../../page";
 
 const ProjectNBCU = () => {
   const theme = useTheme();
-  const { isSM } = useContext<any>(SiteContext);
+  const { isXS } = useContext<any>(SiteContext);
 
   const openLink = (url: string) => {
     window.open(url, "_blank")?.focus();
@@ -17,8 +17,14 @@ const ProjectNBCU = () => {
   const titleContent = (
     <>
       <Typography
-        variant="h2"
-        sx={{ cursor: "pointer" }}
+        variant="h3"
+        sx={{
+          cursor: "pointer",
+          fontWeight: 500,
+          "&:hover": {
+            color: "#1976d2",
+          },
+        }}
         color={theme.palette.primary.light}
         onClick={() => openLink("https://www.nbcuniversal.com/")}
       >
@@ -28,7 +34,7 @@ const ProjectNBCU = () => {
         variant="h2"
         sx={{
           cursor: "default",
-          width: `${isSM ? "275px" : "112px"}`,
+          width: `${isXS ? "275px" : "112px"}`,
           backgroundColor: "rgba(0, 0, 0, .85)",
           color: "#fefefe",
           mt: "2px",
@@ -40,7 +46,7 @@ const ProjectNBCU = () => {
       <Typography
         variant="h2"
         sx={{
-          width: `${isSM ? "275px" : "216px"}`,
+          width: `${isXS ? "275px" : "216px"}`,
           textDecoration: "underline",
           cursor: "pointer",
           "&:hover": { backgroundColor: "yellow" },
@@ -55,7 +61,7 @@ const ProjectNBCU = () => {
       <Typography
         variant="h2"
         sx={{
-          width: `${isSM ? "275px" : "192px"}`,
+          width: `${isXS ? "275px" : "192px"}`,
           textDecoration: "underline",
           cursor: "pointer",
           "&:hover": { backgroundColor: "yellow" },
@@ -89,12 +95,12 @@ const ProjectNBCU = () => {
   return (
     <div className="project nbcU">
       <FlexBetBox
-        sx={{ justifyContent: `${isSM ? "center" : "space-between"}` }}
+        sx={{ justifyContent: `${isXS ? "center" : "space-between"}` }}
       >
-        <Box minWidth={275} sx={{ textAlign: `${isSM ? "center" : "left"}` }}>
+        <Box minWidth={275} sx={{ textAlign: `${isXS ? "center" : "left"}` }}>
           {titleContent}
         </Box>
-        {!isSM && (
+        {!isXS && (
           <Card variant="outlined" sx={projectCardStyles.card}>
             <FlexStartBox
               gap={projectCardStyles.hGap}
