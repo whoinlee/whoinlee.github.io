@@ -6,8 +6,8 @@ import DesktopMacIcon from "@mui/icons-material/DesktopMac";
 import ConnectedTvIcon from "@mui/icons-material/ConnectedTv";
 import TouchAppIcon from "@mui/icons-material/TouchApp";
 import ExtensionIcon from "@mui/icons-material/Extension";
-import { SiteContext } from "../page";
-import { WorkCatetories } from "../page";
+import { SiteContext } from "../contexts/SiteState";
+import { WorkCatetories } from "../components/Topbar";
 // import "../styles/page.scss";
 // import "../styles/works.scss";
 

@@ -23,10 +23,13 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import SearchIcon from "@mui/icons-material/Search";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+// import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 //
-import { SiteContext } from "../page";
-import { WorkCatetories } from "../page";
+import { SiteContext } from "../contexts/SiteState";
+// import { WorkCatetories } from "../page";
 import "../styles/topbar.scss";
+
+export const WorkCatetories = ["Web", "Desktop", "TV App", "Kiosk", "Plugin"];
 
 const Topbar = () => {
   const {
@@ -253,10 +256,10 @@ const Topbar = () => {
       <FlexBetBox>
         <Logo />
         {/* MENU */}
-        {!isXS ? (
+        {/* {!isXS ? ( */}
           <FlexBetBox paddingLeft="12px">
             {/* Menu1: Works with subMenu*/}
-            <Box
+            {/* <Box
               onClick={showSubmenu}
               sx={{
                 // backgroundColor: `${
@@ -323,7 +326,7 @@ const Topbar = () => {
                   </MenuItem>
                 );
               })}
-            </Menu>
+            </Menu> */}
             {/* </div> */}
             {/* Menu2: Data Viz & */}
             {/* <MenuTooltip title="data viz & personal works"> */}
@@ -353,7 +356,7 @@ const Topbar = () => {
             </Box>
             {/* </MenuTooltip> */}
             {/* Menu3: About */}
-            <MenuTooltip title="About"> 
+            {/* <MenuTooltip title="About"> 
             <Box
               onClick={onAboutClick}
               sx={{
@@ -390,9 +393,10 @@ const Topbar = () => {
                 i
               </Typography>
             </Box>
-            </MenuTooltip> 
+            </MenuTooltip>  */}
           </FlexBetBox>
-        ) : (
+        {/* )  */}
+        {/* : (
           //-- hamburger menu
           <Box
             onClick={openMenu}
@@ -416,7 +420,7 @@ const Topbar = () => {
               }}
             />
           </Box>
-        )}
+        )} */}
       </FlexBetBox>
       {/* RIGHT SIDE */}
       <FlexBetBox

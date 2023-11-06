@@ -5,7 +5,7 @@ import {
   Typography,
 } from "@mui/material";
 import WorkCardWide from "@/app/components/base/WorkCardWide";
-import { SiteContext } from "../../page";
+import { SiteContext } from "../../contexts/SiteState";
 
 const ProjectMISC = () => {
   // const theme = useTheme();

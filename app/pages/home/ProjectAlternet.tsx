@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Box, Card, Typography, useTheme } from "@mui/material";
 import FlexBetBox from "@/app/components/base/FlexBetBox";
 import WorkCardWide from "@/app/components/base/WorkCardWide";
-import { SiteContext } from "../../page";
+import { SiteContext } from "../../contexts/SiteState";
 
 const ProjectAlternet = () => {
   const theme = useTheme();

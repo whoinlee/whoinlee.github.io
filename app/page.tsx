@@ -7,15 +7,16 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import { theme } from "./theme";
-import { createContext } from "react";
+// import { createContext } from "react";
 import Topbar from "./components/Topbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Works from "./pages/Works";
+import { SiteContext } from "./contexts/SiteState";
 import "./styles/page.scss";
 
-export const SiteContext = createContext({});
-export const WorkCatetories = ["Web", "Desktop", "TV App", "Kiosk", "Plugin"];
+// export const SiteContext = createContext({});
+// export const WorkCatetories = ["Web", "Desktop", "TV App", "Kiosk", "Plugin"];
 export type Pages = "home" | "works" | "about";
 
 export default function App() {

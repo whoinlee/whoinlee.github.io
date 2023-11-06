@@ -4,7 +4,7 @@ import FlexBetBox from "@/app/components/base/FlexBetBox";
 import FlexStartBox from "@/app/components/base/FlexStartBox";
 import WorkCardImg from "@/app/components/base/WorkCardImg";
 import WorkCardWide from "@/app/components/base/WorkCardWide";
-import { SiteContext } from "../../page";
+import { SiteContext } from "../../contexts/SiteState";
 
 const ProjectAppD = () => {
   const theme = useTheme();

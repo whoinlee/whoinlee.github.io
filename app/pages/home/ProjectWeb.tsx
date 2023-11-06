@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Box, Grid, Typography, useTheme } from "@mui/material";
 import WorkCardWide from "@/app/components/base/WorkCardWide";
-import { SiteContext } from "../../page";
+import { SiteContext } from "../../contexts/SiteState";
 
 const ProjectWeb = () => {
   // const theme = useTheme();
