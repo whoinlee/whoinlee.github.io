@@ -90,7 +90,7 @@ const ProjectMISC = () => {
               imgPath="/media/MiscOsiao265x210.jpg"
               imgWidth={202}
               imgHeight={165}
-              cardWidth={485}
+              cardWidth={800}
               imgAlt="OSIAO Kiosk"
               cardTitle="Estée Lauder"
               cardDesc="CMS managed OSIAO Kiosk in Chinese and English"
@@ -104,7 +104,7 @@ const ProjectMISC = () => {
               imgPath="/media/MiscXerox265x210.jpg"
               imgWidth={202}
               imgHeight={160}
-              cardWidth={485}
+              cardWidth={800}
               imgAlt="Automated Intelligence Challenge Game"
               cardTitle="Blue Telescope"
               cardDesc={`Xerox 'Automated Intelligence Challenge' Touchscreen Game`}
@@ -119,13 +119,14 @@ const ProjectMISC = () => {
               imgPath="/media/MiscSubtexter265x210.jpg"
               imgWidth={202}
               imgHeight={165}
-              cardWidth={485}
+              cardWidth={800}
               imgAlt="Subtexter Facebook App"
               cardTitle="Droga5, Solarsilk"
-              cardDesc="Newcastle Brown Ale 'Subtexter' Facebook App"
+              cardDesc="Newcastle 'Subtexter' Facebook App"
               fontSize=".75rem"
               buttonLabel="See More"
               awards={["One Show Awards", "Facebook Studio Awards"]}
+              // cardDescPB = "8px"
               onClick={() =>
                 openLink(
                   "https://solarsilk.com/work/newcastle-droga5-solarsilk-nobollocks/"
@@ -138,7 +139,7 @@ const ProjectMISC = () => {
               imgPath="/media/Misc3DCard265x210.jpg"
               imgWidth={202}
               imgHeight={165}
-              cardWidth={485}
+              cardWidth={800}
               imgAlt="3D Holiday Card"
               cardTitle="Ogilvy"
               cardDesc="3D Holiday Card Website with YouTube Videos"
@@ -153,8 +154,8 @@ const ProjectMISC = () => {
                 <WorkCardWide
                   imgPath="/media/Misc3DIBM265x210.jpg"
                   imgWidth={202}
-              imgHeight={165}
-              cardWidth={485}
+                  imgHeight={165}
+                  cardWidth={800}
                   imgAlt="3D Banner"
                   cardTitle="Ogilvy"
                   cardDesc="IBM, 'Tivoli Foundation' 3D Banner"
@@ -168,7 +169,7 @@ const ProjectMISC = () => {
                   imgPath="/media/Misc3DApple265x210.jpg"
                   imgWidth={202}
                   imgHeight={160}
-                  cardWidth={485}
+                  cardWidth={800}
                   imgAlt="3D Apple Iphone"
                   cardTitle="Studio UU+i"
                   cardDesc="The Study of 3D Apple Iphone built in Three.js"

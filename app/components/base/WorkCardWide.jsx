@@ -18,6 +18,7 @@ const WorkCardWide = ({
   cardBkgColor = "rgba(150, 150, 150, .15)",
   onClick = () => {},
   awards = [],
+  cardDescPB = "12px"
 }) => {
   const cardStyles = {
     card: {
@@ -48,10 +49,10 @@ const WorkCardWide = ({
           isOverlay={isOverlay}
           onClick={onClick}
         />
-        <CardContent sx={{ height: imgHeight }}>
+        <CardContent sx={{ height: imgHeight, pt: cardDescPB}}>
           <Typography
             component="div"
-            sx={{ fontSize: 14, fontWeight: 500, pb: "6px" }}
+            sx={{ fontSize: 14, fontWeight: 500, pb: "6px"}}
           >
             {cardTitle}
           </Typography>

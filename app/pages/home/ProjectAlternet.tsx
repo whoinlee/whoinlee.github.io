@@ -8,7 +8,7 @@ import { SiteContext } from "../../page";
 
 const ProjectAlternet = () => {
   const theme = useTheme();
-  const { isSM } = useContext<any>(SiteContext);
+  const { isXS } = useContext<any>(SiteContext);
 
   const openLink = (url: string) => {
     window.open(url, "_blank")?.focus();
@@ -33,7 +33,7 @@ const ProjectAlternet = () => {
         variant="h2"
         sx={{
           cursor: "default",
-          width: `${isSM ? "275px" : "186px"}`,
+          width: `${isXS ? "275px" : "186px"}`,
           backgroundColor: "rgba(0, 0, 0, .85)",
           color: "#fefefe",
           mt: "2px",
@@ -46,7 +46,7 @@ const ProjectAlternet = () => {
         variant="h2"
         sx={{
           cursor: "default",
-          width: `${isSM ? "275px" : "186px"}`,
+          width: `${isXS ? "275px" : "186px"}`,
           backgroundColor: "rgba(0, 0, 0, .85)",
           color: "#fefefe",
           mb: "2px",
@@ -57,7 +57,7 @@ const ProjectAlternet = () => {
       <Typography
         variant="h2"
         sx={{
-          width: `${isSM ? "275px" : "260px"}`,
+          width: `${isXS ? "275px" : "260px"}`,
           textDecoration: "underline",
           cursor: "pointer",
           "&:hover": { backgroundColor: "yellow" },
@@ -72,7 +72,7 @@ const ProjectAlternet = () => {
       <Typography
         variant="h2"
         sx={{
-          width: `${isSM ? "275px" : "265px"}`,
+          width: `${isXS ? "275px" : "265px"}`,
           textDecoration: "underline",
           cursor: "pointer",
           "&:hover": { backgroundColor: "yellow" },
@@ -105,12 +105,12 @@ const ProjectAlternet = () => {
   return (
     <div className="project appD">
       <FlexBetBox
-        sx={{ justifyContent: `${isSM ? "center" : "space-between"}` }}
+        sx={{ justifyContent: `${isXS ? "center" : "space-between"}` }}
       >
-        <Box minWidth={275} sx={{ textAlign: `${isSM ? "center" : "left"}` }}>
+        <Box minWidth={275} sx={{ textAlign: `${isXS ? "center" : "left"}` }}>
           {titleContent}
         </Box>
-        {!isSM && (
+        {!isXS && (
           <Card variant="outlined" sx={projectCardStyles.card}>
             <Box
               sx={{
