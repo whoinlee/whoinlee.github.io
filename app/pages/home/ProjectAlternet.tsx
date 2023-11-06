@@ -130,7 +130,7 @@ const ProjectAlternet = () => {
                 onClick={() => openLink("http://www.alternetinc.com/bmg.html")}
               />
               <WorkCardWide
-                imgPath="/media/alternetIVY425x250.jpg"
+                imgPath="/media/alternet_Ivy425x250.jpg"
                 imgWidth={425}
                 imgHeight={250}
                 cardWidth={858}
