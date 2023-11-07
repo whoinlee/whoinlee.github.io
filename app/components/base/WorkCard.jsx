@@ -32,8 +32,6 @@ const WorkCard = ({
     overlayRef.current.style.opacity = 0;
   };
 
-  
-
   const workCardStyles = {
     card: {
       position: "relative",
@@ -72,26 +70,6 @@ const WorkCard = ({
           image={imgPath}
           alt={imgAlt}
         />
-        {/* <div style={workCardStyles.overlay} ref={overlayRef}>
-          {cardTitle}
-        </div>
-        {cardDesc && cardDesc !== "" && (
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              {cardTitle}
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              {cardDesc}
-            </Typography>
-          </CardContent>
-        )}
-        {buttonLabel && buttonLabel !== "" && (
-          <CardActions>
-            <Button size="small" color="primary" onClick={onClick}>
-              {buttonLabel}
-            </Button>
-          </CardActions>
-        )} */}
       </CardActionArea>
     </Card>
   );

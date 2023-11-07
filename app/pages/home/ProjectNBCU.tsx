@@ -43,7 +43,6 @@ const ProjectNBCU = () => {
       <Typography
         variant="h3"
         sx={{
-          // width: `${isXS ? "275px" : "216px"}`,
           display: "inline-block",
           textDecoration: "underline",
           cursor: "pointer",
@@ -59,7 +58,6 @@ const ProjectNBCU = () => {
       <Typography
         variant="h3"
         sx={{
-          // width: `${isXS ? "275px" : "192px"}`,
           display: "inline-block",
           textDecoration: "underline",
           cursor: "pointer",
@@ -112,6 +110,7 @@ const ProjectNBCU = () => {
                 cardWidth={210}
                 imgAlt="Desktop App in Black and White"
                 fontSize="0.75rem"
+                showLaunch={true}
                 onClick={() =>
                   openLink("https://github.com/whoinlee/fireTV_Air")
                 }
@@ -123,6 +122,7 @@ const ProjectNBCU = () => {
                 cardWidth={210}
                 imgAlt="Desktop App in Color"
                 fontSize="0.75rem"
+                showLaunch = {true}
                 onClick={() =>
                   openLink("https://github.com/whoinlee/fireTV_Air")
                 }
@@ -134,6 +134,7 @@ const ProjectNBCU = () => {
                 imgHeight={160}
                 cardWidth={210}
                 imgAlt="Video Player"
+                showLaunch = {true}
                 fontSize="0.75rem"
                 onClick={() =>
                   openLink("https://github.com/whoinlee/fireTV_Air")
@@ -146,6 +147,7 @@ const ProjectNBCU = () => {
                 cardWidth={210}
                 imgAlt="Web App Prototype"
                 fontSize="0.75rem"
+                showLaunch={true}
                 onClick={() =>
                   openLink("https://github.com/whoinlee/fireTV_React")
                 }

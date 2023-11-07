@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { Card, CardActionArea, CardMedia } from "@mui/material";
+import LaunchIcon from "@mui/icons-material/Launch";
 
 const WorkCardImg = ({
   imgPath = "",
@@ -10,6 +11,7 @@ const WorkCardImg = ({
   imgAlt = "",
   cardTitle = "",
   isOverlay = true,
+  showLaunch = false,
   onClick = () => {},
 }) => {
   const overlayRef = useRef(null);
@@ -45,6 +47,17 @@ const WorkCardImg = ({
       opacity: 0,
       transition: "all .25s ease-out",
     },
+
+    launchIcon: {
+      display: "inline-block",
+      fontSize: "large",
+      color: "#42a5f5",
+      opacity: "85%",
+      // color: "#fefefe",
+      position: "absolute",
+      bottom: "6px",
+      left: "6px"
+    }
   };
 
   return (
@@ -66,6 +79,9 @@ const WorkCardImg = ({
           <div style={cardStyles.overlay} ref={overlayRef}>
             {imgAlt}
           </div>
+          {showLaunch && 
+            <LaunchIcon sx={cardStyles.launchIcon} />
+          }
         </CardActionArea>
       ) : (
           <CardMedia

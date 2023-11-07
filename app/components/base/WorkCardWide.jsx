@@ -18,7 +18,8 @@ const WorkCardWide = ({
   cardBkgColor = "rgba(150, 150, 150, .15)",
   onClick = () => {},
   awards = [],
-  cardDescPB = "12px"
+  cardDescPB = "12px",
+  showLaunch = false
 }) => {
   const cardStyles = {
     card: {
@@ -33,8 +34,6 @@ const WorkCardWide = ({
     media: {},
   };
 
-  // console.log("awards? ", awards)
-
   return (
     <Card variant="outlined" sx={cardStyles.card}>
       <FlexStartBox sx={{ alignItems: "flex-start" }}>
@@ -48,11 +47,12 @@ const WorkCardWide = ({
           cardTitle={cardTitle}
           isOverlay={isOverlay}
           onClick={onClick}
+          showLaunch={showLaunch}
         />
-        <CardContent sx={{ height: imgHeight, pt: cardDescPB}}>
+        <CardContent sx={{ height: imgHeight, pt: cardDescPB }}>
           <Typography
             component="div"
-            sx={{ fontSize: 14, fontWeight: 500, pb: "6px"}}
+            sx={{ fontSize: 14, fontWeight: 500, pb: "6px" }}
           >
             {cardTitle}
           </Typography>
@@ -63,17 +63,17 @@ const WorkCardWide = ({
           >
             <span>{cardDesc}</span>
           </Typography>
-          { awards.length > 0 &&
-            awards.map((award, index) =>
+          {awards.length > 0 &&
+            awards.map((award, index) => (
               <Typography
-              key={index}
+                key={index}
                 variant="body2"
                 color="text.secondary"
-                sx={{ fontSize: 12, fontWeight: 700}}
+                sx={{ fontSize: 12, fontWeight: 700 }}
               >
                 {award}
               </Typography>
-            )}
+            ))}
           {buttonLabel && buttonLabel !== "" && (
             <Button
               size="small"

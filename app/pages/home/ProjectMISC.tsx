@@ -98,6 +98,7 @@ const ProjectMISC = () => {
               buttonLabel={`${isXL ? "": "See More"}`}
               awards={["One Show Awards", "Facebook Studio Awards"]}
               cardDescPB = "8px"
+              showLaunch = {true}
               onClick={() =>
                 openLink(
                   "https://solarsilk.com/work/newcastle-droga5-solarsilk-nobollocks/"

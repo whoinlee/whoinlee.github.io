@@ -93,12 +93,10 @@ const ProjectAppD = () => {
       minWidth: 874, //-- 18 + 425 + 6 + 425 = 874
       minHeight: 696, //-- 18 + 325 + 10 + 325 + 18 = 696
       border: "none",
-      // border: "0.5px solid rgba(0, 0, 0, .25)",
       borderRadius: "12px",
       borderTopRightRadius: 0,
       borderBottomRightRadius: 0,
       backgroundColor: "rgba(150, 150, 150, .075)", //-- grey
-      // backgroundColor: "rgba(66, 165, 245, .075)"  //-- light blue
     },
 
     vGap: "10px",
@@ -123,7 +121,7 @@ const ProjectAppD = () => {
                 imgHeight={325}
                 cardWidth={425}
                 imgAlt="Skeleton Loading Screen"
-                // cardTitle="Skeleton Loading Screen"
+                showLaunch={true}
                 onClick={() =>
                   openLink(
                     "https://particle-prototypes.netlify.app/skeletonScreen"
@@ -178,6 +176,7 @@ const ProjectAppD = () => {
                 imgHeight={325}
                 cardWidth={425}
                 imgAlt="Data Visualization Plugin"
+                showLaunch={true}
                 onClick={() =>
                   openLink("https://github.com/whoinlee/figmaPlugins")
                 }

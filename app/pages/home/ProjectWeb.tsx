@@ -12,37 +12,31 @@ const ProjectWeb = () => {
   };
 
   const titleContent = (
-    <>
+    <Box sx={{ textAlign: `${isXS ? "center" : "left"}`, mb: "24px" }}>
       <Typography variant="h2" sx={{ cursor: "default" }}>
         Award Winning{" "}
         <Box
           component="span"
           sx={{
-            fontWeight: "bold"
-            // backgroundColor: "rgba(0, 0, 0, .85)",
-            // color: "#fefefe",
-            // pl: "2px",
-            // pr: "2px",
+            fontWeight: "bold",
           }}
         >
           Websites
         </Box>
       </Typography>
-    </>
+    </Box>
   );
 
   return (
     <div className="project misc">
-      <Box sx={{ textAlign: `${isXS ? "center" : "left"}`, mb: "24px" }}>
-        {titleContent}
-      </Box>
+      {titleContent}
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={1} justifyContent="space-between">
-          <Grid item sm={12} md={6} lg={3} sx={{ flexGrow: 1}}>
+          <Grid item sm={12} md={6} lg={3} sx={{ flexGrow: 1 }}>
             <WorkCardWide
               imgPath="/media/WebIBM260x240.jpg"
-              imgWidth={(isLG||isXS)? 150: 200}
-              imgHeight={(isLG||isXS)? 150: 185}
+              imgWidth={isLG || isXS ? 150 : 200}
+              imgHeight={isLG || isXS ? 150 : 185}
               cardWidth={800}
               imgAlt="IBM 'Whatson' Site"
               cardTitle="IBM, Ogilvy"
@@ -53,39 +47,34 @@ const ProjectWeb = () => {
               isOverlay={false}
             />
           </Grid>
-          <Grid item sm={12} md={6} lg={3} sx={{ flexGrow: 1}}>
+          <Grid item sm={12} md={6} lg={3} sx={{ flexGrow: 1 }}>
             <WorkCardWide
               imgPath="/media/WebDove260x240.jpg"
-              imgWidth={(isLG||isXS)? 150: 200}
-              imgHeight={(isLG||isXS)? 150: 185}
+              imgWidth={isLG || isXS ? 150 : 200}
+              imgHeight={isLG || isXS ? 150 : 185}
               cardWidth={800}
               imgAlt="Dove 'Go Fresh'"
               cardTitle="Unilever, Ogilvy"
               cardDesc={`Dove 'Go Gresh'`}
               fontSize=".75rem"
-              awards={
-                new Array(
-                  "EACA Euro/US Effie Awards"
-                )
-              }
+              awards={new Array("EACA Euro/US Effie Awards")}
               buttonLabel=""
               isOverlay={false}
             />
           </Grid>
-
-          <Grid item sm={12} md={6} lg={3} sx={{ flexGrow: 1}}>
+          <Grid item sm={12} md={6} lg={3} sx={{ flexGrow: 1 }}>
             <WorkCardWide
               imgPath="/media/WebFBSnowball260x240.jpg"
-              imgWidth={(isLG||isXS)? 150: 200}
-              imgHeight={(isLG||isXS)? 150: 185}
+              imgWidth={isLG || isXS ? 150 : 200}
+              imgHeight={isLG || isXS ? 150 : 185}
               cardWidth={800}
               imgAlt="Firstborn Snowball Fight"
               cardTitle="Firstborn"
               cardDesc="Firstborn 'Snowball Fight'"
               fontSize=".75rem"
-              buttonLabel={`${isLG? "": "See More"}`}
+              buttonLabel={`${isLG ? "" : "See More"}`}
               awards={["London International Awards"]}
-              // cardDescPB = "8px"
+              showLaunch = {true}
               onClick={() =>
                 openLink(
                   "https://work.firstborn.com/work/44/firstborn-snowball-fight"
@@ -93,11 +82,11 @@ const ProjectWeb = () => {
               }
             />
           </Grid>
-          <Grid item sm={12} md={6} lg={3} sx={{ flexGrow: 1}}>
+          <Grid item sm={12} md={6} lg={3} sx={{ flexGrow: 1 }}>
             <WorkCardWide
               imgPath="/media/WebTAG260x240.jpg"
-              imgWidth={(isLG||isXS)? 150: 200}
-              imgHeight={(isLG||isXS)? 150: 185}
+              imgWidth={isLG || isXS ? 150 : 200}
+              imgHeight={isLG || isXS ? 150 : 185}
               cardWidth={800}
               imgAlt="TAG Testees Site"
               cardTitle="Arnold, Firstborn"
