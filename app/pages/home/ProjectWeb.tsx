@@ -101,7 +101,7 @@ const ProjectWeb = () => {
               cardWidth={800}
               imgAlt="TAG Testees Website"
               cardTitle="Arnold, Firstborn"
-              cardDesc="'Snowball Fight' Holiday Card"
+              cardDesc="P&G 'TAG Testees' Website"
               awards={["Dope Web Awards", ""]}
               fontSize=".75rem"
               buttonLabel=""

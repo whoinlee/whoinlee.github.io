@@ -127,7 +127,7 @@ const ProjectAlternet = () => {
                 cardWidth={858}
                 imgAlt="BMG/ZOMBA Music Publishing"
                 cardTitle="BMG/ZOMBA Music Publishing"
-                cardDesc="Dynamic data driven RIAs for music album publishing, supporting 4 templates (Sony BMG, Killer Tracks, Koka Media, and FirstCom) in 11 languages"
+                cardDesc="Dynamic data driven RIAs for music album publishing, supporting 11 languages in 4 templates (Sony BMG, Killer Tracks, Koka Media, and FirstCom)"
                 buttonLabel="See More"
                 onClick={() => openLink("http://www.alternetinc.com/bmg.html")}
               />
