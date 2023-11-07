@@ -68,8 +68,8 @@ const WorkCardWide = ({
               <Typography
               key={index}
                 variant="body2"
-                color="text.primary"
-                sx={{ fontSize: 12, fontWeight: 500}}
+                color="text.secondary"
+                sx={{ fontSize: 12, fontWeight: 700}}
               >
                 {award}
               </Typography>
