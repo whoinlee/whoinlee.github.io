@@ -84,7 +84,7 @@ const ProjectWeb = () => {
               cardDesc="'Snowball Fight' Holiday Card"
               fontSize=".75rem"
               buttonLabel={`${isLG? "": "See More"}`}
-              awards={["London Int'l' Awards"]}
+              awards={["London International Awards"]}
               // cardDescPB = "8px"
               onClick={() =>
                 openLink(
