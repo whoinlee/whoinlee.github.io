@@ -5,8 +5,8 @@
   // overflow: hidden;  //-- this prevents the sticky toolbar stickiness
 
   .page {
-    margin: $padding-md $padding-sm;
-    // border: 1px solid red;
+    // margin: $padding-md $padding-sm;
+    padding: $padding-md $padding-sm;
     
     .headlineHolder {
       //-- for Works headline with an icon
@@ -17,7 +17,36 @@
   }
 }
 
-// @keyframes fadeIn {
-//   0% { opacity: 0; }
-//   100% { opacity: 1; }
-// }
+.home {
+  .footer {
+    font-size: .65rem;
+    // position: absolute;
+    // bottom: 8px;
+    color: rgba(0, 0, 0, .85);
+    // animation: fadeIn .75s;
+  }
+}
+
+.about {
+  //-- switch bg and text colors
+  background-color: $text-color;
+  color: $bg-color;
+  height: calc(100vh - ($top-bar-height + $padding-sm*2 + 2px));
+
+  .statement {
+    animation: fadeIn 1.5s;
+  }
+
+  .footer {
+    font-size: .65rem;
+    position: absolute;
+    bottom: 8px;
+    color: #fff;
+    animation: fadeIn .75s;
+  }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}

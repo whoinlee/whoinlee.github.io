@@ -23,10 +23,7 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import SearchIcon from "@mui/icons-material/Search";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-// import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
-//
 import { SiteContext } from "../contexts/SiteState";
-// import { WorkCatetories } from "../page";
 import "../styles/topbar.scss";
 
 export const WorkCatetories = ["Web", "Desktop", "TV App", "Kiosk", "Plugin"];
@@ -111,24 +108,24 @@ const Topbar = () => {
 
   const Logo = () => {
     return (
-      <MenuTooltip title="i" isLight={false}>
+      <MenuTooltip title="i" isLight={selectedPage === "about" ? true: false}>
         <Box
           onClick={onHomeLogoClick}
           sx={{
             display: "flex",
             border: "2px solid rgba(0,0,0,.85)",
-            backgroundColor: BLACK_85P,
-            color: "#fefefe",
-            cursor: "pointer",
+            backgroundColor: `${selectedPage === "about" ? "#fefefe" : BLACK_85P}`,
+            color: `${selectedPage === "about" ? BLACK_85P : "#fefefe"}`,
             pl: `${isXXS ? "5px" : "8px"}`,
             pr: `${isXXS ? "2px" : "5px"}`,
             pt: `${isXXS ? "6px" : "11px"}`,
             pb: `${isXXS ? "6px" : "11px"}`,
+            cursor: "pointer",
             // cursor: `${selectedPage === "home" ? "default" : "pointer"}`,
             "&:hover": {
-              backgroundColor: "#fefefe",
+              backgroundColor: `${selectedPage === "about" ? BLACK_85P : "#fefefe"}`,
               "& .MuiBox-root": {
-                color: "black",
+                color: `${selectedPage === "about" ? "#fefefe" : BLACK_85P}`,
               },
             },
           }}
@@ -236,7 +233,6 @@ const Topbar = () => {
   ];
 
   return (
-    // <div className="topbar">
     <FlexBetBox className="topbar" width="100%">
       {/* LEFT SIDE */}
       <FlexBetBox>
@@ -342,7 +338,7 @@ const Topbar = () => {
           </Box>
           {/* </MenuTooltip> */}
           {/* Menu3: About */}
-          {/* <MenuTooltip title="About"> 
+          <MenuTooltip title="About" isLight={true}> 
             <Box
               onClick={onAboutClick}
               sx={{
@@ -355,15 +351,20 @@ const Topbar = () => {
                 border: "2px solid rgba(0,0,0,.85)",
                 backgroundColor: `${
                   selectedPage === "about"
-                    ? "rgba(255,255,0,.75)"
+                    ? BLACK_85P           //--"rgba(255,255,0,.75)" (yellow)
                     : "transparent"
                 }`,
+                // color: {BLACK_85P},
+                color: `${selectedPage === "about" ? "#fefefe" : BLACK_85P}`,
+                /*
+                backgroundColor: `${selectedPage === "about" ? "#fefefe" : BLACK_85P}`,
+            color: `${selectedPage === "about" ? BLACK_85P : "#fefefe"}`,
+                */
+
                 "&:hover": {
                   border:"2px solid black",
-                  // backgroundColor: YELLOW_75P,
                   backgroundColor: BLACK_85P,
                   "& .MuiTypography-body1": {
-                    // color: "black",
                     color: "white",
                   },
                 },
@@ -371,15 +372,14 @@ const Topbar = () => {
             >
               <Typography
                 mt="-3px"
-                fontSize={`${isSMED ? "18px" : "18px"}`}
-                fontWeight={500}
-                padding="0px 7.5px"
-                color={BLACK_85P}
+                fontSize="16px"
+                fontWeight={700}
+                padding="1.5px 8px"
               >
                 i
               </Typography>
             </Box>
-            </MenuTooltip>  */}
+            </MenuTooltip> 
         </FlexBetBox>
         {/* )  */}
         {/* : (
@@ -462,7 +462,6 @@ const Topbar = () => {
         </Box>
       </FlexBetBox>
     </FlexBetBox>
-    // </div>
   );
 };
 
