@@ -81,7 +81,7 @@ const ProjectWeb = () => {
               cardWidth={800}
               imgAlt="Firstborn Snowball Fight"
               cardTitle="Firstborn"
-              cardDesc="'Snowball Fight' Holiday Card"
+              cardDesc="Firstborn 'Snowball Fight'"
               fontSize=".75rem"
               buttonLabel={`${isLG? "": "See More"}`}
               awards={["London International Awards"]}

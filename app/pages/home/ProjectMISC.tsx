@@ -78,7 +78,7 @@ const ProjectMISC = () => {
               cardWidth={800}
               imgAlt="Automated Intelligence Challenge Game"
               cardTitle="Blue Telescope"
-              cardDesc={`Xerox 'Automated Intelligence Challenge' Touchscreen Game`}
+              cardDesc={`Xerox 'Automated Intelligence Challenge' Game`}
               fontSize=".75rem"
               awards={new Array("Summit Creative Awards, Gold")}
               buttonLabel=""
@@ -113,7 +113,7 @@ const ProjectMISC = () => {
               cardWidth={800}
               imgAlt="3D Holiday Card"
               cardTitle="Ogilvy"
-              cardDesc="3D Holiday Card Website with YouTube Videos"
+              cardDesc="3D Holiday Card with YouTube Videos"
               fontSize=".75rem"
               buttonLabel=""
               isOverlay={false}
