@@ -20,14 +20,14 @@ const ProjectMISC = () => {
         <Box component="span" fontWeight="bold">
           Kiosk
         </Box>
-        , Touchscreen{" "}
+        ,{" "}
         <Box component="span" fontWeight="bold">
           Game
         </Box>
         ,{" "}
         <Box component="span" fontWeight="bold">
           Social Media
-        </Box>{" "}
+        </Box>
         , and{" "}
         <Box
           component="span"
