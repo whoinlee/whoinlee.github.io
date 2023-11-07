@@ -17,7 +17,7 @@ const ProjectNBCU = () => {
   const titleContent = (
     <>
       <Typography
-        variant="h3"
+        variant="h4"
         sx={{
           cursor: "pointer",
           fontWeight: 500,
@@ -31,23 +31,20 @@ const ProjectNBCU = () => {
         NBCUniversal
       </Typography>
       <Typography
-        variant="h2"
+        variant="h3"
         sx={{
           cursor: "default",
           width: `${isXS ? "275px" : "112px"}`,
-          // backgroundColor: "rgba(0, 0, 0, .85)",
-          // color: "#fefefe",
-          // mt: "2px",
-          // mb: "2px",
           fontWeight: "bold"
         }}
       >
         Fire TV
       </Typography>
       <Typography
-        variant="h2"
+        variant="h3"
         sx={{
-          width: `${isXS ? "275px" : "216px"}`,
+          // width: `${isXS ? "275px" : "216px"}`,
+          display: "inline-block",
           textDecoration: "underline",
           cursor: "pointer",
           "&:hover": { backgroundColor: "yellow" },
@@ -60,9 +57,10 @@ const ProjectNBCU = () => {
         and
       </Typography>
       <Typography
-        variant="h2"
+        variant="h3"
         sx={{
-          width: `${isXS ? "275px" : "192px"}`,
+          // width: `${isXS ? "275px" : "192px"}`,
+          display: "inline-block",
           textDecoration: "underline",
           cursor: "pointer",
           "&:hover": { backgroundColor: "yellow" },

@@ -15,9 +15,24 @@ const ProjectAppD = () => {
   };
 
   const titleContent = (
-    <>
+    <Box minWidth={275} sx={{ textAlign: `${isXS ? "center" : "left"}` }}>
       <Typography
-        variant="h3"
+        variant="h6"
+        sx={{
+          mb: "-4px",
+          pl: "2px",
+          cursor: "pointer",
+          "&:hover": {
+            color: "#1976d2",
+          },
+        }}
+        color={theme.palette.primary.light}
+        onClick={() => openLink("https://www.appdynamics.com/")}
+      >
+        CISCO
+      </Typography>
+      <Typography
+        variant="h4"
         sx={{
           cursor: "pointer",
           fontWeight: 500,
@@ -31,23 +46,19 @@ const ProjectAppD = () => {
         AppDynamics
       </Typography>
       <Typography
-        variant="h2"
+        variant="h3"
         sx={{
           cursor: "default",
-          width: `${isXS ? "275px" : "230px"}`,
-          // backgroundColor: "rgba(0, 0, 0, .85)",
-          // color: "#fefefe",
-          // mt: "2px",
-          // mb: "2px",
-          fontWeight: "bold"
+          fontWeight: "bold",
         }}
       >
         Design System
       </Typography>
       <Typography
-        variant="h2"
+        variant="h3"
         sx={{
-          width: `${isXS ? "275px" : "170px"}`,
+          display: "inline-block",
+          // width: `${isXS ? "275px" : "100%"}`,
           textDecoration: "underline",
           cursor: "pointer",
           "&:hover": { backgroundColor: "yellow" },
@@ -60,9 +71,10 @@ const ProjectAppD = () => {
         and
       </Typography>
       <Typography
-        variant="h2"
+        variant="h3"
         sx={{
-          width: `${isXS ? "275px" : "215px"}`,
+          display: "inline-block",
+          // width: `${isXS ? "275px" : "215px"}`,
           textDecoration: "underline",
           cursor: "pointer",
           "&:hover": { backgroundColor: "yellow" },
@@ -71,7 +83,7 @@ const ProjectAppD = () => {
       >
         Figma Plugins
       </Typography>
-    </>
+    </Box>
   );
 
   const projectCardStyles = {
@@ -98,9 +110,7 @@ const ProjectAppD = () => {
       <FlexBetBox
         sx={{ justifyContent: `${isXS ? "center" : "space-between"}` }}
       >
-        <Box minWidth={275} sx={{ textAlign: `${isXS ? "center" : "left"}` }}>
-          {titleContent}
-        </Box>
+        {titleContent}
         {!isXS && (
           <Card variant="outlined" sx={projectCardStyles.card}>
             <FlexStartBox

@@ -15,8 +15,9 @@ const ProjectAlternet = () => {
   const titleContent = (
     <>
       <Typography
-        variant="h2"
+        variant="h4"
         sx={{
+          fontWeight: 500,
           cursor: "pointer",
           "&:hover": {
             color: "#1976d2",
@@ -28,36 +29,30 @@ const ProjectAlternet = () => {
         Alternet
       </Typography>
       <Typography
-        variant="h2"
+        variant="h3"
         sx={{
           cursor: "default",
-          width: `${isXS ? "275px" : "186px"}`,
+          // width: `${isXS ? "275px" : "186px"}`,
           fontWeight: "bold"
-          // backgroundColor: "rgba(0, 0, 0, .85)",
-          // color: "#fefefe",
-          // mt: "2px",
-          // mb: "2px",
         }}
       >
         Large Scale
       </Typography>
       <Typography
-        variant="h2"
+        variant="h3"
         sx={{
           cursor: "default",
-          width: `${isXS ? "275px" : "186px"}`,
-          // backgroundColor: "rgba(0, 0, 0, .85)",
-          // color: "#fefefe",
-          // mb: "2px",
+          // width: `${isXS ? "275px" : "186px"}`,
           fontWeight: "bold"
         }}
       >
         Data-Driven
       </Typography>
       <Typography
-        variant="h2"
+        variant="h3"
         sx={{
-          width: `${isXS ? "275px" : "260px"}`,
+          // width: `${isXS ? "275px" : "260px"}`,
+          display: "inline-block",
           textDecoration: "underline",
           cursor: "pointer",
           "&:hover": { backgroundColor: "yellow" },
@@ -70,9 +65,10 @@ const ProjectAlternet = () => {
         and
       </Typography>
       <Typography
-        variant="h2"
+        variant="h3"
         sx={{
-          width: `${isXS ? "275px" : "265px"}`,
+          // width: `${isXS ? "275px" : "265px"}`,
+          display: "inline-block",
           textDecoration: "underline",
           cursor: "pointer",
           "&:hover": { backgroundColor: "yellow" },
