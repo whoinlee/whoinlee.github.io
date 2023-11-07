@@ -51,7 +51,7 @@ const themeSettings = {
     values: {
       xs: 0,
       sm: 600,
-      md: 1000,  //900, 700
+      md: 850,  //900, 700
       lg: 1200, //
       xl: 1500, //1536
     },
