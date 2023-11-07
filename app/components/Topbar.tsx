@@ -37,8 +37,9 @@ const Topbar = () => {
     setSelectedPage,
     selectedSubIndex,
     setSelectedSubIndex,
-    isXXS, isSMED, 
-    // isXS, 
+    isXXS,
+    isSMED,
+    // isXS,
   } = useContext<any>(SiteContext);
 
   //-- MUI theme
@@ -70,25 +71,25 @@ const Topbar = () => {
   const MenuTooltip = ({
     children,
     title,
+    isLight = true
   }: {
     children: React.ReactElement;
     title: string;
+    isLight: boolean;
   }) => {
     return (
       <Tooltip
         title={title}
         placement="bottom"
-        // placement="right-start"
-        // followCursor
         componentsProps={{
           tooltip: {
             sx: {
-              bgcolor: "white",
-              color: BLACK_85P,
+              bgcolor: `${isLight? "white": "black"}`,
+              // color: BLACK_85P,
+              color: `${isLight? BLACK_85P: "white"}`,
               boxShadow: theme.shadows[2],
               padding: "5px 15px",
               fontSize: "14px",
-              // maxWidth: "200px",
             },
           },
         }}
@@ -110,60 +111,62 @@ const Topbar = () => {
 
   const Logo = () => {
     return (
-      <Box
-        onClick={onHomeLogoClick}
-        sx={{
-          display: "flex",
-          border: "2px solid rgba(0,0,0,.85)",
-          backgroundColor: BLACK_85P,
+      <MenuTooltip title="i" isLight={false}>
+        <Box
+          onClick={onHomeLogoClick}
+          sx={{
+            display: "flex",
+            border: "2px solid rgba(0,0,0,.85)",
+            backgroundColor: BLACK_85P,
 
-          color: "#fefefe",
-          cursor: "pointer",
+            color: "#fefefe",
+            cursor: "pointer",
 
-          // color: `${selectedPage === "home" ? "yellow" : "#fefefe"}`,
+            // color: `${selectedPage === "home" ? "yellow" : "#fefefe"}`,
 
-          // pl: "10px",
-          // pr: "7px",
-          // pt: "12px",
-          // pb: "12px",
+            // pl: "10px",
+            // pr: "7px",
+            // pt: "12px",
+            // pb: "12px",
 
-          pl: `${isXXS ? "5px" : "8px"}`,
-          pr: `${isXXS ? "2px" : "5px"}`,
-          pt: `${isXXS ? "6px" : "10px"}`,
-          pb: `${isXXS ? "6px" : "10px"}`,
-          // cursor: `${selectedPage === "home" ? "default" : "pointer"}`,
+            pl: `${isXXS ? "5px" : "8px"}`,
+            pr: `${isXXS ? "2px" : "5px"}`,
+            pt: `${isXXS ? "6px" : "10px"}`,
+            pb: `${isXXS ? "6px" : "10px"}`,
+            // cursor: `${selectedPage === "home" ? "default" : "pointer"}`,
 
-          "&:hover": {
-            backgroundColor: "#fefefe",
-            "& .MuiBox-root": {
-              // color: `${selectedPage === "home" ? "#fefefe" : "yellow"}`,
-              color: "black",
+            "&:hover": {
+              backgroundColor: "#fefefe",
+              "& .MuiBox-root": {
+                // color: `${selectedPage === "home" ? "#fefefe" : "yellow"}`,
+                color: "black",
+              },
             },
-          },
-        }}
-      >
-        <Box
-          sx={{
-            display: "inline",
-            fontWeight: "bold",
-            // fontSize: "14px",
-            fontSize: `${isXXS ? "14px" : "24px"}`,
           }}
         >
-          UU
+          <Box
+            sx={{
+              display: "inline",
+              fontWeight: "bold",
+              // fontSize: "14px",
+              fontSize: `${isXXS ? "14px" : "24px"}`,
+            }}
+          >
+            UU
+          </Box>
+          <Box
+            sx={{
+              display: "inline",
+              // paddingTop: "4px",
+              paddingTop: `${isXXS ? "3px" : "4px"}`,
+              // fontSize: "10px",
+              fontSize: `${isXXS ? "8px" : "16px"}`,
+            }}
+          >
+            +
+          </Box>
         </Box>
-        <Box
-          sx={{
-            display: "inline",
-            // paddingTop: "4px",
-            paddingTop: `${isXXS ? "3px" : "4px"}`,
-            // fontSize: "10px",
-            fontSize: `${isXXS ? "8px" : "16px"}`,
-          }}
-        >
-          +
-        </Box>
-      </Box>
+      </MenuTooltip>
     );
   };
 
@@ -254,9 +257,9 @@ const Topbar = () => {
         <Logo />
         {/* MENU */}
         {/* {!isXS ? ( */}
-          <FlexBetBox paddingLeft="12px">
-            {/* Menu1: Works with subMenu*/}
-            {/* <Box
+        <FlexBetBox paddingLeft="12px">
+          {/* Menu1: Works with subMenu*/}
+          {/* <Box
               onClick={showSubmenu}
               sx={{
                 // backgroundColor: `${
@@ -324,36 +327,36 @@ const Topbar = () => {
                 );
               })}
             </Menu> */}
-            {/* </div> */}
-            {/* Menu2: Data Viz & */}
-            {/* <MenuTooltip title="data viz & personal works"> */}
-            <Box
-              // border="2px solid cyan"
-              onClick={openBlog}
-              sx={{
-                cursor: "pointer",
-                "&:hover": {
-                  backgroundColor: YELLOW_75P,
+          {/* </div> */}
+          {/* Menu2: Data Viz & */}
+          {/* <MenuTooltip title="data viz & personal works"> */}
+          <Box
+            // border="2px solid cyan"
+            onClick={openBlog}
+            sx={{
+              cursor: "pointer",
+              "&:hover": {
+                backgroundColor: YELLOW_75P,
 
-                  "& .MuiTypography-body1": {
-                    color: "black",
-                  },
+                "& .MuiTypography-body1": {
+                  color: "black",
                 },
-              }}
+              },
+            }}
+          >
+            <Typography
+              // fontWeight="500"
+              fontSize={`${isSMED ? "19px" : "17px"}`}
+              padding="0px 10px"
+              letterSpacing="0.075px"
+              color={BLACK_85P}
             >
-              <Typography
-                // fontWeight="500"
-                fontSize={`${isSMED ? "19px" : "17px"}`}
-                padding="0px 10px"
-                letterSpacing="0.075px"
-                color={BLACK_85P}
-              >
-                {`Data Viz &${isSMED ? " Misc" : ""}`}
-              </Typography>
-            </Box>
-            {/* </MenuTooltip> */}
-            {/* Menu3: About */}
-            {/* <MenuTooltip title="About"> 
+              {`Data Viz &${isSMED ? " Misc" : ""}`}
+            </Typography>
+          </Box>
+          {/* </MenuTooltip> */}
+          {/* Menu3: About */}
+          {/* <MenuTooltip title="About"> 
             <Box
               onClick={onAboutClick}
               sx={{
@@ -391,7 +394,7 @@ const Topbar = () => {
               </Typography>
             </Box>
             </MenuTooltip>  */}
-          </FlexBetBox>
+        </FlexBetBox>
         {/* )  */}
         {/* : (
           //-- hamburger menu

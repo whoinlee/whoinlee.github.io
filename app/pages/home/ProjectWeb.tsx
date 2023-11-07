@@ -44,9 +44,9 @@ const ProjectWeb = () => {
               imgWidth={(isLG||isXS)? 150: 200}
               imgHeight={(isLG||isXS)? 150: 185}
               cardWidth={800}
-              imgAlt="IBM 'Whatson' Website"
+              imgAlt="IBM 'Whatson' Site"
               cardTitle="IBM, Ogilvy"
-              cardDesc={`IBM 'Whatson' Website`}
+              cardDesc={`IBM 'Whatson'`}
               fontSize=".75rem"
               awards={new Array("Cannes and DMA Echo Awards")}
               buttonLabel=""
@@ -59,9 +59,9 @@ const ProjectWeb = () => {
               imgWidth={(isLG||isXS)? 150: 200}
               imgHeight={(isLG||isXS)? 150: 185}
               cardWidth={800}
-              imgAlt="Dove 'Go Fresh' Website"
+              imgAlt="Dove 'Go Fresh'"
               cardTitle="Unilever, Ogilvy"
-              cardDesc={`Dove 'Go Gresh' Website `}
+              cardDesc={`Dove 'Go Gresh'`}
               fontSize=".75rem"
               awards={
                 new Array(
@@ -99,9 +99,9 @@ const ProjectWeb = () => {
               imgWidth={(isLG||isXS)? 150: 200}
               imgHeight={(isLG||isXS)? 150: 185}
               cardWidth={800}
-              imgAlt="TAG Testees Website"
+              imgAlt="TAG Testees Site"
               cardTitle="Arnold, Firstborn"
-              cardDesc="P&G 'TAG Testees' Website"
+              cardDesc="P&G 'TAG Testees'"
               awards={["Dope Web Awards", ""]}
               fontSize=".75rem"
               buttonLabel=""
