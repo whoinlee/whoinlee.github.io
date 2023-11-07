@@ -37,8 +37,8 @@ const Topbar = () => {
     setSelectedPage,
     selectedSubIndex,
     setSelectedSubIndex,
-    // isLT425, isLT625, isGTE700,
-    isXXS, isXS, isSMED
+    isXXS, isSMED, 
+    // isXS, 
   } = useContext<any>(SiteContext);
 
   //-- MUI theme
@@ -46,7 +46,7 @@ const Topbar = () => {
 
   //-- colors
   const BLACK_85P = "rgba(0,0,0,.85)";
-  const BLUE_75P = "rgba(15,10,222,.75)";
+  // const BLUE_75P = "rgba(15,10,222,.75)";
   const YELLOW_75P = "rgba(255,255,0,.75)";
 
   //-- subMenu related
@@ -54,17 +54,14 @@ const Topbar = () => {
   const open = Boolean(anchorEl);
   const showSubmenu = (e: any) => {
     if (anchorEl !== e.currentTarget) setAnchorEl(e.currentTarget);
-    // console.log("showSubmenu :: index? ", selectedSubIndex);
   };
   const hideSubmenu = () => {
     setAnchorEl(null);
-    // console.log("hideSubmenu :: index? ", selectedSubIndex);
   };
   const onSubmenuClick = (e: any, index: number) => {
     hideSubmenu();
     setSelectedSubIndex(index);
     if (selectedPage !== "works") setSelectedPage("works");
-    // console.log("onSubmenuClick :: index? ", index);
   };
   const resetSelectedSubIndex = () => {
     if (selectedSubIndex !== -1) setSelectedSubIndex(-1);

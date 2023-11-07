@@ -8,7 +8,7 @@ import WorkCardWide from "@/app/components/base/WorkCardWide";
 import { SiteContext } from "../../contexts/SiteState";
 
 const ProjectMISC = () => {
-  const { isXS, isLG } = useContext<any>(SiteContext);
+  const { isXS, isLG, isXL } = useContext<any>(SiteContext);
 
   const openLink = (url: string) => {
     window.open(url, "_blank")?.focus();
@@ -95,7 +95,7 @@ const ProjectMISC = () => {
               cardTitle="Droga5, Solarsilk"
               cardDesc="Newcastle 'Subtexter' Facebook App"
               fontSize=".75rem"
-              buttonLabel="See More"
+              buttonLabel={`${isXL ? "": "See More"}`}
               awards={["One Show Awards", "Facebook Studio Awards"]}
               cardDescPB = "8px"
               onClick={() =>
@@ -119,43 +119,6 @@ const ProjectMISC = () => {
               isOverlay={false}
             />
           </Grid>
-          {/* {isLG && (
-            <>
-              <Grid item lg={4}>
-                <WorkCardWide
-                  imgPath="/media/Misc3DIBM265x210.jpg"
-                  imgWidth={200}
-                  imgHeight={158}
-                  cardWidth={800}
-                  imgAlt="3D Banner"
-                  cardTitle="Ogilvy"
-                  cardDesc="IBM, 'Tivoli Foundation' 3D Banner"
-                  fontSize=".75rem"
-                  buttonLabel=""
-                  isOverlay={false}
-                />
-              </Grid>
-              <Grid item lg={4}>
-                <WorkCardWide
-                  imgPath="/media/Misc3DIphone265x210.jpg"
-                  imgWidth={200}
-                  imgHeight={158}
-                  cardWidth={800}
-                  imgAlt="3D Apple Iphone"
-                  cardTitle="Studio UU+i"
-                  cardDesc="The Study of 3D Apple Iphone built in Three.js"
-                  fontSize=".75rem"
-                  buttonLabel="VIEW"
-                  isOverlay={true}
-                  onClick={() =>
-                    openLink(
-                      "https://6509f51c636e3d3eb21f8b0a--lucky-marshmallow-07bdb6.netlify.app/"
-                    )
-                  }
-                />
-              </Grid>
-            </>
-          )} */}
         </Grid>
       </Box>
     </div>

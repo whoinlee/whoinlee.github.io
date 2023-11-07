@@ -27,6 +27,7 @@ export default function App() {
   const isXS = !useMediaQuery("(min-width: 600px)");  //-- less than 600, isXS
   const isSMED = useMediaQuery("(min-width: 700px)"); //-- greter than or equal to 700, Med SM
   const isLG = useMediaQuery("(min-width: 1200px)");  //-- greter than or equal to 1200
+  const isXL = useMediaQuery("(min-width: 1400px)");  //-- greter than or equal to 1200
 
   return (
     <ThemeProvider theme={theme}>
@@ -40,7 +41,8 @@ export default function App() {
           isXXS,
           isXS,
           isSMED,
-          isLG
+          isLG,
+          isXL
         }}
       >
         <Container maxWidth="xl" className="app">
