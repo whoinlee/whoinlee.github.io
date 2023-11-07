@@ -18,6 +18,7 @@ const Home = () => {
       <ProjectMISC />
       <hr />
       <ProjectWeb />
+      <br /><br />
     </div>
   );
 };
