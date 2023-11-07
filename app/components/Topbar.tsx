@@ -47,7 +47,7 @@ const Topbar = () => {
 
   //-- colors
   const BLACK_85P = "rgba(0,0,0,.85)";
-  // const BLUE_75P = "rgba(15,10,222,.75)";
+  const BLUE_75P = "rgba(15,10,222,.85)";
   const YELLOW_75P = "rgba(255,255,0,.75)";
 
   //-- subMenu related
@@ -118,27 +118,16 @@ const Topbar = () => {
             display: "flex",
             border: "2px solid rgba(0,0,0,.85)",
             backgroundColor: BLACK_85P,
-
             color: "#fefefe",
             cursor: "pointer",
-
-            // color: `${selectedPage === "home" ? "yellow" : "#fefefe"}`,
-
-            // pl: "10px",
-            // pr: "7px",
-            // pt: "12px",
-            // pb: "12px",
-
             pl: `${isXXS ? "5px" : "8px"}`,
             pr: `${isXXS ? "2px" : "5px"}`,
-            pt: `${isXXS ? "6px" : "10px"}`,
-            pb: `${isXXS ? "6px" : "10px"}`,
+            pt: `${isXXS ? "6px" : "11px"}`,
+            pb: `${isXXS ? "6px" : "11px"}`,
             // cursor: `${selectedPage === "home" ? "default" : "pointer"}`,
-
             "&:hover": {
               backgroundColor: "#fefefe",
               "& .MuiBox-root": {
-                // color: `${selectedPage === "home" ? "#fefefe" : "yellow"}`,
                 color: "black",
               },
             },
@@ -148,7 +137,6 @@ const Topbar = () => {
             sx={{
               display: "inline",
               fontWeight: "bold",
-              // fontSize: "14px",
               fontSize: `${isXXS ? "14px" : "24px"}`,
             }}
           >
@@ -157,9 +145,7 @@ const Topbar = () => {
           <Box
             sx={{
               display: "inline",
-              // paddingTop: "4px",
               paddingTop: `${isXXS ? "3px" : "4px"}`,
-              // fontSize: "10px",
               fontSize: `${isXXS ? "8px" : "16px"}`,
             }}
           >
@@ -426,7 +412,6 @@ const Topbar = () => {
       <FlexBetBox
         gap="6px"
         marginRight="-4px"
-        //   border="4px solid orange"
       >
         {/* <SearchInput /> */}
         <Box
@@ -447,8 +432,8 @@ const Topbar = () => {
               marginLeft: "2px",
               color: BLACK_85P,
               "&:hover": {
-                // color: BLUE_75P,
-                color: "rgba(125, 125, 125, .85)",
+                color: BLUE_75P,
+                // color: "rgba(125, 125, 125, .85)",
               },
             }}
           />
@@ -469,8 +454,8 @@ const Topbar = () => {
               fontSize: "34px",
               color: BLACK_85P,
               "&:hover": {
-                // color: BLUE_75P,
-                color: "rgba(125, 125, 125, .85)",
+                color: BLUE_75P,
+                // color: "rgba(125, 125, 125, .85)",
               },
             }}
           />
