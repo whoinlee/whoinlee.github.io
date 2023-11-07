@@ -35,10 +35,11 @@ const ProjectNBCU = () => {
         sx={{
           cursor: "default",
           width: `${isXS ? "275px" : "112px"}`,
-          backgroundColor: "rgba(0, 0, 0, .85)",
-          color: "#fefefe",
-          mt: "2px",
-          mb: "2px",
+          // backgroundColor: "rgba(0, 0, 0, .85)",
+          // color: "#fefefe",
+          // mt: "2px",
+          // mb: "2px",
+          fontWeight: "bold"
         }}
       >
         Fire TV

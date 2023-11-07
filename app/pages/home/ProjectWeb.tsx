@@ -18,10 +18,11 @@ const ProjectWeb = () => {
         <Box
           component="span"
           sx={{
-            backgroundColor: "rgba(0, 0, 0, .85)",
-            color: "#fefefe",
-            pl: "2px",
-            pr: "2px",
+            fontWeight: "bold"
+            // backgroundColor: "rgba(0, 0, 0, .85)",
+            // color: "#fefefe",
+            // pl: "2px",
+            // pr: "2px",
           }}
         >
           Websites

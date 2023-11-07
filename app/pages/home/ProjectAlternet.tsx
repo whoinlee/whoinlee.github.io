@@ -32,10 +32,11 @@ const ProjectAlternet = () => {
         sx={{
           cursor: "default",
           width: `${isXS ? "275px" : "186px"}`,
-          backgroundColor: "rgba(0, 0, 0, .85)",
-          color: "#fefefe",
-          mt: "2px",
-          mb: "2px",
+          fontWeight: "bold"
+          // backgroundColor: "rgba(0, 0, 0, .85)",
+          // color: "#fefefe",
+          // mt: "2px",
+          // mb: "2px",
         }}
       >
         Large Scale
@@ -45,9 +46,10 @@ const ProjectAlternet = () => {
         sx={{
           cursor: "default",
           width: `${isXS ? "275px" : "186px"}`,
-          backgroundColor: "rgba(0, 0, 0, .85)",
-          color: "#fefefe",
-          mb: "2px",
+          // backgroundColor: "rgba(0, 0, 0, .85)",
+          // color: "#fefefe",
+          // mb: "2px",
+          fontWeight: "bold"
         }}
       >
         Data-Driven
