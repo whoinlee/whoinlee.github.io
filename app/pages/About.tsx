@@ -35,6 +35,7 @@ const About = () => {
               .typeString("+")
               .pauseFor(1250)
               .typeString("i")
+              .pauseFor(250)
               .callFunction(() => {
                 setShowStatement(true)
               })
