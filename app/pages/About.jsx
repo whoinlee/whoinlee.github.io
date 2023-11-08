@@ -33,12 +33,11 @@ const About = () => {
               .pauseFor(1500)
               .deleteChars(23)
               .typeString("+")
+              
+              .pauseFor(85)
               .callFunction(() => {
                 removeCursor();
               })
-              .pauseFor(85)
-              
-              
               .typeString("i")
               .pauseFor(125)
               .callFunction(() => {
@@ -76,9 +75,6 @@ const About = () => {
             onInit={(typewriter) => {
               typewriter
                 .typeString("Whoin Lee") //-- 30 Us
-                // .callFunction(() => {
-                //   setShowFooter(true);
-                // })
                 .start();
             }}
           />
