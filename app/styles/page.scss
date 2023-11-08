@@ -26,6 +26,11 @@
 
 .about {
   //-- switch bg and text colors
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  // min-height: 100px;
   background-color: $text-color;
   color: $bg-color;
   height: calc(100vh - ($top-bar-height + $padding-sm*2 + 2px));
@@ -39,7 +44,7 @@
     position: absolute;
     bottom: 8px;
     color: #fff;
-    animation: fadeIn .75s;
+    animation: fadeIn 1s;
   }
 }
 
