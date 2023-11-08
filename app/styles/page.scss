@@ -35,6 +35,11 @@
   color: $bg-color;
   height: calc(100vh - ($top-bar-height + $padding-sm*2 + 2px));
 
+  .Typewriter__cursor {
+    opacity: 1;
+    transition: all .5s ease-out;
+  }
+
   .statement {
     animation: fadeIn 1.5s;
   }
@@ -52,4 +57,9 @@
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
 }

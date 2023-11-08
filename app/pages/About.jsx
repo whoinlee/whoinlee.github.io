@@ -56,8 +56,8 @@ const About = () => {
       {showStatement && (
         // <div className="statement">
         <Typography pt="36px" className="statement">
-          I believe in the synergy of working together, <b>U & i</b>, for
-          creating the most delightful <b>User Experience</b>.
+          I believe in the synergy of working together, <b>U</b> & <b>i</b>, for
+          creating a <b>U</b>nified <b>U</b>ser  Experience.
         </Typography>
       )}
       {showName && (
