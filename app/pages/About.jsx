@@ -20,32 +20,32 @@ const About = () => {
       >
         <Typewriter
           options={{
-            delay: 65,
-            deleteSpeed: 25,
+            delay: 50,
+            deleteSpeed: 5,
             autoStart: true,
             loop: false,
           }}
           onInit={(typewriter) => {
             typewriter
               .typeString("UUUUUUUUUUUUUUUUUUUUUUUUU") //-- 25 Us
-              .pauseFor(1500)
+              .pauseFor(1250)
               .deleteChars(23)
               .typeString("+")
               .pauseFor(85)
               .callFunction(() => {
                 removeCursor();
               })
+              .pauseFor(150)
               .typeString("i")
-              .pauseFor(125)
+              // .pauseFor(125)
               .callFunction(() => {
                 setShowStatement(true);
               })
-              .pauseFor(250)
               .pauseFor(1000)
               .callFunction(() => {
                 setShowName(true);
               })
-              .pauseFor(250)
+              .pauseFor(350)
               .callFunction(() => {
                 setShowFooter(true);
               })
