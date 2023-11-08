@@ -39,12 +39,9 @@ const About = () => {
               .callFunction(() => {
                 setShowStatement(true)
               })
-              .pauseFor(500)
+              .pauseFor(1250)
               .callFunction(() => {
                 removeCursor();
-              })
-              .pauseFor(750)
-              .callFunction(() => {
                 setShowName(true);
               })
               .start();
