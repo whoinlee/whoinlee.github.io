@@ -33,7 +33,7 @@ const About = () => {
               .pauseFor(1500)
               .deleteChars(28)
               .typeString("+")
-              .pauseFor(1000)
+              .pauseFor(750)
               .typeString("i")
               .pauseFor(250)
               .callFunction(() => {
