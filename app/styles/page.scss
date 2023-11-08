@@ -41,10 +41,11 @@
 
   .footer {
     font-size: .65rem;
-    position: absolute;
-    bottom: 8px;
+    margin-top: 75px;
+    // position: absolute;
+    // bottom: 8px;
     color: #fff;
-    animation: fadeIn 1s;
+    animation: fadeIn 1.5s;
   }
 }
 

@@ -20,7 +20,7 @@ const Home = () => {
       <ProjectWeb />
       <br /><br />
       <div className="footer">
-          &copy; 2023 &nbsp;&nbsp;&nbsp;studio UU+i
+          &copy; 2023 &nbsp;&nbsp;&nbsp;Studio UU+i
         </div>
     </div>
   );

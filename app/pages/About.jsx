@@ -10,8 +10,6 @@ const About = () => {
   const removeCursor = () => {
     const cursor = document.querySelector(".Typewriter__cursor");
     if (cursor) cursor.style.visibility = "hidden";
-    console.log("cursor.?", cursor);
-    console.log("cursor.style?", cursor.style);
   };
 
   return (
@@ -33,7 +31,6 @@ const About = () => {
               .pauseFor(1500)
               .deleteChars(23)
               .typeString("+")
-              
               .pauseFor(85)
               .callFunction(() => {
                 removeCursor();
@@ -48,7 +45,7 @@ const About = () => {
               .callFunction(() => {
                 setShowName(true);
               })
-              .pauseFor(125)
+              .pauseFor(250)
               .callFunction(() => {
                 setShowFooter(true);
               })
@@ -64,7 +61,7 @@ const About = () => {
         </Typography>
       )}
       {showName && (
-        <Typography pt="12px" variant="h6">
+        <Typography pt="12px" variant="h6" pr="4px">
           <Typewriter
             options={{
               delay: 65,
