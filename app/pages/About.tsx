@@ -14,19 +14,6 @@ const About = () => {
     cursor?.remove();
   };
 
-  // const typoStyle = {
-  //   statement: {
-  //     opacity: 0,
-  //     transition: "all 1s ease-out",
-  //   },
-  //   // footer: {
-  //   //   position: absolute,
-  //   //   bottom: 0px,
-  //   //   opacity: 0,
-  //   //   transition: "all .5s ease-out",
-  //   // }
-  // };
-
   return (
     <div className="page about">
       <Typography
@@ -50,8 +37,11 @@ const About = () => {
               .typeString("+i")
               .pauseFor(750)
               .callFunction(() => {
-                removeCursor();
                 setShowStatement(true)
+              })
+              .pauseFor(500)
+              .callFunction(() => {
+                removeCursor();
               })
               .pauseFor(750)
               .callFunction(() => {
@@ -82,10 +72,10 @@ const About = () => {
                   .callFunction(() => {
                     setShowFooter(true);
                   })
-                  .pauseFor(750)
-                  .callFunction(() => {
-                    removeCursor();
-                  })
+                  // .pauseFor(750)
+                  // .callFunction(() => {
+                  //   removeCursor();
+                  // })
                   .start();
               }}
             />
