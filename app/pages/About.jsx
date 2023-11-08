@@ -33,16 +33,18 @@ const About = () => {
               .pauseFor(1500)
               .deleteChars(23)
               .typeString("+")
+              .callFunction(() => {
+                removeCursor();
+              })
               .pauseFor(85)
+              
+              
               .typeString("i")
               .pauseFor(125)
               .callFunction(() => {
                 setShowStatement(true);
               })
               .pauseFor(250)
-              .callFunction(() => {
-                removeCursor();
-              })
               .pauseFor(1000)
               .callFunction(() => {
                 setShowName(true);
