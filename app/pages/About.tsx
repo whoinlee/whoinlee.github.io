@@ -30,10 +30,10 @@ const About = () => {
           onInit={(typewriter) => {
             typewriter
               .typeString("UUUUUUUUUUUUUUUUUUUUUUUUUUUUUU") //-- 30 Us
-              .pauseFor(2000)
+              .pauseFor(1500)
               .deleteChars(28)
               .typeString("+")
-              .pauseFor(1250)
+              .pauseFor(1000)
               .typeString("i")
               .pauseFor(250)
               .callFunction(() => {
