@@ -36,7 +36,7 @@ const ProjectAlternet = () => {
           fontWeight: "bold"
         }}
       >
-        Large Scale
+        Large-Scale
       </Typography>
       <Typography
         variant="h3"
