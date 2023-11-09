@@ -40,12 +40,13 @@ const About = () => {
               // .pauseFor(125)
               .callFunction(() => {
                 setShowStatement(true);
+                // removeCursor();
               })
-              .pauseFor(1000)
+              .pauseFor(750)
               .callFunction(() => {
                 setShowName(true);
               })
-              .pauseFor(350)
+              .pauseFor(250)
               .callFunction(() => {
                 setShowFooter(true);
               })
@@ -79,7 +80,7 @@ const About = () => {
       )}
       {showFooter && (
         <div className="footer">
-          &copy; 2023 &nbsp;&nbsp;&nbsp;whoinlee@gmail.com&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &copy; 2023 &nbsp;&nbsp;&nbsp;whoinlee@gmail.com&nbsp;&nbsp;&nbsp;
         </div>
       )}
     </div>
