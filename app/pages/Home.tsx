@@ -4,7 +4,7 @@ import ProjectNBCU from "./home/ProjectNBCU";
 import ProjectMISC from "./home/ProjectMISC";
 import ProjectWeb from "./home/ProjectWeb";
 import ProjectAlternet from "./home/ProjectAlternet";
-import "../styles/home.scss";
+// import "../styles/page.scss";
 
 const Home = () => {
   return (
@@ -18,10 +18,9 @@ const Home = () => {
       <ProjectMISC />
       <hr />
       <ProjectWeb />
-      <br /><br />
-      <div className="footer">
-          &copy; 2023 &nbsp;&nbsp;&nbsp;Studio UU+i
-        </div>
+      <br />
+      <br />
+      <div className="footer">&copy; 2023 &nbsp;&nbsp;&nbsp;Studio UU+i</div>
     </div>
   );
 };

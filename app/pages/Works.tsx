@@ -8,8 +8,7 @@ import TouchAppIcon from "@mui/icons-material/TouchApp";
 import ExtensionIcon from "@mui/icons-material/Extension";
 import { SiteContext } from "../contexts/SiteState";
 import { WorkCatetories } from "../components/Topbar";
-// import "../styles/page.scss";
-// import "../styles/works.scss";
+import "../styles/page.scss";
 
 // interface WorksProps {
 //   category: string;
@@ -44,6 +43,7 @@ const Works = () => {
         </Typography>
         <ComponentName fontSize="large" sx={{ color: BLACK_85P, ml: "12px" }} />
       </div>
+      <div className="footer">&copy; 2023 &nbsp;&nbsp;&nbsp;Studio UU+i</div>
     </div>
   );
 };

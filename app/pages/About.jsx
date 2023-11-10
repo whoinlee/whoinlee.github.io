@@ -9,7 +9,10 @@ const About = () => {
 
   const removeCursor = () => {
     const cursor = document.querySelector(".Typewriter__cursor");
-    if (cursor) cursor.style.visibility = "hidden";
+    if (cursor) {
+      cursor.style.opacity = 0;
+      cursor.style.visibility = "hidden";
+    }
   };
 
   return (

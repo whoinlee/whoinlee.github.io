@@ -18,6 +18,35 @@
 }
 
 .home {
+  .project {
+    padding-top: $padding-md;
+    padding-bottom: $padding-md;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  hr {
+    // margin-left: -$padding-sm;
+    // margin-right: -$padding-sm;
+    border: 0.5px solid $LIGHT_BLUE_75P;
+    opacity: .75;
+  }
+  
+  .misc {
+    margin-bottom: "36px"
+  }
+  
+  // .footer {
+  //   font-size: .65rem;
+  //   color: rgba(0, 0, 0, .85);
+  // }
+}
+
+// .works {
+
+// }
+
+.home, .works {
   .footer {
     font-size: .65rem;
     color: rgba(0, 0, 0, .85);
@@ -42,13 +71,22 @@
 
   .statement {
     animation: fadeIn 2.5s;
+    // font-size: 1rem;
+
+    b {
+      // font-size: 1.35rem;
+      color: white;
+      // background: -webkit-linear-gradient(#eee, rgb(218, 9, 225)); //-- pink gradient
+      // background: -webkit-linear-gradient(rgba(255, 255, 255, .1), rgba(255, 255, 255, 1));  //-- white gradient
+      // -webkit-background-clip: text;
+      // background-clip: text;
+      // -webkit-text-fill-color: transparent;
+    }
   }
 
   .footer {
     font-size: .65rem;
     margin-top: 75px;
-    // position: absolute;
-    // bottom: 8px;
     color: #fff;
     animation: fadeIn 1.75s;
   }
