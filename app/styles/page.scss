@@ -85,10 +85,12 @@
   }
 
   .footer {
+    display: flex;
     font-size: .65rem;
     margin-top: 75px;
     color: #fff;
     animation: fadeIn 1.75s;
+    align-items: center;
   }
 }
 

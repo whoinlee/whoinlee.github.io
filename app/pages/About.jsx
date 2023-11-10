@@ -1,6 +1,8 @@
 import React, { useRef, useState } from "react";
 import Typography from "@mui/material/Typography";
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import Typewriter from "typewriter-effect";
+
 
 const About = () => {
   const [showName, setShowName] = useState(false);
@@ -83,7 +85,7 @@ const About = () => {
       )}
       {showFooter && (
         <div className="footer">
-          &copy; 2023 &nbsp;&nbsp;&nbsp;whoinlee@gmail.com&nbsp;&nbsp;&nbsp;
+          <MailOutlineIcon sx={{fontSize:"16px", color: "rgba(255,255,255, .85)" }} /><span style={{display: "inline-block", marginBottom: "1px"}}>&nbsp;&nbsp;whoinlee@gmail.com&nbsp;&nbsp;&nbsp;</span>
         </div>
       )}
     </div>
