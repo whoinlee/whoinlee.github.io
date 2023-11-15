@@ -1,13 +1,13 @@
 import React, { useRef } from "react";
 import {
   // Box,
-  Button,
+  // Button,
   Card,
   CardActionArea,
-  CardActions,
-  CardContent,
+  // CardActions,
+  // CardContent,
   CardMedia,
-  Typography,
+  // Typography,
   // useTheme,
 } from "@mui/material";
 
