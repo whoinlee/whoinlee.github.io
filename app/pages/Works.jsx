@@ -7,7 +7,7 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import LaunchIcon from "@mui/icons-material/Launch";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import AddIcon from '@mui/icons-material/Add';
+import AddIcon from "@mui/icons-material/Add";
 import WebIcon from "@mui/icons-material/Web";
 import DesktopMacIcon from "@mui/icons-material/DesktopMac";
 import ConnectedTvIcon from "@mui/icons-material/ConnectedTv";
@@ -154,33 +154,43 @@ const Works = () => {
                     ))}
                   </Typography>
                 )}
-                {workData["attributes"].liveLink && (
-                  <Button
-                    size="small"
-                    variant="outlined"
-                    sx={{ fontSize: 12, textTransform: "none", mt: "4px", mr: "6px" }} //, color: "#42a5f5"
-                    onClick={() => openLink(workData["attributes"].liveLink)}
-                  >
-                    {buttonLabels.live}{" "}
-                    <LaunchIcon sx={{ ml: "6px", fontSize: "small" }} />
-                  </Button>
-                )}
                 {workData["attributes"].descLink && (
                   <Button
                     size="small"
                     variant="outlined"
-                    sx={{ fontSize: 12, textTransform: "none", mt: "4px", mr: "6px" }}  //, color: "#1976d2"
+                    sx={{
+                      fontSize: 12,
+                      textTransform: "none",
+                      mt: "4px",
+                      mr: "6px",
+                    }} //, color: "#1976d2"
                     onClick={() => openLink(workData["attributes"].descLink)}
                   >
                     {buttonLabels.desc}{" "}
                     <AddIcon sx={{ ml: "6px", fontSize: "small" }} />
                   </Button>
                 )}
+                {workData["attributes"].liveLink && (
+                  <Button
+                    size="small"
+                    variant="outlined"
+                    sx={{
+                      fontSize: 12,
+                      textTransform: "none",
+                      mt: "4px",
+                      mr: "6px",
+                    }} //, color: "#42a5f5"
+                    onClick={() => openLink(workData["attributes"].liveLink)}
+                  >
+                    {buttonLabels.live}{" "}
+                    <LaunchIcon sx={{ ml: "6px", fontSize: "small" }} />
+                  </Button>
+                )}
                 {workData["attributes"].srcLink && (
                   <Button
                     size="small"
                     variant="outlined"
-                    sx={{ fontSize: 12, textTransform: "none", mt: "4px" }} //, color: "#1565c0" 
+                    sx={{ fontSize: 12, textTransform: "none", mt: "4px" }} //, color: "#1565c0"
                     onClick={() => openLink(workData["attributes"].srcLink)}
                   >
                     {buttonLabels.src}
