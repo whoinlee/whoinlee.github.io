@@ -59,7 +59,7 @@ const Works = () => {
       mt: "12px",
       lineHeight: "1.25",
       fontSize: "0.8rem",
-      fontWeight: 500,
+      fontWeight: 600,
       // color: "#42a5f5",  //light
       // color: "#1976d2",
       // textTransform: "uppercase"
