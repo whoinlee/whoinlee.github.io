@@ -1,7 +1,8 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
+import CardActionArea from "@mui/material/CardActionArea";
 import CardMedia from "@mui/material/CardMedia";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
@@ -23,7 +24,6 @@ const API_URL = "/data/works.json";
 const Works = () => {
   const { selectedSubIndex } = useContext(SiteContext);
   const [works, setWorks] = useState([]);
-
   const Icons = [
     WebIcon,
     DesktopMacIcon,
@@ -42,6 +42,16 @@ const Works = () => {
     desc: "READ",
     src: "SOURCE",
   };
+
+  const overlayRef = useRef(null);
+
+  // const onCardOver = () => {
+  //   overlayRef.current.style.opacity = 1;
+  //   console.log("onCardOver, overlayRef.current? ", overlayRef.current);
+  // };
+  // const onCardOut = () => {
+  //   overlayRef.current.style.opacity = 0;
+  // };
 
   const openLink = (url) => {
     window.open(url, "_blank")?.focus();
@@ -65,6 +75,22 @@ const Works = () => {
       border: "0.5px solid rgba(0,0,0,.5)",
     },
 
+    overlay: {
+      position: "absolute",
+      width: "100%",
+      height: "100%",
+      top: "0px",
+      left: "0px",
+      paddingBottom: "10px",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      color: "#fefefe",
+      backgroundColor: "rgba(0, 0, 0, .6)",
+      opacity: 0,
+      transition: "all .25s ease-out",
+    },
+
     media: {
       // width: "265px"
     },
@@ -81,7 +107,7 @@ const Works = () => {
 
     desc: {
       mt: "2px",
-      mb: "10px",
+      mb: "6px",
       fontSize: "0.70rem",
       lineHeight: "1.25",
     },
@@ -90,6 +116,7 @@ const Works = () => {
       fontSize: "0.70rem",
       lineHeight: "1.25",
       fontWeight: "bold",
+      mb: "6px"
     },
 
     awardList: {
@@ -127,12 +154,21 @@ const Works = () => {
                 // xs={12}
               >
                 <Card variant="outlined" sx={cardStyles.card}>
-                  <CardMedia
-                    component="img"
-                    image={workData["attributes"].imgSrc}
-                    alt={workData["attributes"].title}
-                    sx={cardStyles.media}
-                  />
+                  <CardActionArea
+                  // onClick={onClick}
+                  // onMouseOver={onCardOver}
+                  // onMouseLeave={onCardOut}
+                  >
+                    <CardMedia
+                      component="img"
+                      image={workData["attributes"].imgSrc}
+                      alt={workData["attributes"].title}
+                      sx={cardStyles.media}
+                    />
+                    {/* <div style={cardStyles.overlay} ref={overlayRef}>
+                    {workData["attributes"].comments}
+                  </div> */}
+                  </CardActionArea>
                 </Card>
                 <Typography sx={cardStyles.title}>
                   {workData["attributes"].header}
@@ -141,7 +177,7 @@ const Works = () => {
                   {workData["attributes"].descText}
                 </Typography>
                 {workData["attributes"].Awards && (
-                  <Typography sx={cardStyles.award}>
+                  <Box sx={cardStyles.award}>
                     Awards
                     {workData["attributes"].Awards.map((award, index) => (
                       <Typography
@@ -152,7 +188,7 @@ const Works = () => {
                         {award}
                       </Typography>
                     ))}
-                  </Typography>
+                  </Box>
                 )}
                 {workData["attributes"].descLink && (
                   <Button
@@ -161,7 +197,7 @@ const Works = () => {
                     sx={{
                       fontSize: 12,
                       textTransform: "none",
-                      mt: "4px",
+                      // mt: "4px",
                       mr: "6px",
                     }} //, color: "#1976d2"
                     onClick={() => openLink(workData["attributes"].descLink)}
@@ -177,7 +213,7 @@ const Works = () => {
                     sx={{
                       fontSize: 12,
                       textTransform: "none",
-                      mt: "4px",
+                      // mt: "4px",
                       mr: "6px",
                     }} //, color: "#42a5f5"
                     onClick={() => openLink(workData["attributes"].liveLink)}
@@ -190,7 +226,7 @@ const Works = () => {
                   <Button
                     size="small"
                     variant="outlined"
-                    sx={{ fontSize: 12, textTransform: "none", mt: "4px" }} //, color: "#1565c0"
+                    sx={{ fontSize: 12, textTransform: "none" }} //, color: "#1565c0"
                     onClick={() => openLink(workData["attributes"].srcLink)}
                   >
                     {buttonLabels.src}

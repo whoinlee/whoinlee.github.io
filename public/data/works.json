@@ -8,7 +8,7 @@
         "descText": "Particle Design System Prototype for 'Skeleton Loading Screen'",
         "liveLink": "https://particle-prototypes.netlify.app/skeletonScreen",
         "srcLink": "https://github.com/whoinlee/prototypeSite",
-        "comments": null,
+        "comments": "",
         "isActive": true,
         "imgSrc": "/media/works/y_appD_39_Skeleton_529x484.jpg",
         "tags": "Web, Prototype, Design System"
@@ -22,7 +22,7 @@
         "descText": "Particle Design System Prototype for 'Inspector Panel Resizing'",
         "liveLink": "https://particle-prototypes.netlify.app/inspectorPanel",
         "srcLink": "https://github.com/whoinlee/prototypeSite",
-        "comments": null,
+        "comments": "",
         "isActive": true,
         "imgSrc": "/media/works/y_appD_40_Inspector_529x484.jpg",
         "tags": "Web, Prototype, Design System"
@@ -36,7 +36,7 @@
         "descText": "Particle Design System Prototype for 'Relationship Graph Improvements'",
         "liveLink": "https://particle-prototypes.netlify.app/relationshipGraph",
         "srcLink": "https://github.com/whoinlee/prototypeSite",
-        "comments": null,
+        "comments": "",
         "isActive": true,
         "imgSrc": "/media/works/y_appD_41_Relationship_529x484.jpg",
         "tags": "Web, Prototype, Design System"
@@ -50,7 +50,7 @@
         "descText": "Figma Plugins for 'Data Visualization' and 'Jira & Figma Communication'",
         "descLink": null,
         "srcLink": "https://github.com/whoinlee/figmaPlugins",
-        "comments": null,
+        "comments": "",
         "isActive": true,
         "imgSrc": "/media/works/y_appD_42_Plugin_529x484.jpg",
         "tags": "Figma Plugin"
@@ -64,7 +64,7 @@
         "descText": "FireTV Desktop App Prototypes",
         "descLink": null,
         "srcLink": "https://github.com/whoinlee/fireTV_Air",
-        "comments": null,
+        "comments": "",
         "isActive": true,
         "imgSrc": "/media/works/x_nbc_36_fireTVAir_529x484.jpg",
         "tags": "Prototype"
@@ -77,7 +77,7 @@
         "header": "NBC Universal",
         "descText": "FireTV Web App POC",
         "srcLink": "https://github.com/whoinlee/fireTV_React",
-        "comments": null,
+        "comments": "",
         "isActive": true,
         "imgSrc": "/media/works/x_nbc_37_fireTVWeb_529x484.jpg",
         "tags": "Web, POC"
@@ -91,7 +91,7 @@
         "descText": "FireTV (Android Platform) TV App POC",
         "descLink": null,
         "srcLink": "https://github.com/whoinlee/fireTV_ReactNative",
-        "comments": null,
+        "comments": "",
         "isActive": true,
         "imgSrc": "/media/works/x_nbc_38_fireTVAndroid_529x484.jpg",
         "tags": "POC, Android"
@@ -105,7 +105,7 @@
         "descText": "Estée Lauder OSIAO Kiosk",
         "descLink": null,
         "srcLink": null,
-        "comments": null,
+        "comments": "",
         "isActive": true,
         "imgSrc": "/media/works/w_32_OSIAO_529x484.jpg",
         "tags": "Kiosk"
@@ -120,7 +120,7 @@
           "Awards": ["Summit Creative Award 2015, Gold"],
           "descLink": null,
           "srcLink": null,
-          "comments": null,
+          "comments": "",
           "isActive": true,
           "imgSrc": "/media/works/w_35_Xerox_529x484.jpg",
           "tags": "Touchscreen, Game"
@@ -154,7 +154,7 @@
         "Awards": ["Cannes and DMA Echo Awards 2011, Gold and Silver"],
         "descLink": null,
         "srcLink": null,
-        "comments": null,
+        "comments": "",
         "isActive": true,
         "imgSrc": "/media/works/ogilvy_31_IBM_529x484.jpg",
         "tags": "Web"
@@ -210,7 +210,7 @@
         "descText": "SAP ‘Run Better’ YouTube Brand Channel",
         "descLink": null,
         "srcLink": null,
-        "comments": null,
+        "comments": "",
         "isActive": true,
         "imgSrc": "/media/works/ogilvy_27_SAP_529x484.jpg",
         "tags": "Web, Social Media"
@@ -224,7 +224,7 @@
         "descText": "UPS ‘Plastics’ Factoids Module",
         "descLink": null,
         "srcLink": null,
-        "comments": null,
+        "comments": "",
         "isActive": true,
         "imgSrc": "/media/works/ogilvy_28_Factoids_529x484.jpg",
         "tags": ""
@@ -239,7 +239,7 @@
         "descText": "Nestlé CARNATION® Milk Website",
         "descLink": null,
         "srcLink": null,
-        "comments": null,
+        "comments": "",
         "isActive": true,
         "imgSrc": "/media/works/ogilvy_26_Nestle_529x484.jpg",
         "tags": "Web"
@@ -267,7 +267,7 @@
         "descText": "Maxwell House Website",
         "descLink": null,
         "srcLink": null,
-        "comments": null,
+        "comments": "",
         "isActive": true,
         "imgSrc": "/media/works/ogilvy_21_MH_529x484.jpg",
         "tags": "Web"
@@ -281,7 +281,7 @@
         "descText": "Time Warner Cable ‘Best Choice’ Campaign Website",
         "descLink": null,
         "srcLink": null,
-        "comments": null,
+        "comments": "",
         "isActive": true,
         "imgSrc": "/media/works/ogilvy_24_TWC_529x484.jpg",
         "tags": "Web",
@@ -296,7 +296,7 @@
         "descText": "SAP ‘Career’ Website",
         "descLink": null,
         "srcLink": null,
-        "comments": null,
+        "comments": "",
         "isActive": true,
         "imgSrc": "/media/works/ogilvy_23_SAPCareer_529x484.jpg",
         "tags": "Web",
@@ -311,7 +311,7 @@
         "descText": "EarthGrains Eco-Grain Website",
         "descLink": null,
         "srcLink": null,
-        "comments": null,
+        "comments": "",
         "isActive": true,
         "imgSrc": "/media/works/ogilvy_22_SaraLee_529x484.jpg",
         "tags": "Web"
@@ -354,7 +354,7 @@
         "descText": "FM Global Website",
         "descLink": null,
         "srcLink": null,
-        "comments": null,
+        "comments": "",
         "isActive": true,
         "imgSrc": "/media/works/ogilvy_18_FMG_529x484.jpg",
         "tags": "Web"
@@ -368,7 +368,7 @@
         "descText": "SAP ‘Clear New World’ Website",
         "descLink": null,
         "srcLink": null,
-        "comments": null,
+        "comments": "",
         "isActive": true,
         "imgSrc": "/media/works/ogilvy_17_SAP_529x484.jpg",
         "tags": "Web"
@@ -383,7 +383,7 @@
         "descText": "Honey Bunches of Oats Website",
         "descLink": null,
         "srcLink": null,
-        "comments": null,
+        "comments": "",
         "isActive": true,
         "imgSrc": "/media/works/ogilvy_16_HBO_529x484.jpg",
         "tags": "Web"
@@ -411,7 +411,7 @@
         "descText": "IBM 'Build on Blue' Site Landing Page",
         "descLink": null,
         "srcLink": null,
-        "comments": null,
+        "comments": "",
         "isActive": true,
         "imgSrc": "/media/works/ogilvy_15_IBM_529x484.jpg",
         "tags": "Web"
@@ -425,7 +425,7 @@
         "descText": "Enfamil Site Landing Page",
         "descLink": null,
         "srcLink": null,
-        "comments": null,
+        "comments": "",
         "isActive": true,
         "imgSrc": "/media/works/ogilvy_14_Enfamil_529x484.jpg",
         "tags": "Web"
@@ -440,7 +440,7 @@
         "Awards": ["EACA Euro/US Effie Awards 2009, second Gold/Bronze Effie"],
         "descLink": null,
         "srcLink": null,
-        "comments": null,
+        "comments": "",
         "isActive": true,
         "imgSrc": "/media/works/ogilvy_13_Dove_529x484.jpg",
         "tags": "Web"
@@ -454,7 +454,7 @@
         "descText": "Slimfast Site Landing Page",
         "descLink": null,
         "srcLink": null,
-        "comments": null,
+        "comments": "",
         "isActive": true,
         "imgSrc": "/media/works/ogilvy_12_Slimfast_529x484.jpg",
         "tags": "Web"
@@ -482,7 +482,7 @@
         "descText": "Citibank Website",
         "descLink": null,
         "srcLink": null,
-        "comments": null,
+        "comments": "",
         "isActive": true,
         "imgSrc": "/media/works/firstborn_10_Citi_529x484.jpg",
         "tags": "Web"
@@ -494,7 +494,7 @@
         "title": "Firstborn's Snowball Fight",
         "header": "Firstborn",
         "descText": "Holiday Card, ‘Snowball Fight’",
-        "Awards": ["London International Awards 2007, Digital Media Finalists"],
+        "Awards": ["London Int'l Awards 2007, Digital Media Finalists"],
         "descLink": "https://work.firstborn.com/work/44/firstborn-snowball-fight",
         "srcLink": null,
         "comments": "Firstborn's Christmas & New Year's project — an interactive video holiday card.",
@@ -575,33 +575,32 @@
       }
     },
     {
-      "id": 2,
-      "attributes": {
-        "title": "Ivy™, The Interactive Video Agency",
-        "header": "Alternet",
-        "descText": "Ivy™, Interactive Video Platform",
-        "descLink": "http://www.alternetinc.com/ivy.html",
-        "srcLink": null,
-        "comments": "CMS manageable interactive online video solution, IVY™, implemented in AS 2.0 using ARIAware (MVC design pattern based framework) and custom made components. Supports multi languages.",
-        "isActive": true,
-        "imgSrc": "/media/works/alternet_2_IVY_529x484.jpg",
-        "tags": "Web, Video, CMS"
-      }
-    },
-    {
       "id": 1,
       "attributes": {
         "title": "LPG Wellbox",
         "header": "LPG, Alternet",
         "descText": "LPG Wellbox Website",
         "descLink": "http://www.alternetinc.com/wellbox.html",
-        "liveLink": "https://www.wellbox.com/",
         "comments": "A site that provides experiences where customers could learn about the new Wellbox product, explore all of its features via interactive videos, and purchase the Wellbox via a custom order form",
         "isActive": true,
         "imgSrc": "/media/works/alternet_1_Wellbox_529x484.jpg",
         "tags": "Web, Video, CMS"
       }
     },
+    {
+        "id": 2,
+        "attributes": {
+          "title": "Ivy™, The Interactive Video Agency",
+          "header": "Alternet",
+          "descText": "Ivy™, Interactive Video Platform",
+          "descLink": "http://www.alternetinc.com/ivy.html",
+          "srcLink": null,
+          "comments": "CMS manageable interactive online video solution, IVY™, implemented in AS 2.0 using ARIAware (MVC design pattern based framework) and custom made components. Supports multi languages.",
+          "isActive": true,
+          "imgSrc": "/media/works/alternet_2_IVY_529x484.jpg",
+          "tags": "Web, Video, CMS"
+        }
+      },
     {
       "id": 0,
       "attributes": {
