@@ -96,7 +96,7 @@ const Works = () => {
         </div>
       )}
       {works.length > 0 && (
-        <Box>
+        <Box pt="18px">
           <Grid
             container
             spacing={{ xs: 2, sm: 4, md: 5, lg: 6 }}

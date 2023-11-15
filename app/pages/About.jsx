@@ -21,7 +21,7 @@ const About = () => {
       {/* <div className="headlineHolder"> */}
         <Typography
           variant="h1"
-          sx={{ display: "inline-block", wordBreak: "break-word", mt: "6px" }}
+          sx={{ display: "inline-block", wordBreak: "break-word", mt: "10px" }}
         >
           <Typewriter
             options={{
