@@ -17,6 +17,7 @@
   }
 }
 
+//-- Home Page
 .home {
   .project {
     padding-top: $padding-md;
@@ -35,24 +36,23 @@
   .misc {
     margin-bottom: "36px"
   }
-  
-  // .footer {
-  //   font-size: .65rem;
-  //   color: rgba(0, 0, 0, .85);
-  // }
 }
 
-// .works {
-
-// }
-
+//-- Footer for Home & Works Pages
 .home, .works {
+  // height: calc(100vh - ($top-bar-height + $padding-sm*2 + 2px));
+  position: relative;
+
   .footer {
+    position: absolute;
+    bottom: 10px;
     font-size: .65rem;
     color: rgba(0, 0, 0, .85);
+    // border: 4px solid red;
   }
 }
 
+//-- About Page
 .about {
   //-- switch bg and text colors
   display: flex;
@@ -74,7 +74,7 @@
     // font-size: 1rem;
 
     b {
-      // font-size: 1.35rem;
+      font-size: 1.35rem;
       color: white;
       // background: -webkit-linear-gradient(#eee, rgb(218, 9, 225)); //-- pink gradient
       // background: -webkit-linear-gradient(rgba(255, 255, 255, .1), rgba(255, 255, 255, 1));  //-- white gradient

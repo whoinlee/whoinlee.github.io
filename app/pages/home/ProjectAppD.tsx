@@ -116,7 +116,7 @@ const ProjectAppD = () => {
               sx={{ pb: projectCardStyles.vGap }}
             >
               <WorkCardImg
-                imgPath="/media/p1skeleton425x325.jpg"
+                imgPath="/media/home/p1skeleton425x325.jpg"
                 imgWidth={425}
                 imgHeight={325}
                 cardWidth={425}
@@ -137,7 +137,7 @@ const ProjectAppD = () => {
                 }}
               >
                 <WorkCardWide
-                  imgPath="/media/p2inspector320x320.jpg"
+                  imgPath="/media/home/p2inspector320x320.jpg"
                   imgWidth={146}
                   imgHeight={146}
                   cardWidth={425}
@@ -153,7 +153,7 @@ const ProjectAppD = () => {
                   }
                 />
                 <WorkCardWide
-                  imgPath="/media/p3relation320x320.jpg"
+                  imgPath="/media/home/p3relation320x320.jpg"
                   imgWidth={146}
                   imgHeight={146}
                   cardWidth={425}
@@ -171,7 +171,7 @@ const ProjectAppD = () => {
             </FlexStartBox>
             <FlexStartBox gap={projectCardStyles.hGap}>
               <WorkCardImg
-                imgPath="/media/dataVizPlugin425x325_1.jpg"
+                imgPath="/media/home/dataVizPlugin425x325_1.jpg"
                 imgWidth={425}
                 imgHeight={325}
                 cardWidth={425}
@@ -182,7 +182,7 @@ const ProjectAppD = () => {
                 }
               />
               <WorkCardImg
-                imgPath="/media/figmaJiraPlugin425x325.jpg"
+                imgPath="/media/home/figmaJiraPlugin425x325.jpg"
                 imgWidth={425}
                 imgHeight={325}
                 cardWidth={425}

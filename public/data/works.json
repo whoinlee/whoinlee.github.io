@@ -1,0 +1,621 @@
+{
+  "data": [
+    {
+      "id": 39,
+      "attributes": {
+        "title": "Skeleton Loading Screen",
+        "header": "Cisco AppDynamics",
+        "descText": "Particle Design System Prototype for 'Skeleton Loading Screen'",
+        "descLink": "https://particle-prototypes.netlify.app/skeletonScreen",
+        "srcLink": "https://github.com/whoinlee/prototypeSite",
+        "comments": null,
+        "isActive": true,
+        "imgSrc": "/media/works/y_appD_39_Skeleton_529x484.jpg",
+        "tags": "Web, Prototype, Design System"
+      }
+    },
+    {
+      "id": 40,
+      "attributes": {
+        "title": "Inspector Panel Resizing",
+        "header": "Cisco AppDynamics",
+        "descText": "Particle Design System Prototype for 'Inspector Panel Resizing'",
+        "descLink": "https://particle-prototypes.netlify.app/inspectorPanel",
+        "srcLink": "https://github.com/whoinlee/prototypeSite",
+        "comments": null,
+        "isActive": true,
+        "imgSrc": "/media/works/y_appD_40_Inspector_529x484.jpg",
+        "tags": "Web, Prototype, Design System"
+      }
+    },
+    {
+      "id": 41,
+      "attributes": {
+        "title": "Relationship Graph Improvements",
+        "header": "Cisco AppDynamics",
+        "descText": "Particle Design System Prototype for 'Relationship Graph Improvements'",
+        "descLink": "https://particle-prototypes.netlify.app/relationshipGraph",
+        "srcLink": "https://github.com/whoinlee/prototypeSite",
+        "comments": null,
+        "isActive": true,
+        "imgSrc": "/media/works/y_appD_41_Relationship_529x484.jpg",
+        "tags": "Web, Prototype, Design System"
+      }
+    },
+    {
+      "id": 42,
+      "attributes": {
+        "title": "Figma Plugins",
+        "header": "Cisco AppDynamics",
+        "descText": "Figma Plugins for 'Data Visualization' and 'Jira & Figma Communication'",
+        "descLink": "",
+        "srcLink": "https://github.com/whoinlee/figmaPlugins",
+        "comments": null,
+        "isActive": true,
+        "imgSrc": "/media/works/y_appD_42_Plugin_529x484.jpg",
+        "tags": "Figma Plugin"
+      }
+    },
+    {
+      "id": 36,
+      "attributes": {
+        "title": "NBC FireTV Desktop App Prototypes",
+        "header": "NBC Universal",
+        "descText": "FireTV Desktop App Prototypes",
+        "descLink": "",
+        "srcLink": "https://github.com/whoinlee/fireTV_Air",
+        "comments": null,
+        "isActive": true,
+        "imgSrc": "/media/works/x_nbc_36_fireTVAir_529x484.jpg",
+        "tags": "Prototype"
+      }
+    },
+    {
+      "id": 37,
+      "attributes": {
+        "title": "NBC FireTV Web App POC",
+        "header": "NBC Universal",
+        "descText": "FireTV Web App POC",
+        "descLink": "https://github.com/whoinlee/fireTV_React",
+        "srcLink": null,
+        "comments": null,
+        "isActive": true,
+        "imgSrc": "/media/works/x_nbc_37_fireTVWeb_529x484.jpg",
+        "tags": "Web, POC"
+      }
+    },
+    {
+      "id": 38,
+      "attributes": {
+        "title": "NBC FireTV Android Platform App POC",
+        "header": "NBC Universal",
+        "descText": "FireTV Android Platform TV App POC",
+        "descLink": null,
+        "srcLink": "https://github.com/whoinlee/fireTV_ReactNative",
+        "comments": null,
+        "isActive": true,
+        "imgSrc": "/media/works/x_nbc_38_fireTVAndroid_529x484.jpg",
+        "tags": "POC, Android"
+      }
+    },
+    {
+      "id": 32,
+      "attributes": {
+        "title": "Estée Lauder OSIAO Kiosk",
+        "header": "Estée Lauder",
+        "descText": "Estée Lauder OSIAO Kiosk",
+        "descLink": null,
+        "srcLink": null,
+        "comments": null,
+        "isActive": true,
+        "imgSrc": "/media/works/w_32_OSIAO_529x484.jpg",
+        "tags": "Kiosk"
+      }
+    },
+    {
+        "id": 35,
+        "attributes": {
+          "title": "Xerox Automated Intelligence Challenge Game",
+          "header": "Xerox, Blue Telescope",
+          "descText": "Xerox 'Automated Intelligence Challenge' Game",
+          "Awards": ["Summit Creative Award 2015, Gold"],
+          "descLink": null,
+          "srcLink": null,
+          "comments": null,
+          "isActive": true,
+          "imgSrc": "/media/works/w_35_Xerox_529x484.jpg",
+          "tags": "Touchscreen, Game"
+        }
+      },
+    {
+      "id": 34,
+      "attributes": {
+        "title": "The Subtexter Facebook App.",
+        "header": "Droga5, Solarsilk",
+        "descText": "Newcastle Facebook App",
+        "Awards": [
+          "One Show Award 2013, Bronze Pencil",
+          "Facebook Studio Award 2013, Bronze"
+        ],
+        "descLink": "https://solarsilk.com/work/newcastle-droga5-solarsilk-nobollocks/",
+        "srcLink": null,
+        "comments": "A CMS managed Facebook application that allows users to choose a photo from 'provided images for a selected category'/'their computer'/'their Facebook photos', add a subtext overlay, and post the integrated image to their Facebook timeline.",
+        "isActive": true,
+        "imgSrc": "/media/works/w_34_Subtexter_529x484.jpg",
+        "tags": "Web, CMS, Social Media"
+      }
+    },
+
+    {
+      "id": 31,
+      "attributes": {
+        "title": "IBM Watson Site",
+        "header": "IBM Watson, Ogilvy",
+        "descText": "IBM ‘Watson’ Website",
+        "Awards": ["Cannes and DMA Echo Awards 2011, Gold and Silver"],
+        "descLink": null,
+        "srcLink": null,
+        "comments": null,
+        "isActive": true,
+        "imgSrc": "/media/works/ogilvy_31_IBM_529x484.jpg",
+        "tags": "Web"
+      }
+    },
+    {
+        "id": 33,
+        "attributes": {
+          "title": "FM Global Resilience Site",
+          "header": "FM Global, Ogilvy",
+          "descText": "FM Global ‘Resilience' Campaign Website",
+          "srcLink": null,
+          "comments": "A site that consists of 4 sport videos that play forward or backward in different speed in response to mouse movement. The site URL is shareable through social media — Facebook, Twitter, and LinkedIn.",
+          "isActive": true,
+          "imgSrc": "/media/works/w_33_FMG_529x484.jpg",
+          "tags": "Web, Video, Social Media"
+        }
+      },
+    {
+      "id": 29,
+      "attributes": {
+        "title": "It’s On My Mind Site",
+        "header": "The JED Foundation, Ogilvy",
+        "descText": "The JED Foundation ‘It's On My Mind’ Website",
+        "descLink": null,
+        "srcLink": null,
+        "comments": "A teen suicide prevention site that informs teens about different emotions and shows that everybody has them, even celebrities. Users can take 4 photos of different emotions and share them with friends on Facebook or Twitter.",
+        "isActive": true,
+        "imgSrc": "/media/works/ogilvy_29_JED_529x484.jpg",
+        "tags": "Web, Social Media"
+      }
+    },
+
+    {
+      "id": 30,
+      "attributes": {
+        "title": "GE Capital Teaser Module",
+        "header": "GE Capital, Ogilvy",
+        "descText": "GE Capital Employee Engagement Site Teaser, 'We Are Builders'",
+        "descLink": null,
+        "srcLink": null,
+        "comments": "Each moving pixel in the teaser represents a participating employee. As more employees participate and it gets close to the target date, the teaser reveals the word 'BUILDERS' with more pixels created.",
+        "isActive": true,
+        "imgSrc": "/media/works/ogilvy_30_GE_529x484.jpg",
+        "tags": "Web"
+      }
+    },
+    {
+      "id": 27,
+      "attributes": {
+        "title": "SAP YouTube Channel",
+        "header": "SAP, Ogilvy",
+        "descText": "SAP ‘Run Better’ YouTube Brand Channel",
+        "descLink": null,
+        "srcLink": null,
+        "comments": null,
+        "isActive": true,
+        "imgSrc": "/media/works/ogilvy_27_SAP_529x484.jpg",
+        "tags": "Web, Social Media"
+      }
+    },
+    {
+      "id": 28,
+      "attributes": {
+        "title": "UPS Factoids Module",
+        "header": "UPS, Ogilvy",
+        "descText": "UPS ‘Plastics’ Factoids Module",
+        "descLink": null,
+        "srcLink": null,
+        "comments": null,
+        "isActive": true,
+        "imgSrc": "/media/works/ogilvy_28_Factoids_529x484.jpg",
+        "tags": ""
+      }
+    },
+
+    {
+      "id": 26,
+      "attributes": {
+        "title": "CARNATION® Milk Site",
+        "header": "Nestlé, Ogilvy",
+        "descText": "Nestlé CARNATION® Milk Website",
+        "descLink": null,
+        "srcLink": null,
+        "comments": null,
+        "isActive": true,
+        "imgSrc": "/media/works/ogilvy_26_Nestle_529x484.jpg",
+        "tags": "Web"
+      }
+    },
+    {
+      "id": 25,
+      "attributes": {
+        "title": "Ogilvy YouTube Channel",
+        "header": "Ogilvy",
+        "descText": "Ogilvy & Mather ‘Create or Else’ YouTube Brand Channel",
+        "descLink": null,
+        "srcLink": null,
+        "comments": "A global YouTube channel founded and curated by Ogilvy & Mather to celebrate what inspires creative ideas.",
+        "isActive": true,
+        "imgSrc": "/media/works/ogilvy_25_OgilvyYoutube_529x484.jpg",
+        "tags": "Web, Social Media"
+      }
+    },
+    {
+      "id": 21,
+      "attributes": {
+        "title": "Maxwell House Site",
+        "header": "Kraft, Ogilvy",
+        "descText": "Maxwell House Website",
+        "descLink": null,
+        "srcLink": null,
+        "comments": null,
+        "isActive": true,
+        "imgSrc": "/media/works/ogilvy_21_MH_529x484.jpg",
+        "tags": "Web"
+      }
+    },
+    {
+      "id": 24,
+      "attributes": {
+        "title": "Time Warner Cable Site",
+        "header": "Time Warner Cable, Ogilvy",
+        "descText": "Time Warner Cable ‘Best Choice’ Campaign Website",
+        "descLink": null,
+        "srcLink": null,
+        "comments": null,
+        "isActive": true,
+        "imgSrc": "/media/works/ogilvy_24_TWC_529x484.jpg",
+        "tags": "Web",
+        "order": 24
+      }
+    },
+    {
+      "id": 23,
+      "attributes": {
+        "title": "SAP Career Site",
+        "header": "SAP, Ogilvy",
+        "descText": "SAP ‘Career’ Website",
+        "descLink": null,
+        "srcLink": null,
+        "comments": null,
+        "isActive": true,
+        "imgSrc": "/media/works/ogilvy_23_SAPCareer_529x484.jpg",
+        "tags": "Web",
+        "order": 23
+      }
+    },
+    {
+      "id": 22,
+      "attributes": {
+        "title": "Sara Lee Eco-Grain Site",
+        "header": "Sara Lee, Ogilvy",
+        "descText": "EarthGrains Eco-Grain Website",
+        "descLink": null,
+        "srcLink": null,
+        "comments": null,
+        "isActive": true,
+        "imgSrc": "/media/works/ogilvy_22_SaraLee_529x484.jpg",
+        "tags": "Web"
+      }
+    },
+
+    {
+      "id": 20,
+      "attributes": {
+        "title": "Ogilvy 3D Holiday Card Site",
+        "header": "Ogilvy",
+        "descText": "Ogilvy 3D Holiday Card Website",
+        "descLink": null,
+        "srcLink": null,
+        "comments": "Ogilvy's 2009 holiday card site that users can create, view, and send a video card. User's selection of holiday shape is decorated with YouTube videos, searched through the keyword that sender/user choose.",
+        "isActive": true,
+        "imgSrc": "/media/works/ogilvy_20_HolidayCard_529x484.jpg",
+        "tags": "Web, 3D, Video, Social Media"
+      }
+    },
+    {
+      "id": 19,
+      "attributes": {
+        "title": "IBM Tivoli 3D Banner",
+        "header": "IBM, Ogilvy",
+        "descText": "IBM ‘Tivoli Foundations’ 3D Banner",
+        "descLink": null,
+        "srcLink": null,
+        "comments": "An interactive 3D banner that users can twist or rotate in a 3 dimensional space for a more complete view.",
+        "isActive": true,
+        "imgSrc": "/media/works/ogilvy_19_IBMTivoli_529x484.jpg",
+        "tags": "Web, 3D"
+      }
+    },
+    {
+      "id": 18,
+      "attributes": {
+        "title": "FM Global Site",
+        "header": "FM Global, Ogilvy",
+        "descText": "FM Global Website",
+        "descLink": null,
+        "srcLink": null,
+        "comments": null,
+        "isActive": true,
+        "imgSrc": "/media/works/ogilvy_18_FMG_529x484.jpg",
+        "tags": "Web"
+      }
+    },
+    {
+      "id": 17,
+      "attributes": {
+        "title": "SAP Clear New World Site",
+        "header": "SAP, Ogilvy",
+        "descText": "SAP ‘Clear New World’ Website",
+        "descLink": null,
+        "srcLink": null,
+        "comments": null,
+        "isActive": true,
+        "imgSrc": "/media/works/ogilvy_17_SAP_529x484.jpg",
+        "tags": "Web"
+      }
+    },
+
+    {
+      "id": 16,
+      "attributes": {
+        "title": "Honey Bunches of Oats Site",
+        "header": "Nestlé, Ogilvy",
+        "descText": "Honey Bunches of Oats Website",
+        "descLink": null,
+        "srcLink": null,
+        "comments": null,
+        "isActive": true,
+        "imgSrc": "/media/works/ogilvy_16_HBO_529x484.jpg",
+        "tags": "Web"
+      }
+    },
+    {
+      "id": 15,
+      "attributes": {
+        "title": "Unilever Slimfast Site",
+        "header": "Unilever, Ogilvy",
+        "descText": "Slimfast Website",
+        "descLink": null,
+        "srcLink": null,
+        "comments": "4 different kinds of sites with alpha channel videos and 3D carousel menu.",
+        "isActive": true,
+        "imgSrc": "/media/works/ogilvy_15_SlimFast_529x484.jpg",
+        "tags": "Web"
+      }
+    },
+    {
+      "id": 14,
+      "attributes": {
+        "title": "IBM Puzzle Landing",
+        "header": "IBM, Ogilvy",
+        "descText": "IBM 'Build on Blue' Site Landing Page",
+        "descLink": null,
+        "srcLink": null,
+        "comments": null,
+        "isActive": true,
+        "imgSrc": "/media/works/ogilvy_15_IBM_529x484.jpg",
+        "tags": "Web"
+      }
+    },
+    {
+      "id": 13,
+      "attributes": {
+        "title": "Mead Johnson Enfamil Site",
+        "header": "Mead Johnson, Ogilvy",
+        "descText": "Enfamil Site Landing Page",
+        "descLink": null,
+        "srcLink": null,
+        "comments": null,
+        "isActive": true,
+        "imgSrc": "/media/works/ogilvy_14_Enfamil_529x484.jpg",
+        "tags": "Web"
+      }
+    },
+    {
+      "id": 12,
+      "attributes": {
+        "title": "Unilever Dove Site",
+        "header": "Unilever, Ogilvy",
+        "descText": "Dove ‘Go Fresh’ Website",
+        "Awards": ["EACA Euro/US Effie Awards 2009, second Gold/Bronze Effie"],
+        "descLink": null,
+        "srcLink": null,
+        "comments": "",
+        "isActive": true,
+        "imgSrc": "/media/works/ogilvy_13_Dove_529x484.jpg",
+        "tags": "Web"
+      }
+    },
+    {
+      "id": 11,
+      "attributes": {
+        "title": "Unilever Slimfast Site",
+        "header": "Unilever, Ogilvy",
+        "descText": "Slimfast Site Landing Page",
+        "descLink": null,
+        "srcLink": null,
+        "comments": "",
+        "isActive": true,
+        "imgSrc": "/media/works/ogilvy_12_Slimfast_529x484.jpg",
+        "tags": "Web"
+      }
+    },
+    {
+      "id": 10,
+      "attributes": {
+        "title": "Maxwell House Site",
+        "header": "Kraft, Firstborn & Ogilvy",
+        "descText": "Maxwell House 'Brew Some Good' Website",
+        "descLink": null,
+        "srcLink": null,
+        "comments": "A dynamic content site with 3D carousel menu configured through xml. One of the features like 'Smile Validator' let users take a picture of themselves smiling and issue a coupon for a validated picture taken real time.",
+        "isActive": true,
+        "imgSrc": "/media/works/ogilvy_11_MaxwellHouse_529x484.jpg",
+        "tags": "Web"
+      }
+    },
+    {
+      "id": 9,
+      "attributes": {
+        "title": "Citibank Microsite",
+        "header": "Citibank, Firstborn",
+        "descText": "Citibank Website",
+        "descLink": null,
+        "srcLink": null,
+        "comments": "",
+        "isActive": true,
+        "imgSrc": "/media/works/firstborn_10_Citi_529x484.jpg",
+        "tags": "Web"
+      }
+    },
+    {
+      "id": 6,
+      "attributes": {
+        "title": "Firstborn's Snowball Fight",
+        "header": "Firstborn",
+        "descText": "Holiday Card, ‘Snowball Fight’",
+        "Awards": ["London International Awards 2007, Digital Media Finalists"],
+        "descLink": "https://work.firstborn.com/work/44/firstborn-snowball-fight",
+        "srcLink": null,
+        "comments": "Firstborn's Christmas & New Year's project — an interactive video holiday card.",
+        "isActive": true,
+        "imgSrc": "/media/works/firstborn_7_FBSnowball_529x484.jpg",
+        "tags": "Web, Video"
+      }
+    },
+    {
+      "id": 7,
+      "attributes": {
+        "title": "JCPenney Spring Site",
+        "header": "Saatchi & Saatchi, Firstborn",
+        "descText": "JCPenney Spring Website",
+        "descLink": "",
+        "srcLink": null,
+        "comments": "A seasonal microsite that users can save their own collection",
+        "isActive": true,
+        "imgSrc": "/media/works/firstborn_8_JCP_529x484.jpg",
+        "tags": "Web"
+      }
+    },
+    {
+      "id": 5,
+      "attributes": {
+        "title": "Borders The Gift Squad",
+        "header": "Borders, Firstborn",
+        "descText": "Borders ‘The Gift Squad’ Chat App",
+        "descLink": "https://work.firstborn.com/work/47/borders-gift-squad",
+        "srcLink": null,
+        "comments": "An interactive chat engine with over 500 sound files configured through xml. Gift recommendation and emailing features implemented using WebService.",
+        "isActive": true,
+        "imgSrc": "/media/works/firstborn_5_Borders_529x484.jpg",
+        "tags": "Web, Audio"
+      }
+    },
+    {
+      "id": 8,
+      "attributes": {
+        "title": "P&G TAG Testees Site",
+        "header": "Arnold, Firstborn",
+        "descText": "P&G ‘TAG Testees’ Website",
+        "Awards": ["Dope Web Awards 2007"],
+        "descLink": null,
+        "srcLink": null,
+        "comments": "A game site of 4 different categories of games happening in 4 rooms in 3D environment. Each game can run as a stand alone, when linked from a sharing email.",
+        "isActive": true,
+        "imgSrc": "/media/works/firstborn_9_TAG_529x484.jpg",
+        "tags": "Web, 3D, Game"
+      }
+    },
+    {
+      "id": 4,
+      "attributes": {
+        "title": "AT&T Your World",
+        "header": "Rogers Townsend, Firstborn",
+        "descText": "AT&T ‘Your World’ Video Module",
+        "descLink": null,
+        "srcLink": null,
+        "comments": "A Flash module with over 60 alpha channel videos dynamically managed through xml.",
+        "isActive": true,
+        "imgSrc": "/media/works/firstborn_4_ATT_529x484.jpg",
+        "tags": "Web, Video"
+      }
+    },
+    {
+      "id": 3,
+      "attributes": {
+        "title": "Malibu Rum Global Site",
+        "header": "Publicis, Firstborn",
+        "descText": "Malibu Rum Global Website",
+        "descLink": "https://work.firstborn.com/work/56/malibu-rum-global-Website",
+        "srcLink": null,
+        "comments": "CMS managed global site that supports 6 languages including English, Spanish, French, Dutch, and Chinese. Global offices could update content, drink recipes, TV spots, and event calendars, to be unique to each region on their local website.",
+        "isActive": true,
+        "imgSrc": "/media/works/firstborn_3_Malibu_529x484.jpg",
+        "tags": "Web, CMS"
+      }
+    },
+    {
+      "id": 2,
+      "attributes": {
+        "title": "Ivy™, The Interactive Video Agency",
+        "header": "Alternet",
+        "descText": "Interactive Video Platform",
+        "descLink": "http://www.alternetinc.com/ivy.html",
+        "srcLink": null,
+        "comments": "CMS manageable interactive online video solution, IVY™, implemented in AS 2.0 using ARIAware (MVC design pattern based framework) and custom made components. Supports multi languages.",
+        "isActive": true,
+        "imgSrc": "/media/works/alternet_2_IVY_529x484.jpg",
+        "tags": "Web, Video, CMS"
+      }
+    },
+    {
+      "id": 1,
+      "attributes": {
+        "title": "LPG Wellbox",
+        "header": "LPG, Alternet",
+        "descText": "LPG Wellbox Website",
+        "descLink": "http://www.alternetinc.com/wellbox.html",
+        "srcLink": "https://www.wellbox.com/",
+        "comments": "A site that provides experiences where customers could learn about the new Wellbox product, explore all of its features via interactive videos, and purchase the Wellbox via a custom order form",
+        "isActive": true,
+        "imgSrc": "/media/works/alternet_1_Wellbox_529x484.jpg",
+        "tags": "Web, Video, CMS"
+      }
+    },
+    {
+      "id": 0,
+      "attributes": {
+        "title": "BMG Music Publishing",
+        "header": "Sony BMG/Zomba (Universal Publishing Production Music), Alternet",
+        "descText": "Sony BMG/Zomba, Killer Tracks, Koka Media, and FirstCom Music Publishing Global Websites",
+        "descLink": "http://www.alternetinc.com/bmg.html",
+        "srcLink": null,
+        "comments": "CMS managed large-scale data-driven global sites that support 11 languages. Download features implemented utilizing Java Applet and Local Shared Object. Components built and skinned for 4 different templates — Sony BMG, Killer Tracks, Koka Media, and FirstCom.",
+        "isActive": true,
+        "imgSrc": "/media/works/alternet_0_BMG_529x484.jpg",
+        "tags": "Web, Audio, CMS"
+      }
+    }
+  ]
+}

@@ -104,7 +104,7 @@ const ProjectNBCU = () => {
               sx={{ pb: projectCardStyles.vGap }}
             >
               <WorkCardImg
-                imgPath="/media/fireTVblackWhite425x325.jpg"
+                imgPath="/media/home/fireTVblackWhite425x325.jpg"
                 imgWidth={210}
                 imgHeight={160}
                 cardWidth={210}
@@ -116,7 +116,7 @@ const ProjectNBCU = () => {
                 }
               />
               <WorkCardImg
-                imgPath="/media/fireTVcolor425x325.jpg"
+                imgPath="/media/home/fireTVcolor425x325.jpg"
                 imgWidth={210}
                 imgHeight={160}
                 cardWidth={210}
@@ -129,7 +129,7 @@ const ProjectNBCU = () => {
               />
 
               <WorkCardImg
-                imgPath="/media/fireTVvideoPlayer425x325.jpg"
+                imgPath="/media/home/fireTVvideoPlayer425x325.jpg"
                 imgWidth={210}
                 imgHeight={160}
                 cardWidth={210}
@@ -141,7 +141,7 @@ const ProjectNBCU = () => {
                 }
               />
               <WorkCardImg
-                imgPath="/media/fireTVWeb425x325.jpg"
+                imgPath="/media/home/fireTVWeb425x325.jpg"
                 imgWidth={210}
                 imgHeight={160}
                 cardWidth={210}
@@ -155,7 +155,7 @@ const ProjectNBCU = () => {
             </FlexStartBox>
             <FlexStartBox gap={projectCardStyles.hGap}>
               <WorkCardImg
-                imgPath="/media/fireTVbravo425x340.jpg"
+                imgPath="/media/home/fireTVbravo425x340.jpg"
                 imgWidth={425}
                 imgHeight={340}
                 cardWidth={425}
@@ -165,7 +165,7 @@ const ProjectNBCU = () => {
                 }
               />
               <WorkCardImg
-                imgPath="/media/fireTVvariations425x340.jpg"
+                imgPath="/media/home/fireTVvariations425x340.jpg"
                 imgWidth={425}
                 imgHeight={340}
                 cardWidth={425}
@@ -177,7 +177,7 @@ const ProjectNBCU = () => {
             </FlexStartBox>
             <Box sx={{ pt: "10px" }}>
               <WorkCardWide
-                imgPath="/media/fireTVReactNative425x325.jpg"
+                imgPath="/media/home/fireTVReactNative425x325.jpg"
                 imgWidth={146}
                 imgHeight={146}
                 cardWidth={858}

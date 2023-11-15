@@ -56,7 +56,7 @@ const ProjectMISC = () => {
           <Grid container spacing={1} justifyContent="space-between">
           <Grid item sm={12} md={6} xl={3} sx={{ flexGrow: 1}}>
             <WorkCardWide
-              imgPath="/media/MiscOsiao265x210.jpg"
+              imgPath="/media/home/MiscOsiao265x210.jpg"
               // imgWidth={200}
               // imgHeight={158}
               cardWidth={800}
@@ -72,7 +72,7 @@ const ProjectMISC = () => {
           </Grid>
           <Grid item sm={12} md={6} xl={3} sx={{ flexGrow: 1}}>
             <WorkCardWide
-              imgPath="/media/MiscXerox265x210.jpg"
+              imgPath="/media/home/MiscXerox265x210.jpg"
               imgWidth={(isLG)? 150: (isXS? 190: 200)}
               imgHeight={(isLG)? 150: (isXS? 150: 158)}
               cardWidth={800}
@@ -87,7 +87,7 @@ const ProjectMISC = () => {
           </Grid>
           <Grid item sm={12} md={6} xl={3} sx={{ flexGrow: 1}}>
             <WorkCardWide
-              imgPath="/media/MiscSubtexter265x210.jpg"
+              imgPath="/media/home/MiscSubtexter265x210.jpg"
               imgWidth={(isLG)? 150: (isXS? 190: 200)}
               imgHeight={(isLG)? 150: (isXS? 150: 158)}
               cardWidth={800}
@@ -108,7 +108,7 @@ const ProjectMISC = () => {
           </Grid>
           <Grid item sm={12} md={6} xl={3} sx={{ flexGrow: 1}}>
             <WorkCardWide
-              imgPath="/media/Misc3DCard265x210.jpg"
+              imgPath="/media/home/Misc3DCard265x210.jpg"
               imgWidth={(isLG)? 150: (isXS? 190: 200)}
               imgHeight={(isLG)? 150: (isXS? 150: 158)}
               cardWidth={800}

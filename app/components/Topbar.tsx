@@ -44,14 +44,16 @@ const Topbar = () => {
 
   //-- colors
   const BLACK_85P = "rgba(0,0,0,.85)";
-  const BLUE_75P = "rgba(15,10,222,.85)";
+  const BLUE_85P = "rgba(15,10,222,.85)";
   const YELLOW_75P = "rgba(255,255,0,.75)";
 
   //-- subMenu related
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const showSubmenu = (e: any) => {
-    if (anchorEl !== e.currentTarget) setAnchorEl(e.currentTarget);
+    // if (anchorEl !== e.currentTarget) setAnchorEl(e.currentTarget);
+    console.log("showSubmenu ===> showWorks");
+    if (selectedPage !== "works") setSelectedPage("works");
   };
   const hideSubmenu = () => {
     setAnchorEl(null);
@@ -241,7 +243,7 @@ const Topbar = () => {
         {/* {!isXS ? ( */}
         <FlexBetBox paddingLeft="12px">
           {/* Menu1: Works with subMenu*/}
-          {/* <Box
+          <Box
               onClick={showSubmenu}
               sx={{
                 // backgroundColor: `${
@@ -267,26 +269,21 @@ const Topbar = () => {
               }}
             >
               <Typography
-                // fontWeight="400"
                 fontSize={`${isSMED ? "19px" : "17px"}`}
                 padding="0px 10px"
                 color={BLACK_85P}
-                // sx={{
-                //   // textDecoration: "underline"
-                //   textDecoration: `${(selectedPage === "works")? "underline":"none"}`
-                //  }}
               >
                 Works
               </Typography>
-              <ArrowDropDownIcon
+              {/* <ArrowDropDownIcon
                 sx={{
                   marginLeft: "-12px",
                   color: BLACK_85P,
                   transform: `${open ? "rotate(180deg)" : "rotate(0deg)"}`,
                 }}
-              />
+              /> */}
             </Box>
-            <Menu
+            {/* <Menu
               anchorEl={anchorEl}
               open={open}
               onClose={hideSubmenu}
@@ -327,7 +324,6 @@ const Topbar = () => {
             }}
           >
             <Typography
-              // fontWeight="500"
               fontSize={`${isSMED ? "19px" : "17px"}`}
               padding="0px 10px"
               letterSpacing="0.075px"
@@ -354,13 +350,7 @@ const Topbar = () => {
                     ? BLACK_85P           //--"rgba(255,255,0,.75)" (yellow)
                     : "transparent"
                 }`,
-                // color: {BLACK_85P},
                 color: `${selectedPage === "about" ? "#fefefe" : BLACK_85P}`,
-                /*
-                backgroundColor: `${selectedPage === "about" ? "#fefefe" : BLACK_85P}`,
-            color: `${selectedPage === "about" ? BLACK_85P : "#fefefe"}`,
-                */
-
                 "&:hover": {
                   border:"2px solid black",
                   backgroundColor: BLACK_85P,
@@ -432,8 +422,7 @@ const Topbar = () => {
               marginLeft: "2px",
               color: BLACK_85P,
               "&:hover": {
-                color: BLUE_75P,
-                // color: "rgba(125, 125, 125, .85)",
+                color: BLUE_85P,
               },
             }}
           />
@@ -454,8 +443,7 @@ const Topbar = () => {
               fontSize: "34px",
               color: BLACK_85P,
               "&:hover": {
-                color: BLUE_75P,
-                // color: "rgba(125, 125, 125, .85)",
+                color: BLUE_85P,
               },
             }}
           />

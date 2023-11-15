@@ -28,13 +28,13 @@ const ProjectWeb = () => {
   );
 
   return (
-    <div className="project misc">
+    <div className="project web">
       {titleContent}
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={1} justifyContent="space-between">
           <Grid item sm={12} md={6} lg={3} sx={{ flexGrow: 1 }}>
             <WorkCardWide
-              imgPath="/media/WebIBM260x240.jpg"
+              imgPath="/media/home/WebIBM260x240.jpg"
               imgWidth={isLG || isXS ? 150 : 200}
               imgHeight={isLG || isXS ? 150 : 185}
               cardWidth={800}
@@ -49,7 +49,7 @@ const ProjectWeb = () => {
           </Grid>
           <Grid item sm={12} md={6} lg={3} sx={{ flexGrow: 1 }}>
             <WorkCardWide
-              imgPath="/media/WebDove260x240.jpg"
+              imgPath="/media/home/WebDove260x240.jpg"
               imgWidth={isLG || isXS ? 150 : 200}
               imgHeight={isLG || isXS ? 150 : 185}
               cardWidth={800}
@@ -64,7 +64,7 @@ const ProjectWeb = () => {
           </Grid>
           <Grid item sm={12} md={6} lg={3} sx={{ flexGrow: 1 }}>
             <WorkCardWide
-              imgPath="/media/WebFBSnowball260x240.jpg"
+              imgPath="/media/home/WebFBSnowball260x240.jpg"
               imgWidth={isLG || isXS ? 150 : 200}
               imgHeight={isLG || isXS ? 150 : 185}
               cardWidth={800}
@@ -84,7 +84,7 @@ const ProjectWeb = () => {
           </Grid>
           <Grid item sm={12} md={6} lg={3} sx={{ flexGrow: 1 }}>
             <WorkCardWide
-              imgPath="/media/WebTAG260x240.jpg"
+              imgPath="/media/home/WebTAG260x240.jpg"
               imgWidth={isLG || isXS ? 150 : 200}
               imgHeight={isLG || isXS ? 150 : 185}
               cardWidth={800}

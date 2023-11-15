@@ -32,7 +32,6 @@ const ProjectAlternet = () => {
         variant="h3"
         sx={{
           cursor: "default",
-          // width: `${isXS ? "275px" : "186px"}`,
           fontWeight: "bold"
         }}
       >
@@ -42,7 +41,6 @@ const ProjectAlternet = () => {
         variant="h3"
         sx={{
           cursor: "default",
-          // width: `${isXS ? "275px" : "186px"}`,
           fontWeight: "bold"
         }}
       >
@@ -51,7 +49,6 @@ const ProjectAlternet = () => {
       <Typography
         variant="h3"
         sx={{
-          // width: `${isXS ? "275px" : "260px"}`,
           display: "inline-block",
           textDecoration: "underline",
           cursor: "pointer",
@@ -67,7 +64,6 @@ const ProjectAlternet = () => {
       <Typography
         variant="h3"
         sx={{
-          // width: `${isXS ? "275px" : "265px"}`,
           display: "inline-block",
           textDecoration: "underline",
           cursor: "pointer",
@@ -99,7 +95,7 @@ const ProjectAlternet = () => {
   };
 
   return (
-    <div className="project appD">
+    <div className="project alternet">
       <FlexBetBox
         sx={{ justifyContent: `${isXS ? "center" : "space-between"}` }}
       >
@@ -117,7 +113,7 @@ const ProjectAlternet = () => {
               }}
             >
               <WorkCardWide
-                imgPath="/media/alternetBMG425x250.jpg"
+                imgPath="/media/home/alternetBMG425x250.jpg"
                 imgWidth={425}
                 imgHeight={250}
                 cardWidth={858}
@@ -128,7 +124,7 @@ const ProjectAlternet = () => {
                 onClick={() => openLink("http://www.alternetinc.com/bmg.html")}
               />
               <WorkCardWide
-                imgPath="/media/alternet_Ivy425x250.jpg"
+                imgPath="/media/home/alternet_Ivy425x250.jpg"
                 imgWidth={425}
                 imgHeight={250}
                 cardWidth={858}

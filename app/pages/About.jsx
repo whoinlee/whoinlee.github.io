@@ -1,8 +1,7 @@
 import React, { useRef, useState } from "react";
 import Typography from "@mui/material/Typography";
-import MailOutlineIcon from '@mui/icons-material/MailOutline';
+// import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import Typewriter from "typewriter-effect";
-
 
 const About = () => {
   const [showName, setShowName] = useState(false);
@@ -19,55 +18,57 @@ const About = () => {
 
   return (
     <div className="page about">
-      <Typography
-        variant="h1"
-        sx={{ display: "inline-block", wordBreak: "break-word" }}
-      >
-        <Typewriter
-          options={{
-            delay: 50,
-            deleteSpeed: 5,
-            autoStart: true,
-            loop: false,
-          }}
-          onInit={(typewriter) => {
-            typewriter
-              .typeString("UUUUUUUUUUUUUUUUUUUUUUUUU") //-- 25 Us
-              .pauseFor(1250)
-              .deleteChars(23)
-              .typeString("+")
-              .pauseFor(85)
-              .callFunction(() => {
-                removeCursor();
-              })
-              .pauseFor(150)
-              .typeString("i")
-              // .pauseFor(125)
-              .callFunction(() => {
-                setShowStatement(true);
-                // removeCursor();
-              })
-              .pauseFor(750)
-              .callFunction(() => {
-                setShowName(true);
-              })
-              .pauseFor(250)
-              .callFunction(() => {
-                setShowFooter(true);
-              })
-              .start();
-          }}
-        />
-      </Typography>
+      {/* <div className="headlineHolder"> */}
+        <Typography
+          variant="h1"
+          sx={{ display: "inline-block", wordBreak: "break-word", mt: "6px" }}
+        >
+          <Typewriter
+            options={{
+              delay: 50,
+              deleteSpeed: 5,
+              autoStart: true,
+              loop: false,
+            }}
+            onInit={(typewriter) => {
+              typewriter
+                .typeString("UUUUUUUUUUUUUUUUUUUUUUUUU") //-- 25 Us
+                .pauseFor(1250)
+                .deleteChars(23)
+                .typeString("+")
+                .pauseFor(85)
+                .callFunction(() => {
+                  removeCursor();
+                })
+                .pauseFor(150)
+                .typeString("i")
+                // .pauseFor(125)
+                .callFunction(() => {
+                  setShowStatement(true);
+                  // removeCursor();
+                })
+                .pauseFor(750)
+                .callFunction(() => {
+                  setShowName(true);
+                })
+                .pauseFor(250)
+                .callFunction(() => {
+                  setShowFooter(true);
+                })
+                .start();
+            }}
+          />
+        </Typography>
+      {/* </div> */}
       {showStatement && (
         // <div className="statement">
         <Typography pt="36px" className="statement">
           I believe in the synergy of working together, <b>U</b> & <b>i</b>, for
-          creating a <b>U</b>nified <b>U</b>ser  Experience.
+          creating a <b>U</b>nified <b>U</b>ser Experience.
         </Typography>
       )}
       {showName && (
-        <Typography pt="12px" variant="h6" pr="4px">
+        <Typography pt="12px" variant="h6" mr="8px">
           <Typewriter
             options={{
               delay: 65,
@@ -85,7 +86,9 @@ const About = () => {
       )}
       {showFooter && (
         <div className="footer">
-          <MailOutlineIcon sx={{fontSize:"16px", color: "rgba(255,255,255, .85)" }} /><span style={{display: "inline-block", marginBottom: "1px"}}>&nbsp;&nbsp;whoinlee@gmail.com&nbsp;&nbsp;&nbsp;</span>
+          {/* <MailOutlineIcon sx={{fontSize:"12px", color: "rgba(255,255,255, .85)" }} /><span style={{display: "inline-block", marginBottom: "1px"}}>&nbsp;&nbsp;whoinlee@gmail.com&nbsp;&nbsp;&nbsp;</span> */}
+          &copy;
+          2023&nbsp;&nbsp;&nbsp;whoinlee@gmail.com&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </div>
       )}
     </div>
