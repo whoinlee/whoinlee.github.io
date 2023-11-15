@@ -58,12 +58,16 @@ const Works = () => {
     title: {
       mt: "12px",
       lineHeight: "1.25",
+      fontSize: "0.8rem",
+      fontWeight: 500,
+      // color: "#42a5f5",  //light
+      // color: "#1976d2",
       // textTransform: "uppercase"
     },
 
     desc: {
-      mt: "8px",
-      mb: "8px",
+      mt: "2px",
+      mb: "10px",
       fontSize: "0.70rem",
       lineHeight: "1.25",
     },
@@ -115,11 +119,11 @@ const Works = () => {
                   <CardMedia
                     component="img"
                     image={workData["attributes"].imgSrc}
-                    // alt={imgAlt}
+                    alt={workData["attributes"].title}
                     sx={cardStyles.media}
                   />
                 </Card>
-                <Typography variant="h6" sx={cardStyles.title}>
+                <Typography sx={cardStyles.title}>
                   {workData["attributes"].header}
                 </Typography>
                 <Typography sx={cardStyles.desc}>
