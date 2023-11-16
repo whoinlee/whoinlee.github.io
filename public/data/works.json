@@ -8,7 +8,7 @@
         "descText": "Particle Design System Prototype for 'Skeleton Loading Screen'",
         "liveLink": "https://particle-prototypes.netlify.app/skeletonScreen",
         "srcLink": "https://github.com/whoinlee/prototypeSite",
-        "comments": "",
+        "comments": "Skeleton Loading Screen",
         "isActive": true,
         "imgSrc": "/media/works/y_appD_39_Skeleton_529x484.jpg",
         "tags": "Web, Prototype, Design System"
@@ -22,7 +22,7 @@
         "descText": "Particle Design System Prototype for 'Inspector Panel Resizing'",
         "liveLink": "https://particle-prototypes.netlify.app/inspectorPanel",
         "srcLink": "https://github.com/whoinlee/prototypeSite",
-        "comments": "",
+        "comments": "Inspector Panel Resizing",
         "isActive": true,
         "imgSrc": "/media/works/y_appD_40_Inspector_529x484.jpg",
         "tags": "Web, Prototype, Design System"
@@ -36,7 +36,7 @@
         "descText": "Particle Design System Prototype for 'Relationship Graph Improvements'",
         "liveLink": "https://particle-prototypes.netlify.app/relationshipGraph",
         "srcLink": "https://github.com/whoinlee/prototypeSite",
-        "comments": "",
+        "comments": "Relationship Graph Improvements",
         "isActive": true,
         "imgSrc": "/media/works/y_appD_41_Relationship_529x484.jpg",
         "tags": "Web, Prototype, Design System"
@@ -50,7 +50,7 @@
         "descText": "Figma Plugins for 'Data Visualization' and 'Jira & Figma Communication'",
         "descLink": null,
         "srcLink": "https://github.com/whoinlee/figmaPlugins",
-        "comments": "",
+        "comments": "'Data Visualization' and 'Jira & Figma Communication' Plugins",
         "isActive": true,
         "imgSrc": "/media/works/y_appD_42_Plugin_529x484.jpg",
         "tags": "Figma Plugin"
@@ -64,7 +64,7 @@
         "descText": "FireTV Desktop App Prototypes",
         "descLink": null,
         "srcLink": "https://github.com/whoinlee/fireTV_Air",
-        "comments": "",
+        "comments": "Desktop App Prototypes for various NBC brands",
         "isActive": true,
         "imgSrc": "/media/works/x_nbc_36_fireTVAir_529x484.jpg",
         "tags": "Prototype"
@@ -77,7 +77,7 @@
         "header": "NBC Universal",
         "descText": "FireTV Web App POC",
         "srcLink": "https://github.com/whoinlee/fireTV_React",
-        "comments": "",
+        "comments": "FireTV Web App POC",
         "isActive": true,
         "imgSrc": "/media/works/x_nbc_37_fireTVWeb_529x484.jpg",
         "tags": "Web, POC"
@@ -91,7 +91,7 @@
         "descText": "FireTV (Android Platform) TV App POC",
         "descLink": null,
         "srcLink": "https://github.com/whoinlee/fireTV_ReactNative",
-        "comments": "",
+        "comments": "Android Platform TV App POC in ReactNative",
         "isActive": true,
         "imgSrc": "/media/works/x_nbc_38_fireTVAndroid_529x484.jpg",
         "tags": "POC, Android"
@@ -105,7 +105,7 @@
         "descText": "Estée Lauder OSIAO Kiosk",
         "descLink": null,
         "srcLink": null,
-        "comments": "",
+        "comments": "Estée Lauder OSIAO Kiosk in Chinese and English",
         "isActive": true,
         "imgSrc": "/media/works/w_32_OSIAO_529x484.jpg",
         "tags": "Kiosk"
@@ -120,7 +120,7 @@
           "Awards": ["Summit Creative Award 2015, Gold"],
           "descLink": null,
           "srcLink": null,
-          "comments": "",
+          "comments": "Automated Intelligence Challenge Game",
           "isActive": true,
           "imgSrc": "/media/works/w_35_Xerox_529x484.jpg",
           "tags": "Touchscreen, Game"
@@ -138,7 +138,7 @@
         ],
         "descLink": "https://solarsilk.com/work/newcastle-droga5-solarsilk-nobollocks/",
         "srcLink": null,
-        "comments": "A CMS managed Facebook application that allows users to choose a photo from 'provided images for a selected category'/'their computer'/'their Facebook photos', add a subtext overlay, and post the integrated image to their Facebook timeline.",
+        "comments": "A CMS managed Facebook application that allows users to choose a photo either from provided images, from their computer, or from their Facebook photos, then add a subtext overlay and post the integrated image to their Facebook timeline.",
         "isActive": true,
         "imgSrc": "/media/works/w_34_Subtexter_529x484.jpg",
         "tags": "Web, CMS, Social Media"
@@ -154,7 +154,7 @@
         "Awards": ["Cannes and DMA Echo Awards 2011, Gold and Silver"],
         "descLink": null,
         "srcLink": null,
-        "comments": "",
+        "comments": "IBM ‘Watson’ Website",
         "isActive": true,
         "imgSrc": "/media/works/ogilvy_31_IBM_529x484.jpg",
         "tags": "Web"
@@ -210,7 +210,7 @@
         "descText": "SAP ‘Run Better’ YouTube Brand Channel",
         "descLink": null,
         "srcLink": null,
-        "comments": "",
+        "comments": "SAP ‘Run Better’ YouTube Brand Channel",
         "isActive": true,
         "imgSrc": "/media/works/ogilvy_27_SAP_529x484.jpg",
         "tags": "Web, Social Media"
@@ -224,7 +224,7 @@
         "descText": "UPS ‘Plastics’ Factoids Module",
         "descLink": null,
         "srcLink": null,
-        "comments": "",
+        "comments": "UPS ‘Plastics’ Factoids Module",
         "isActive": true,
         "imgSrc": "/media/works/ogilvy_28_Factoids_529x484.jpg",
         "tags": ""
@@ -239,7 +239,7 @@
         "descText": "Nestlé CARNATION® Milk Website",
         "descLink": null,
         "srcLink": null,
-        "comments": "",
+        "comments": "Nestlé CARNATION® Milk Website",
         "isActive": true,
         "imgSrc": "/media/works/ogilvy_26_Nestle_529x484.jpg",
         "tags": "Web"
@@ -253,7 +253,7 @@
         "descText": "Ogilvy & Mather ‘Create or Else’ YouTube Brand Channel",
         "descLink": null,
         "srcLink": null,
-        "comments": "A global YouTube channel founded and curated by Ogilvy & Mather to celebrate what inspires creative ideas.",
+        "comments": "A global YouTube channel curated by Ogilvy & Mather to celebrate what inspires creative ideas.",
         "isActive": true,
         "imgSrc": "/media/works/ogilvy_25_OgilvyYoutube_529x484.jpg",
         "tags": "Web, Social Media"
@@ -267,7 +267,7 @@
         "descText": "Maxwell House Website",
         "descLink": null,
         "srcLink": null,
-        "comments": "",
+        "comments": "Maxwell House Website",
         "isActive": true,
         "imgSrc": "/media/works/ogilvy_21_MH_529x484.jpg",
         "tags": "Web"
@@ -281,7 +281,7 @@
         "descText": "Time Warner Cable ‘Best Choice’ Campaign Website",
         "descLink": null,
         "srcLink": null,
-        "comments": "",
+        "comments": "Time Warner Cable ‘Best Choice’ Campaign Website",
         "isActive": true,
         "imgSrc": "/media/works/ogilvy_24_TWC_529x484.jpg",
         "tags": "Web",
@@ -296,7 +296,7 @@
         "descText": "SAP ‘Career’ Website",
         "descLink": null,
         "srcLink": null,
-        "comments": "",
+        "comments": "SAP ‘Career’ Website",
         "isActive": true,
         "imgSrc": "/media/works/ogilvy_23_SAPCareer_529x484.jpg",
         "tags": "Web",
@@ -311,7 +311,7 @@
         "descText": "EarthGrains Eco-Grain Website",
         "descLink": null,
         "srcLink": null,
-        "comments": "",
+        "comments": "EarthGrains Eco-Grain Website",
         "isActive": true,
         "imgSrc": "/media/works/ogilvy_22_SaraLee_529x484.jpg",
         "tags": "Web"
@@ -326,7 +326,7 @@
         "descText": "Ogilvy 3D Holiday Card Website",
         "descLink": null,
         "srcLink": null,
-        "comments": "Ogilvy's 2009 holiday card site that users can create, view, and send a video card. User's selection of holiday shape is decorated with YouTube videos, searched through the keyword that sender/user choose.",
+        "comments": "Ogilvy's 2009 3D holiday card site that users can create, view, and send a video card. User's selection of holiday shape is decorated with YouTube videos, searched through the keyword that sender choose.",
         "isActive": true,
         "imgSrc": "/media/works/ogilvy_20_HolidayCard_529x484.jpg",
         "tags": "Web, 3D, Video, Social Media"
@@ -354,7 +354,7 @@
         "descText": "FM Global Website",
         "descLink": null,
         "srcLink": null,
-        "comments": "",
+        "comments": "FM Global 'Resilience' Website",
         "isActive": true,
         "imgSrc": "/media/works/ogilvy_18_FMG_529x484.jpg",
         "tags": "Web"
@@ -368,7 +368,7 @@
         "descText": "SAP ‘Clear New World’ Website",
         "descLink": null,
         "srcLink": null,
-        "comments": "",
+        "comments": "SAP ‘Clear New World’ Website",
         "isActive": true,
         "imgSrc": "/media/works/ogilvy_17_SAP_529x484.jpg",
         "tags": "Web"
@@ -383,7 +383,7 @@
         "descText": "Honey Bunches of Oats Website",
         "descLink": null,
         "srcLink": null,
-        "comments": "",
+        "comments": "Nestlé 'Honey Bunches of Oats' Website",
         "isActive": true,
         "imgSrc": "/media/works/ogilvy_16_HBO_529x484.jpg",
         "tags": "Web"
@@ -411,7 +411,7 @@
         "descText": "IBM 'Build on Blue' Site Landing Page",
         "descLink": null,
         "srcLink": null,
-        "comments": "",
+        "comments": "IBM 'Build on Blue' Website",
         "isActive": true,
         "imgSrc": "/media/works/ogilvy_15_IBM_529x484.jpg",
         "tags": "Web"
@@ -425,7 +425,7 @@
         "descText": "Enfamil Site Landing Page",
         "descLink": null,
         "srcLink": null,
-        "comments": "",
+        "comments": "Enfamil Website",
         "isActive": true,
         "imgSrc": "/media/works/ogilvy_14_Enfamil_529x484.jpg",
         "tags": "Web"
@@ -440,7 +440,7 @@
         "Awards": ["EACA Euro/US Effie Awards 2009, second Gold/Bronze Effie"],
         "descLink": null,
         "srcLink": null,
-        "comments": "",
+        "comments": "Dove ‘Go Fresh’ Website",
         "isActive": true,
         "imgSrc": "/media/works/ogilvy_13_Dove_529x484.jpg",
         "tags": "Web"
@@ -454,7 +454,7 @@
         "descText": "Slimfast Site Landing Page",
         "descLink": null,
         "srcLink": null,
-        "comments": "",
+        "comments": "Slimfast Website ",
         "isActive": true,
         "imgSrc": "/media/works/ogilvy_12_Slimfast_529x484.jpg",
         "tags": "Web"
@@ -482,7 +482,7 @@
         "descText": "Citibank Website",
         "descLink": null,
         "srcLink": null,
-        "comments": "",
+        "comments": "Citibank Website",
         "isActive": true,
         "imgSrc": "/media/works/firstborn_10_Citi_529x484.jpg",
         "tags": "Web"
@@ -511,7 +511,7 @@
         "descText": "JCPenney Spring Website",
         "descLink": null,
         "srcLink": null,
-        "comments": "A seasonal microsite that users can save their own collection",
+        "comments": "A seasonal microsite that users can save their own collection.",
         "isActive": true,
         "imgSrc": "/media/works/firstborn_8_JCP_529x484.jpg",
         "tags": "Web"
@@ -540,7 +540,7 @@
         "Awards": ["Dope Web Awards 2007"],
         "descLink": null,
         "srcLink": null,
-        "comments": "A game site of 4 different categories of games happening in 4 rooms in 3D environment. Each game can run as a stand alone, when linked from a sharing email.",
+        "comments": "A game site of 4 different games happening in 4 rooms in 3D environment. Each game can run as a stand alone, when it's opened from a sharing email.",
         "isActive": true,
         "imgSrc": "/media/works/firstborn_9_TAG_529x484.jpg",
         "tags": "Web, 3D, Game"
@@ -568,7 +568,7 @@
         "descText": "Malibu Rum Global Website",
         "descLink": "https://work.firstborn.com/work/56/malibu-rum-global-Website",
         "srcLink": null,
-        "comments": "CMS managed global site that supports 6 languages including English, Spanish, French, Dutch, and Chinese. Global offices could update content, drink recipes, TV spots, and event calendars, to be unique to each region on their local website.",
+        "comments": "A CMS managed global site that supports 6 languages including English, Spanish, French, Dutch, and Chinese. Global offices could update content, drink recipes, TV spots, and event calendars, to be unique to each region on their local website.",
         "isActive": true,
         "imgSrc": "/media/works/firstborn_3_Malibu_529x484.jpg",
         "tags": "Web, CMS"
@@ -581,7 +581,7 @@
         "header": "LPG, Alternet",
         "descText": "LPG Wellbox Website",
         "descLink": "http://www.alternetinc.com/wellbox.html",
-        "comments": "A site that provides experiences where customers could learn about the new Wellbox product, explore all of its features via interactive videos, and purchase the Wellbox via a custom order form",
+        "comments": "A site that provides experiences where customers could learn about the new Wellbox product, explore all of its features via interactive videos, and purchase the Wellbox via a custom order form.",
         "isActive": true,
         "imgSrc": "/media/works/alternet_1_Wellbox_529x484.jpg",
         "tags": "Web, Video, CMS"
@@ -595,7 +595,7 @@
           "descText": "Ivy™, Interactive Video Platform",
           "descLink": "http://www.alternetinc.com/ivy.html",
           "srcLink": null,
-          "comments": "CMS manageable interactive online video solution, IVY™, implemented in AS 2.0 using ARIAware (MVC design pattern based framework) and custom made components. Supports multi languages.",
+          "comments": "CMS manageable interactive online video solution, IVY™, implemented in AS 2.0 using MVC design pattern based framework, ARIAware, and custom made components. Supports multi languages.",
           "isActive": true,
           "imgSrc": "/media/works/alternet_2_IVY_529x484.jpg",
           "tags": "Web, Video, CMS"

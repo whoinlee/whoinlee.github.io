@@ -21,6 +21,87 @@ import "../styles/page.scss";
 const BLACK_85P = "rgba(0,0,0,.85)";
 const API_URL = "/data/works.json";
 
+const MediaCard = ({
+  imgSrc,
+  altText = "",
+  overlayText = "",
+  onClick = () => {},
+}) => {
+  const overlayRef = useRef(null);
+
+  const onCardOver = () => {
+    if (overlayRef) overlayRef.current.style.opacity = 1; //show overlay only when the image opens a new tab
+  };
+  const onCardOut = () => {
+    if (overlayRef) overlayRef.current.style.opacity = 0;
+  };
+
+  const cardStyles = {
+    card: {
+      position: "relative", //need?
+      borderRadius: "0px",
+      border: "0.5px solid rgba(0,0,0,.5)",
+    },
+
+    media: {
+      // width: "265px"
+    },
+
+    overlay: {
+      position: "absolute",
+      width: "100%",
+      height: "100%",
+      top: "0px",
+      left: "0px",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      color: "#fefefe",
+      opacity: 0,
+      transition: "all .25s ease-out",
+      //
+      backgroundColor: "rgba(0, 0, 0, .7)",
+      fontSize: "0.75rem",
+      paddingLeft: "14px",
+      paddingRight: "12px",
+      fontSize: "0.70rem",
+      lineHeight: "1.25",
+      paddingBottom: "10px",
+      textAlign: "center"
+    },
+
+    // launchIcon: {
+    //   display: "inline-block",
+    //   fontSize: "large",
+    //   color: "#42a5f5",
+    //   opacity: "85%",
+    //   position: "absolute",
+    //   bottom: "6px",
+    //   left: "6px",
+    // },
+  };
+
+  return (
+    <Card variant="outlined" sx={cardStyles.card}>
+      <CardActionArea
+        onClick={onClick}
+        onMouseOver={onCardOver}
+        onMouseOut={onCardOut}
+      >
+        <CardMedia
+          component="img"
+          image={imgSrc}
+          alt={altText}
+          sx={cardStyles.media}
+        />
+        <div style={cardStyles.overlay} ref={overlayRef}>
+          <span>{overlayText}</span>
+        </div>
+      </CardActionArea>
+    </Card>
+  );
+};
+
 const Works = () => {
   const { selectedSubIndex } = useContext(SiteContext);
   const [works, setWorks] = useState([]);
@@ -43,14 +124,18 @@ const Works = () => {
     src: "SOURCE",
   };
 
-  const overlayRef = useRef(null);
+  // const overlayRefs = useRef([]);
 
-  // const onCardOver = () => {
-  //   overlayRef.current.style.opacity = 1;
-  //   console.log("onCardOver, overlayRef.current? ", overlayRef.current);
+  // const onCardOver = (e) => {
+  //   console.log('over e.target?', e.target);
+  //   if (overlayRef) {
+  //     // overlayRef.current.style.opacity = 1;
+  //     // console.log("onCardOver, overlayRef.current? ", overlayRef.current);
+  //   }
   // };
   // const onCardOut = () => {
-  //   overlayRef.current.style.opacity = 0;
+  //   console.log('out e.target?', e.target);
+  //   // if (overlayRef) overlayRef.current.style.opacity = 0;
   // };
 
   const openLink = (url) => {
@@ -68,41 +153,12 @@ const Works = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const cardStyles = {
-    card: {
-      // width: "265px",
-      borderRadius: "0px",
-      border: "0.5px solid rgba(0,0,0,.5)",
-    },
-
-    overlay: {
-      position: "absolute",
-      width: "100%",
-      height: "100%",
-      top: "0px",
-      left: "0px",
-      paddingBottom: "10px",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      color: "#fefefe",
-      backgroundColor: "rgba(0, 0, 0, .6)",
-      opacity: 0,
-      transition: "all .25s ease-out",
-    },
-
-    media: {
-      // width: "265px"
-    },
-
+  const descStyles = {
     title: {
       mt: "12px",
       lineHeight: "1.25",
       fontSize: "0.8rem",
       fontWeight: 600,
-      // color: "#42a5f5",  //light blue
-      // color: "#1976d2",  //dark blue
-      // textTransform: "uppercase"
     },
 
     desc: {
@@ -116,7 +172,7 @@ const Works = () => {
       fontSize: "0.70rem",
       lineHeight: "1.25",
       fontWeight: "bold",
-      mb: "6px"
+      mb: "6px",
     },
 
     awardList: {
@@ -153,36 +209,27 @@ const Works = () => {
                 xs={6} //2 items
                 // xs={12}
               >
-                <Card variant="outlined" sx={cardStyles.card}>
-                  <CardActionArea
-                  // onClick={onClick}
-                  // onMouseOver={onCardOver}
-                  // onMouseLeave={onCardOut}
-                  >
-                    <CardMedia
-                      component="img"
-                      image={workData["attributes"].imgSrc}
-                      alt={workData["attributes"].title}
-                      sx={cardStyles.media}
-                    />
-                    {/* <div style={cardStyles.overlay} ref={overlayRef}>
-                    {workData["attributes"].comments}
-                  </div> */}
-                  </CardActionArea>
-                </Card>
-                <Typography sx={cardStyles.title}>
+                <MediaCard
+                  imgSrc={workData["attributes"].imgSrc}
+                  altText={workData["attributes"].title}
+                  overlayText={workData["attributes"].comments}
+                  onClick={() => {
+                    console.log("onClic!");
+                  }}
+                />
+                <Typography sx={descStyles.title}>
                   {workData["attributes"].header}
                 </Typography>
-                <Typography sx={cardStyles.desc}>
+                <Typography sx={descStyles.desc}>
                   {workData["attributes"].descText}
                 </Typography>
                 {workData["attributes"].Awards && (
-                  <Box sx={cardStyles.award}>
+                  <Box sx={descStyles.award}>
                     Awards
                     {workData["attributes"].Awards.map((award, index) => (
                       <Typography
                         key={index}
-                        sx={cardStyles.awardList}
+                        sx={descStyles.awardList}
                         fontWeight={400}
                       >
                         {award}
@@ -197,7 +244,6 @@ const Works = () => {
                     sx={{
                       fontSize: 12,
                       textTransform: "none",
-                      // mt: "4px",
                       mr: "6px",
                     }} //, color: "#1976d2"
                     onClick={() => openLink(workData["attributes"].descLink)}
