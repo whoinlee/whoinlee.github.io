@@ -26,6 +26,7 @@ const MediaCard = ({
   altText = "",
   overlayText = "",
   onClick = () => {},
+  isClickable = true,
 }) => {
   const overlayRef = useRef(null);
 
@@ -67,18 +68,8 @@ const MediaCard = ({
       fontSize: "0.70rem",
       lineHeight: "1.25",
       paddingBottom: "10px",
-      textAlign: "center"
+      textAlign: "center",
     },
-
-    // launchIcon: {
-    //   display: "inline-block",
-    //   fontSize: "large",
-    //   color: "#42a5f5",
-    //   opacity: "85%",
-    //   position: "absolute",
-    //   bottom: "6px",
-    //   left: "6px",
-    // },
   };
 
   return (
@@ -123,20 +114,6 @@ const Works = () => {
     desc: "READ",
     src: "SOURCE",
   };
-
-  // const overlayRefs = useRef([]);
-
-  // const onCardOver = (e) => {
-  //   console.log('over e.target?', e.target);
-  //   if (overlayRef) {
-  //     // overlayRef.current.style.opacity = 1;
-  //     // console.log("onCardOver, overlayRef.current? ", overlayRef.current);
-  //   }
-  // };
-  // const onCardOut = () => {
-  //   console.log('out e.target?', e.target);
-  //   // if (overlayRef) overlayRef.current.style.opacity = 0;
-  // };
 
   const openLink = (url) => {
     window.open(url, "_blank")?.focus();
@@ -199,88 +176,95 @@ const Works = () => {
       {works.length > 0 && (
         <Box pt="18px">
           <Grid container spacing={{ xs: 2, sm: 4, md: 5, lg: 6 }}>
-            {works.map((workData, index) => (
-              <Grid
-                item
-                key={index}
-                lg={3} //4 items in a row
-                md={4} //3 items
-                sm={6} //2 items
-                xs={6} //2 items
-                // xs={12}
-              >
-                <MediaCard
-                  imgSrc={workData["attributes"].imgSrc}
-                  altText={workData["attributes"].title}
-                  overlayText={workData["attributes"].comments}
-                  onClick={() => {
-                    console.log("onClic!");
-                  }}
-                />
-                <Typography sx={descStyles.title}>
-                  {workData["attributes"].header}
-                </Typography>
-                <Typography sx={descStyles.desc}>
-                  {workData["attributes"].descText}
-                </Typography>
-                {workData["attributes"].Awards && (
-                  <Box sx={descStyles.award}>
-                    Awards
-                    {workData["attributes"].Awards.map((award, index) => (
-                      <Typography
-                        key={index}
-                        sx={descStyles.awardList}
-                        fontWeight={400}
-                      >
-                        {award}
-                      </Typography>
-                    ))}
-                  </Box>
-                )}
-                {workData["attributes"].descLink && (
-                  <Button
-                    size="small"
-                    variant="outlined"
-                    sx={{
-                      fontSize: 12,
-                      textTransform: "none",
-                      mr: "6px",
-                    }} //, color: "#1976d2"
-                    onClick={() => openLink(workData["attributes"].descLink)}
-                  >
-                    {buttonLabels.desc}{" "}
-                    <AddIcon sx={{ ml: "6px", fontSize: "small" }} />
-                  </Button>
-                )}
-                {workData["attributes"].liveLink && (
-                  <Button
-                    size="small"
-                    variant="outlined"
-                    sx={{
-                      fontSize: 12,
-                      textTransform: "none",
-                      // mt: "4px",
-                      mr: "6px",
-                    }} //, color: "#42a5f5"
-                    onClick={() => openLink(workData["attributes"].liveLink)}
-                  >
-                    {buttonLabels.live}{" "}
-                    <LaunchIcon sx={{ ml: "6px", fontSize: "small" }} />
-                  </Button>
-                )}
-                {workData["attributes"].srcLink && (
-                  <Button
-                    size="small"
-                    variant="outlined"
-                    sx={{ fontSize: 12, textTransform: "none" }} //, color: "#1565c0"
-                    onClick={() => openLink(workData["attributes"].srcLink)}
-                  >
-                    {buttonLabels.src}
-                    <GitHubIcon sx={{ ml: "6px", fontSize: "small" }} />
-                  </Button>
-                )}
-              </Grid>
-            ))}
+            {works.map((workData, index) => {
+              let targetLink = null;
+              targetLink = workData["attributes"].liveLink ? workData["attributes"].liveLink : (
+                                 workData["attributes"].descLink ? workData["attributes"].descLink : 
+                                 workData["attributes"].srcLink);
+                                //  console.log("isClickable??", (targetLink != null))
+              return (
+                <Grid
+                  item
+                  key={index}
+                  lg={3} //4 items in a row
+                  md={4} //3 items
+                  sm={6} //2 items
+                  xs={6} //2 items
+                >
+                  <MediaCard
+                    imgSrc={workData["attributes"].imgSrc}
+                    altText={workData["attributes"].title}
+                    overlayText={workData["attributes"].comments}
+                    onClick={() => {
+                      if (targetLink) openLink(targetLink);
+                    }}
+                    isClickable = {targetLink != null}
+                  />
+                  <Typography sx={descStyles.title}>
+                    {workData["attributes"].header}
+                  </Typography>
+                  <Typography sx={descStyles.desc}>
+                    {workData["attributes"].descText}
+                  </Typography>
+                  {workData["attributes"].Awards && (
+                    <Box sx={descStyles.award}>
+                      Awards
+                      {workData["attributes"].Awards.map((award, index) => (
+                        <Typography
+                          key={index}
+                          sx={descStyles.awardList}
+                          fontWeight={400}
+                        >
+                          {award}
+                        </Typography>
+                      ))}
+                    </Box>
+                  )}
+                  {workData["attributes"].descLink && (
+                    <Button
+                      size="small"
+                      variant="outlined"
+                      sx={{
+                        fontSize: 12,
+                        textTransform: "none",
+                        mr: "6px",
+                      }} //, color: "#1976d2"
+                      onClick={() => openLink(workData["attributes"].descLink)}
+                    >
+                      {buttonLabels.desc}{" "}
+                      <AddIcon sx={{ ml: "6px", fontSize: "small" }} />
+                    </Button>
+                  )}
+                  {workData["attributes"].liveLink && (
+                    <Button
+                      size="small"
+                      variant="outlined"
+                      sx={{
+                        fontSize: 12,
+                        textTransform: "none",
+                        // mt: "4px",
+                        mr: "6px",
+                      }} //, color: "#42a5f5"
+                      onClick={() => openLink(workData["attributes"].liveLink)}
+                    >
+                      {buttonLabels.live}{" "}
+                      <LaunchIcon sx={{ ml: "6px", fontSize: "small" }} />
+                    </Button>
+                  )}
+                  {workData["attributes"].srcLink && (
+                    <Button
+                      size="small"
+                      variant="outlined"
+                      sx={{ fontSize: 12, textTransform: "none" }} //, color: "#1565c0"
+                      onClick={() => openLink(workData["attributes"].srcLink)}
+                    >
+                      {buttonLabels.src}
+                      <GitHubIcon sx={{ ml: "6px", fontSize: "small" }} />
+                    </Button>
+                  )}
+                </Grid>
+              );
+            })}
           </Grid>
         </Box>
       )}
