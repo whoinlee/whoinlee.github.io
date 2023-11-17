@@ -241,17 +241,15 @@ const Topbar = () => {
         <Logo />
         {/* MENU */}
         {/* {!isXS ? ( */}
-        <FlexBetBox paddingLeft="12px">
+        <FlexBetBox paddingLeft="14px">
           {/* Menu1: Works with subMenu*/}
           <Box
               onClick={showSubmenu}
               sx={{
-                // backgroundColor: `${
-                //   open ? "rgba(255,255,0,.75)" : "transparent"
-                // }`,
+                // border: "1px solid red",
                 backgroundColor: `${
                   selectedPage === "works" || open
-                    ? "rgba(255,255,0,.75)"
+                    ? "rgba(255,255,0,.75)" //yellow
                     : "transparent"
                 }`,
                 // border: "1px solid red",
@@ -259,7 +257,8 @@ const Topbar = () => {
                 alignItems: "center",
                 justifyContent: "flex-start",
                 cursor: "pointer",
-                paddingRight: "4px",
+                // paddingRight: "4px", //-- for down arrow icon
+                marginRight: "4px",
                 "&:hover": {
                   backgroundColor: YELLOW_75P,
                   "& .MuiTypography-body1": {
@@ -314,6 +313,7 @@ const Topbar = () => {
             onClick={openBlog}
             sx={{
               cursor: "pointer",
+              marginRight: "4px",
               "&:hover": {
                 backgroundColor: YELLOW_75P,
 
