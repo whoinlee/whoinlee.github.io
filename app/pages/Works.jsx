@@ -26,7 +26,7 @@ const MediaCard = ({
   altText = "",
   overlayText = "",
   onClick = () => {},
-  isClickable = true,
+  // isClickable = true,
 }) => {
   const overlayRef = useRef(null);
 
@@ -44,9 +44,9 @@ const MediaCard = ({
       border: "0.5px solid rgba(0,0,0,.5)",
     },
 
-    media: {
-      // width: "265px"
-    },
+    // media: {
+    //   // width: "265px"
+    // },
 
     overlay: {
       position: "absolute",
@@ -83,7 +83,7 @@ const MediaCard = ({
           component="img"
           image={imgSrc}
           alt={altText}
-          sx={cardStyles.media}
+          // sx={cardStyles.media}
         />
         <div style={cardStyles.overlay} ref={overlayRef}>
           <span>{overlayText}</span>
@@ -198,7 +198,7 @@ const Works = () => {
                     onClick={() => {
                       if (targetLink) openLink(targetLink);
                     }}
-                    isClickable = {targetLink != null}
+                    // isClickable = {targetLink != null}
                   />
                   <Typography sx={descStyles.title}>
                     {workData["attributes"].header}

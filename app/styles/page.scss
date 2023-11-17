@@ -72,7 +72,7 @@
   }
 
   .statement {
-    animation: fadeIn 2.5s;
+    animation: fadeIn 3.5s;
     // font-size: 1rem;
 
     b {
@@ -86,14 +86,14 @@
     font-size: .65rem;
     margin-top: 75px;
     color: #fff;
-    animation: fadeIn 1.75s;
+    animation: fadeIn 1s ease-out;
     align-items: center;
   }
 }
 
 @keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% { opacity: 0; scale: .95}
+  100% { opacity: 1; scale: 1 }
 }
 
 @keyframes fadeOut {

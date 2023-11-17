@@ -47,11 +47,11 @@ const About = () => {
                   setShowStatement(true);
                   // removeCursor();
                 })
-                .pauseFor(750)
+                .pauseFor(2250)
                 .callFunction(() => {
                   setShowName(true);
                 })
-                .pauseFor(250)
+                .pauseFor(750)
                 .callFunction(() => {
                   setShowFooter(true);
                 })

@@ -595,7 +595,7 @@
           "descText": "Ivy™, Interactive Video Platform",
           "descLink": "http://www.alternetinc.com/ivy.html",
           "srcLink": null,
-          "comments": "CMS manageable interactive online video solution, IVY™, implemented in AS 2.0 using MVC design pattern based framework, ARIAware, and custom made components. Supports multi languages.",
+          "comments": "CMS manageable interactive online video solution, IVY™, implemented using MVC design pattern based framework, ARIAware, and custom made components. Supports multi languages.",
           "isActive": true,
           "imgSrc": "/media/works/alternet_2_IVY_529x484.jpg",
           "tags": "Web, Video, CMS"
