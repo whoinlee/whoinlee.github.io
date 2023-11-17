@@ -52,7 +52,7 @@ const Topbar = () => {
   const open = Boolean(anchorEl);
   const showSubmenu = (e: any) => {
     // if (anchorEl !== e.currentTarget) setAnchorEl(e.currentTarget);
-    console.log("showSubmenu ===> showWorks");
+    // console.log("showSubmenu ===> showWorks");
     if (selectedPage !== "works") setSelectedPage("works");
   };
   const hideSubmenu = () => {
@@ -219,7 +219,7 @@ const Topbar = () => {
   };
 
   const openMenu = () => {
-    console.log("openMenu");
+    // console.log("openMenu");
   };
 
   const openBlog = () => {

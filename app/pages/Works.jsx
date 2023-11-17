@@ -42,11 +42,8 @@ const MediaCard = ({
       position: "relative", //need?
       borderRadius: "0px",
       border: "0.5px solid rgba(0,0,0,.5)",
+      // cursor: `${isClickable? "pointer" : "default"}`
     },
-
-    // media: {
-    //   // width: "265px"
-    // },
 
     overlay: {
       position: "absolute",
@@ -83,7 +80,6 @@ const MediaCard = ({
           component="img"
           image={imgSrc}
           alt={altText}
-          // sx={cardStyles.media}
         />
         <div style={cardStyles.overlay} ref={overlayRef}>
           <span>{overlayText}</span>
@@ -123,7 +119,7 @@ const Works = () => {
   useEffect(() => {
     const getData = async () => {
       const result = await (await fetch(API_URL)).json();
-      console.log("data ? ", result.data);
+      // console.log("data ? ", result.data);
       setWorks(result.data);
     };
     getData();
