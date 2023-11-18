@@ -230,7 +230,7 @@ const Works = () => {
         </FlexEndBox>
       )}
       {works.length > 0 && (
-        <Box pt="18px">
+        <Box pt="18px" pb="12px">
           <Grid container spacing={{ xs: 2, sm: 4, md: 5, lg: 6 }}>
             {/* {works.map((workData, index) => { */}
             {filteredWorks.map((workData, index) => {
