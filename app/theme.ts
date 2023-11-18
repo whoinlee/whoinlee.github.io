@@ -10,9 +10,14 @@ const primary = {
 https://mui.com/material-ui/customization/typography/
 */
 import { createTheme } from "@mui/material/styles";
+import { indigo } from '@mui/material/colors';
 
 const FONT_FAMILY = ["Inter", "Open Sans", "sans-serif"].join(",");
 const themeSettings = {
+  palette: {
+    info: indigo
+  },
+
   typography: {
     fontSize: 16,
     fontFamily: FONT_FAMILY,
@@ -47,6 +52,7 @@ const themeSettings = {
       fontSize: "0.95rem", //16px
     },
   },
+
   breakpoints: {
     values: {
       xs: 0,

@@ -53,7 +53,7 @@
         "comments": "'Data Visualization' and 'Jira & Figma Communication' Plugins",
         "isActive": true,
         "imgSrc": "/media/works/y_appD_42_Plugin_529x484.jpg",
-        "tags": "Figma Plugin"
+        "tags": "Plugin"
       }
     },
     {
@@ -67,7 +67,7 @@
         "comments": "Desktop App Prototypes for various NBC brands",
         "isActive": true,
         "imgSrc": "/media/works/x_nbc_36_fireTVAir_529x484.jpg",
-        "tags": "Prototype"
+        "tags": "Prototype, Desktop App, Video"
       }
     },
     {
@@ -80,7 +80,7 @@
         "comments": "FireTV Web App POC",
         "isActive": true,
         "imgSrc": "/media/works/x_nbc_37_fireTVWeb_529x484.jpg",
-        "tags": "Web, POC"
+        "tags": "Web, Prototype"
       }
     },
     {
@@ -94,7 +94,7 @@
         "comments": "Android Platform TV App POC in ReactNative",
         "isActive": true,
         "imgSrc": "/media/works/x_nbc_38_fireTVAndroid_529x484.jpg",
-        "tags": "POC, Android"
+        "tags": "Android, Prototype, TV App"
       }
     },
     {
@@ -108,7 +108,7 @@
         "comments": "Estée Lauder OSIAO Kiosk in Chinese and English",
         "isActive": true,
         "imgSrc": "/media/works/w_32_OSIAO_529x484.jpg",
-        "tags": "Kiosk"
+        "tags": "Kiosk, CMS"
       }
     },
     {
@@ -116,14 +116,14 @@
         "attributes": {
           "title": "Xerox Automated Intelligence Challenge Game",
           "header": "Xerox, Blue Telescope",
-          "descText": "Xerox 'Automated Intelligence Challenge' Game",
+          "descText": "Xerox 'Automated Intelligence Challenge' Touchscreen Game",
           "Awards": ["Summit Creative Award 2015, Gold"],
           "descLink": null,
           "srcLink": null,
           "comments": "Automated Intelligence Challenge Game",
           "isActive": true,
           "imgSrc": "/media/works/w_35_Xerox_529x484.jpg",
-          "tags": "Touchscreen, Game"
+          "tags": "Kiosk, Game"
         }
       },
     {
@@ -227,7 +227,7 @@
         "comments": "UPS ‘Plastics’ Factoids Module",
         "isActive": true,
         "imgSrc": "/media/works/ogilvy_28_Factoids_529x484.jpg",
-        "tags": ""
+        "tags": "Web"
       }
     },
 
@@ -400,7 +400,7 @@
         "comments": "4 different kinds of sites with alpha channel videos and 3D carousel menu.",
         "isActive": true,
         "imgSrc": "/media/works/ogilvy_15_SlimFast_529x484.jpg",
-        "tags": "Web"
+        "tags": "Web, Video"
       }
     },
     {
@@ -414,7 +414,7 @@
         "comments": "IBM 'Build on Blue' Website",
         "isActive": true,
         "imgSrc": "/media/works/ogilvy_15_IBM_529x484.jpg",
-        "tags": "Web"
+        "tags": "Web, Game"
       }
     },
     {

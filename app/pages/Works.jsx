@@ -10,13 +10,14 @@ import LaunchIcon from "@mui/icons-material/Launch";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import AddIcon from "@mui/icons-material/Add";
 import WebIcon from "@mui/icons-material/Web";
+// import { useTheme } from "@mui/material";
 import DesktopMacIcon from "@mui/icons-material/DesktopMac";
 import ConnectedTvIcon from "@mui/icons-material/ConnectedTv";
 import TouchAppIcon from "@mui/icons-material/TouchApp";
 import ExtensionIcon from "@mui/icons-material/Extension";
 import { SiteContext } from "../contexts/SiteState";
 import { WorkCatetories } from "../components/Topbar";
-import "../styles/page.scss";
+import FlexEndBox from "../components/base/FlexEndBox";
 
 const BLACK_85P = "rgba(0,0,0,.85)";
 const API_URL = "/data/works.json";
@@ -76,11 +77,7 @@ const MediaCard = ({
         onMouseOver={onCardOver}
         onMouseOut={onCardOut}
       >
-        <CardMedia
-          component="img"
-          image={imgSrc}
-          alt={altText}
-        />
+        <CardMedia component="img" image={imgSrc} alt={altText} />
         <div style={cardStyles.overlay} ref={overlayRef}>
           <span>{overlayText}</span>
         </div>
@@ -92,6 +89,10 @@ const MediaCard = ({
 const Works = () => {
   const { selectedSubIndex } = useContext(SiteContext);
   const [works, setWorks] = useState([]);
+  const [filteredWorks, setFilteredWorks] = useState({});
+  // const theme = useTheme();
+  // console.log("theme.palette? ", theme.palette)
+  // console.log("theme.palette.grey[900]", theme.palette.grey[900])
   const Icons = [
     WebIcon,
     DesktopMacIcon,
@@ -111,8 +112,35 @@ const Works = () => {
     src: "SOURCE",
   };
 
+  const TAGS = [
+    "ALL",
+    "WEB",
+    "DESKTOP APP",
+    "TV APP",
+    "KIOSK",
+    "3D",
+    "AUDIO",
+    "VIDEO",
+    "GAME",
+    "SOCIAL MEDIA",
+    "PROTOTYPE",
+    "CMS",
+  ];
+
   const openLink = (url) => {
     window.open(url, "_blank")?.focus();
+  };
+
+  const filterBy = (tag) => {
+    if (tag === "all") {
+      setFilteredWorks(works);
+    } else {
+      const filteredWorks = works.filter(
+        (work) => work["attributes"].tags.toLowerCase().indexOf(tag) !== -1
+      );
+      // console.log("filteredWorks? ", filteredWorks);
+      setFilteredWorks(filteredWorks);
+    }
   };
 
   //-- get data
@@ -121,6 +149,7 @@ const Works = () => {
       const result = await (await fetch(API_URL)).json();
       // console.log("data ? ", result.data);
       setWorks(result.data);
+      setFilteredWorks(result.data);
     };
     getData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -169,15 +198,49 @@ const Works = () => {
           />
         </div>
       )}
+      {selectedSubIndex < 0 && (
+        <FlexEndBox
+          sx={{
+            flexWrap: "wrap",
+            mr: "-6px",
+            mt: "-10px",
+            mb: "5px",
+            rowGap: "6px",
+          }}
+        >
+          {TAGS.map((tag, index) => (
+            <Button
+              key={index}
+              size="small"
+              variant="outlined"
+              // color="info"
+              sx={{
+                // color: "rgba(0, 0, 0, .85)",
+                fontSize: 12,
+                textTransform: "uppercase",
+                mr: "6px",
+              }} //, color: "#1976d2"
+              onClick={(e) => {
+                filterBy(tag.toLowerCase());
+              }}
+            >
+              {tag}
+            </Button>
+          ))}
+        </FlexEndBox>
+      )}
       {works.length > 0 && (
         <Box pt="18px">
           <Grid container spacing={{ xs: 2, sm: 4, md: 5, lg: 6 }}>
-            {works.map((workData, index) => {
+            {/* {works.map((workData, index) => { */}
+            {filteredWorks.map((workData, index) => {
               let targetLink = null;
-              targetLink = workData["attributes"].liveLink ? workData["attributes"].liveLink : (
-                                 workData["attributes"].descLink ? workData["attributes"].descLink : 
-                                 workData["attributes"].srcLink);
-                                //  console.log("isClickable??", (targetLink != null))
+              targetLink = workData["attributes"].liveLink
+                ? workData["attributes"].liveLink
+                : workData["attributes"].descLink
+                ? workData["attributes"].descLink
+                : workData["attributes"].srcLink;
+              //  console.log("isClickable??", (targetLink != null))
               return (
                 <Grid
                   item

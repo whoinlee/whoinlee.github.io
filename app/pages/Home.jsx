@@ -4,7 +4,6 @@ import ProjectNBCU from "./home/ProjectNBCU";
 import ProjectMISC from "./home/ProjectMISC";
 import ProjectWeb from "./home/ProjectWeb";
 import ProjectAlternet from "./home/ProjectAlternet";
-// import "../styles/page.scss";
 
 const Home = () => {
   return (

@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import Typography from "@mui/material/Typography";
-// import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import Typewriter from "typewriter-effect";
 
 const About = () => {
@@ -21,7 +20,7 @@ const About = () => {
       {/* <div className="headlineHolder"> */}
         <Typography
           variant="h1"
-          sx={{ display: "inline-block", wordBreak: "break-word", mt: "10px" }}
+          sx={{ display: "inline-block", wordBreak: "break-word", mt: "32px" }}
         >
           <Typewriter
             options={{
